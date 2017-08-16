@@ -1,0 +1,150 @@
+#testform{
+  display: none;
+}
+body{
+  padding: 0;
+  margin:0;
+  font-family: core, "Avenir Next", "Helvetica Neue", Helvetica, Arial, "Source Han Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi MicroHei", sans-serif;
+  color: #666;
+  font-size: 14px;
+  background: url('http://assets.qiniu.com/v2/qiniu-blue-195x105.png') no-repeat #1DA4DE;
+}
+ul,li {
+  padding: 0;
+  margin: 0;
+}
+td, th{
+  border: 0 none;
+  border-bottom: 1px solid #f0f0f0;
+}
+.hidden{
+  display: none;
+}
+.show {
+  display: inherit;
+}
+.title{
+  background-color: #0983C7;
+  line-height: 40px;
+  text-align: center;
+  color:#fff;
+}
+.container{
+  width: 100%;
+  margin:0 auto;
+  max-width:640px;
+  background-color: #fff;
+  border-radius: 10px;
+  min-height: 530px;
+  overflow: hidden;
+  padding-bottom: 30px;
+}
+.uploaded-result{
+  line-height: 30px;
+  margin: 0 20px;
+}
+.uploaded-result th{
+  text-align: left;
+}
+.uploaded-result table {
+  width: 100%;
+  word-break: break-all;
+}
+#canvas{
+  display:none;
+}
+.progress{
+  padding: 20px 20px;
+  color: #108ee9;
+  line-height: 26px;
+}
+.low-browser{
+  padding: 30px 20px;
+}
+.run{
+  display: block;
+  width: 120px;
+  line-height: 26px;
+  background-color: #1992ea;
+  border-radius: 6px;
+  margin: 20px auto;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+.run:hover{
+  background-color: #1DA4DE;
+}
+.disabled, .disabled:hover{
+  background-color: #aaa;
+}
+.uphosts-list li{
+  list-style: none;
+  font-size: 14px;
+}
+.uphosts-list ul:first-of-type{
+  text-align: center;
+  height: 27px;
+  line-height: 26px;
+  margin: 20px;
+  border-bottom: 1px solid #d9d9d9;
+}
+.uphosts-list ul:first-of-type li{
+  float: left;
+  width: 50px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.uphosts-list ul:first-of-type li.on{
+  color: #108ee9;
+  border-bottom: 2px solid #108ee9;
+}
+.uphosts-list ul:last-child{
+  margin: 20px;
+}
+.uphosts-list ul:last-child li{
+  display: none;
+}
+.uphosts-list ul:last-child li.on{
+  display: block;
+}
+.uphosts-list ul:last-child li label{
+  display: inline-block;
+  width: 50%;
+  padding: 6px 0;
+  cursor: pointer;
+}
+.up-performance{
+  margin-bottom: 20px;
+}
+.per-title{
+  font-weight: bold;
+  color: #108ee9;
+}
+.up-headers{
+  
+}
+.up-headers tr td:first-child{
+  width: 120px;
+}
+@media screen and (min-width: 640px){
+  .container{
+    margin-top:50px;
+  }
+}
+@media screen and (max-width: 640px){
+  body{
+    background-color:#fff;
+  }
+  .uphosts-list ul:last-child li label{
+    width: 100%;
+  }
+  .container{
+    border-radius: 0;
+  }
+}
+
+
+

@@ -1,0 +1,65 @@
+{
+  "name": "qiniu",
+  "description": "Javascript SDK for Qiniu Resource (Cloud) Storage API",
+  "version": "1.0.19",
+  "main": "dist/qiniu.js",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "keywords": [
+    "cloud",
+    "storage",
+    "s3",
+    "qiniu",
+    "upload"
+  ],
+  "authors": "sdk@qiniu.com",
+  "contributors": [
+    {
+      "name": "luoyeshu0507",
+      "email": "lizhiwei@qiniu.com"
+    },
+    {
+      "name": "codedogfish",
+      "email": "jackyu@qiniu.com"
+    },
+    {
+      "name": "dengchenhua",
+      "email": "dengchenhua@qiniu.com"
+    }
+  ],
+  "homepage": "https://github.com/qiniu/js-sdk",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/qiniu/js-sdk.git"
+  },
+  "dependencies": {
+    "plupload": "=2.1.1"
+  },
+  "devDependencies": {
+    "bootstrap": "~3.3.6",
+    "highlight": "~8.9.1",
+    "jquery": "~1.9.1",
+    "respond": "~1.4.2",
+    "vue": "^2.2.1"
+  },
+  "private": false,
+  "_release": "1.0.19",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.19",
+    "commit": "e44ca6cc2d21bf0b7f833a10142ba40429442767"
+  },
+  "_source": "https://github.com/qiniu/js-sdk.git",
+  "_target": "^1.0.19",
+  "_originalSource": "qiniu",
+  "_direct": true
+}

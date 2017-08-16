@@ -1,0 +1,54 @@
+{
+  "name": "qiniu-js",
+  "jsName": "qiniu",
+  "version": "1.0.19",
+  "private": false,
+  "scripts": {
+    "start": "node demo/server.js"
+  },
+  "description": "Javascript SDK for Qiniu Resource (Cloud) Storage API",
+  "main": "dist/qiniu.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/qiniu/js-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/qiniu/js-sdk/issues"
+  },
+  "keywords": [
+    "cloud",
+    "storage",
+    "s3",
+    "qiniu",
+    "web-service"
+  ],
+  "author": "sdk@qiniu.com",
+  "contributors": [
+    {
+      "name": "luoyeshu0507",
+      "email": "lizhiwei@qiniu.com"
+    },
+    {
+      "name": "codedogfish",
+      "email": "jackyu@qiniu.com"
+    },
+    {
+      "name": "dengchenhua",
+      "email": "dengchenhua@qiniu.com"
+    }
+  ],
+  "devDependencies": {
+    "bower": "^1.6.8",
+    "ejs": "~1.0.0",
+    "express": "~3.4.7",
+    "grunt": "~0.4.2",
+    "grunt-cli": "~0.1.13",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-jshint": "~0.7.2",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "qiniu": "~6.1.1"
+  },
+  "license": "MIT"
+}
