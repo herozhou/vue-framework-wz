@@ -105,38 +105,6 @@
     </Row>
 
 
-    <Row class="row-margin-top">
-        <Col :md="6" :sm="12" :lg="6">
-          <h5> 地缘  </h5>
-            <p>地缘是一款基于海量移动设备线上、线下行为数据结合精准选址分析模型，为地产投策、线下选址提供决策依据的产品。
-            </p>
-            <p><a href="">立即访问</a></p>
-
-        </Col>
-
-        <Col :md="6" :sm="12" :lg="6"> 
-          
-             <Carousel autoplay v-model="value1" :autoplay-speed="speed">
-        <Carousel-item>
-            <div class="demo-carousel">
-            <img src="https://file.iviewui.com/dist/b87a413b52a2214950166811dd1aca4a.png">
-            </div>
-        </Carousel-item>
-        <Carousel-item>
-            <div class="demo-carousel">
-            <img src="https://file.iviewui.com/dist/f100d5f1eb363157f3b4657bd2f82cf5.png">
-            </div>
-        </Carousel-item>
-        <Carousel-item>
-            <div class="demo-carousel">
-            <img src="https://file.iviewui.com/dist/536d470d2bb6a15d31c3eb221d8fecd9.png">
-            </div>
-        </Carousel-item>
-       
-    </Carousel>
-        </Col>
-    </Row>
-
 
 
   </div>
@@ -150,7 +118,6 @@ export default {
             return {
                 value1: 0,
                 value2: 0,
-                value3: 0,
 
                 speed:10000,
             }

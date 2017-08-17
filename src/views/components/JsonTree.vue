@@ -6,35 +6,34 @@
            
            <div style="" class="doc-header">
 
-<Collapse v-model="now_show_panel" accordion> 
-                     <Panel name="1">
-                          maxDepth:1
-                          <p slot="content">
-   <tree-view :data="sampleData1" :options="{maxDepth: 1}"></tree-view>
+              <Collapse v-model="now_show_panel" accordion> 
 
-                          </p>
-                      </Panel>
-                      <Panel name="2" >
-                             maxDepth:2
-                          <p slot="content">
-                                  <tree-view :data="sampleData1" :options="{maxDepth: 2}"></tree-view>
-                          </p>
-                      </Panel>
-                      <Panel name="3">
-                          maxDepth:3
-                          <p slot="content">
-                                  <tree-view :data="sampleData1" :options="{maxDepth: 3}"></tree-view>
-                          </p>
-                      </Panel>
+                 <Panel name="1">
+                      maxDepth:1
+                      <p slot="content">
+                            <tree-view :data="sampleData1" :options="{maxDepth: 1}"></tree-view>
+                      </p>
+                  </Panel>
+                  <Panel name="2" >
+                         maxDepth:2
+                      <p slot="content">
+                            <tree-view :data="sampleData1" :options="{maxDepth: 2}"></tree-view>
+                      </p>
+                  </Panel>
+                  <Panel name="3">
+                      maxDepth:3
+                      <p slot="content">
+                            <tree-view :data="sampleData1" :options="{maxDepth: 3}"></tree-view>
+                      </p>
+                  </Panel>
                      
-                  </Collapse>
+                </Collapse>
 
             </div>
             <div style="" class="doc-content">
                 <h5>JSON展示列表</h5>
 
         <p>配合Collapse 折叠面板很轻易的就可以展示又臭又长的json字符串</p>
-        <p>通过设置type为primary、ghost、dashed、text、info、success、warning、error创建不同样式的按钮，不设置为默认样式。</p>
             </div>
              
         </Col>
@@ -44,28 +43,31 @@
            
 <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #062873; font-weight: bold">&lt;template&gt;</span>
 
-<span style="color: #062873; font-weight: bold">&lt;Collapse</span> <span style="color: #4070a0"><span>v-model=</span>&quot;<span>value</span>&quot;</span> <span >accordion</span><span style="color: #062873; font-weight: bold">&gt;</span> 
-                     <span style="color: #062873; font-weight: bold">&lt;Panel</span> <span style="color: #4070a0">name=&quot;1&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>
-                          maxDepth:1
-                          <span style="color: #062873; font-weight: bold">&lt;p</span> <span style="color: #4070a0">slot=&quot;content&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>
-   <span style="color: #062873; font-weight: bold">&lt;tree-view</span> <span style="color: #4070a0">:data=&quot;sampleData1&quot;</span> <span style="color: #4070a0">:options=&quot;{maxDepth: 1}&quot;</span><span style="color: #062873; font-weight: bold">&gt;&lt;/tree-view&gt;</span>
+       <span style="color: #062873; font-weight: bold">&lt;Collapse</span> <span style="color: #4070a0">v-model=&quot;now_show_panel&quot;</span> <span>accordion</span><span style="color: #062873; font-weight: bold">&gt;</span> 
 
-                          <span style="color: #062873; font-weight: bold">&lt;/p&gt;</span>
-                      <span style="color: #062873; font-weight: bold">&lt;/Panel&gt;</span>
-                      <span style="color: #062873; font-weight: bold">&lt;Panel</span> <span style="color: #4070a0">name=&quot;2&quot;</span> <span style="color: #062873; font-weight: bold">&gt;</span>
-                             maxDepth:2
-                          <span style="color: #062873; font-weight: bold">&lt;p</span> <span style="color: #4070a0">slot=&quot;content&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>
-                                  <span style="color: #062873; font-weight: bold">&lt;tree-view</span> <span style="color: #4070a0">:data=&quot;sampleData1&quot;</span> <span style="color: #4070a0">:options=&quot;{maxDepth: 2}&quot;</span><span style="color: #062873; font-weight: bold">&gt;&lt;/tree-view&gt;</span>
-                          <span style="color: #062873; font-weight: bold">&lt;/p&gt;</span>
-                      <span style="color: #062873; font-weight: bold">&lt;/Panel&gt;</span>
-                      <span style="color: #062873; font-weight: bold">&lt;Panel</span> <span style="color: #4070a0">name=&quot;3&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>
-                          maxDepth:3
-                          <span style="color: #062873; font-weight: bold">&lt;p</span> <span style="color: #4070a0">slot=&quot;content&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>
-                                  <span style="color: #062873; font-weight: bold">&lt;tree-view</span> <span style="color: #4070a0">:data=&quot;sampleData1&quot;</span> <span style="color: #4070a0">:options=&quot;{maxDepth: 3}&quot;</span><span style="color: #062873; font-weight: bold">&gt;&lt;/tree-view&gt;</span>
-                          <span style="color: #062873; font-weight: bold">&lt;/p&gt;</span>
-                      <span style="color: #062873; font-weight: bold">&lt;/Panel&gt;</span>
-                     
-                  <span style="color: #062873; font-weight: bold">&lt;/Collapse&gt;</span>
+         <span style="color: #062873; font-weight: bold">&lt;Panel</span> <span style="color: #4070a0">name=&quot;1&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>
+              maxDepth:1
+              <span style="color: #062873; font-weight: bold">&lt;p</span> <span style="color: #4070a0">slot=&quot;content&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>
+                <span style="color: #062873; font-weight: bold">&lt;tree-view</span> <span style="color: #4070a0">:data=&quot;sampleData1&quot;</span> <span style="color: #4070a0">:options=&quot;{maxDepth: 1}&quot;</span><span style="color: #062873; font-weight: bold">&gt;
+                &lt;/tree-view&gt;</span>
+              <span style="color: #062873; font-weight: bold">&lt;/p&gt;</span>
+          <span style="color: #062873; font-weight: bold">&lt;/Panel&gt;</span>
+          <span style="color: #062873; font-weight: bold">&lt;Panel</span> <span style="color: #4070a0">name=&quot;2&quot;</span> <span style="color: #062873; font-weight: bold">&gt;</span>
+                 maxDepth:2
+              <span style="color: #062873; font-weight: bold">&lt;p</span> <span style="color: #4070a0">slot=&quot;content&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>
+                <span style="color: #062873; font-weight: bold">&lt;tree-view</span> <span style="color: #4070a0">:data=&quot;sampleData1&quot;</span> <span style="color: #4070a0">:options=&quot;{maxDepth: 2}&quot;</span><span style="color: #062873; font-weight: bold">&gt;
+                &lt;/tree-view&gt;</span>
+              <span style="color: #062873; font-weight: bold">&lt;/p&gt;</span>
+          <span style="color: #062873; font-weight: bold">&lt;/Panel&gt;</span>
+          <span style="color: #062873; font-weight: bold">&lt;Panel</span> <span style="color: #4070a0">name=&quot;3&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>
+              maxDepth:3
+              <span style="color: #062873; font-weight: bold">&lt;p</span> <span style="color: #4070a0">slot=&quot;content&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>
+                <span style="color: #062873; font-weight: bold">&lt;tree-view</span> <span style="color: #4070a0">:data=&quot;sampleData1&quot;</span> <span style="color: #4070a0">:options=&quot;{maxDepth: 3}&quot;</span><span style="color: #062873; font-weight: bold">&gt;
+                &lt;/tree-view&gt;</span>
+              <span style="color: #062873; font-weight: bold">&lt;/p&gt;</span>
+          <span style="color: #062873; font-weight: bold">&lt;/Panel&gt;</span>
+             
+        <span style="color: #062873; font-weight: bold">&lt;/Collapse&gt;</span>
 
 <span style="color: #062873; font-weight: bold">&lt;/template&gt;</span>
 <span style="color: #062873; font-weight: bold">&lt;script&gt;</span>

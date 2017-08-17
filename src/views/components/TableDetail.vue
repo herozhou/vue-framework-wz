@@ -6,7 +6,7 @@
       <Col :md="8" :sm="12" :lg="9">
       <div style="text-align:center">
           
-  <video  controls height="300" v-if="is_video" id='video' preload="auto">
+  <video  controls height="300" v-if="is_video" id='video' preload="auto" src="http://otl6ypoog.bkt.clouddn.com/Objectstoarge/videos/2017-08-14/65055_WeChatSight38.mp4">
      
     
   </video>
