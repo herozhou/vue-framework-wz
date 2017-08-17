@@ -2,10 +2,8 @@
 
 [TOC]
 
-[线上地址](http://panjiachen.github.io/vue-element-admin)
-
 **本项目是后台管理框架，集成了权限管理、登录功能、UI组件、七牛上传等功能，建议直接使用。**
-> **注意：**便于前端调试，所以数据请求都是用了mockjs模拟。**在需要请求外部api时请移除mock文件**。
+> **注意**：便于前端调试，所以数据请求都是用了mockjs模拟。**在需要请求外部api时请移除mock文件**。
 
 ## 功能
 - `工业化UI组件`（上手即用，无需自己造轮子）
@@ -87,23 +85,23 @@
 ```
 ## 效果图
 
-####自适应布局
+#### 自适应布局
 
 ![自适应布局](https://github.com/herozhou/vue-framework-wz/blob/master/gifs/wz_index.gif)
 
-####丰富功能表格
+#### 丰富功能表格
 
 ![丰富功能表格](https://github.com/herozhou/vue-framework-wz/blob/master/gifs/wz_table.gif)
-####炫酷登录界面
+#### 炫酷登录界面
 
 ![炫酷登录界面](https://github.com/herozhou/vue-framework-wz/blob/master/gifs/wz_login.gif)
 
-####hover特效按钮
+#### hover特效按钮
 
 ![hover特效按钮](https://github.com/herozhou/vue-framework-wz/blob/master/gifs/wz_hoverbutton.gif)
 
 
-####JSONTree
+#### JSONTree
 
 ![丰富功能表格](https://github.com/herozhou/vue-framework-wz/blob/master/gifs/wz_jsontree.gif)
 
@@ -111,19 +109,21 @@
 
 **[更多demo](http://panjiachen.github.io/vue-element-admin)**
 
-##关于作者
+## 关于作者
 
 ```javascript
   var herozhou = {
     blogName  : "herozhou工巧",
     blog : "https://www.cnblogs.com/herozhou",
     email:"Zhouhero@hotmail.com",
+    School:"NCHU",
+    Grade:"Junior"
   }
-  //有任何问题请联系我
+  //有任何问题请联系我,招聘优先
 ```
 
 
-##感激
+## 感激
 感谢以下的项目,排名不分先后
 
 * [iView](http://mouapp.com/) 
