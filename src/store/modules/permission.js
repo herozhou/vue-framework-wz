@@ -42,7 +42,7 @@ const permission = {
       state.addRouters = routers;
       state.routers = constantRouterMap.concat(routers);
       state.routers.forEach(function(e){
-          if(e.name==="Home"){
+          if(e.name==="首页"){
           state.siderbar_routers=e;
       console.log(state.siderbar_routers)
             

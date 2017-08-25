@@ -92,19 +92,19 @@ export const asyncRouterMap = [
  {
       path: '/',
       redirect: '/dashboard',
-      name: 'Home',
+      name: '首页',
       component: Full,
       hidden:false,
       children: [
        {
           path: '/dashboard',
-          name: 'Dashboard',
+          name: '介绍',
           icon:'speedometer',
           component: Dashboard
         },
        {
           path: '/components',
-          name: 'Components',
+          name: '组件',
       redirect: '/components/buttons',
 
           icon:'bookmark',
@@ -114,7 +114,7 @@ export const asyncRouterMap = [
           children: [
             {
               path: 'buttons',
-              name: 'Buttons',
+              name: '按钮',
               icon:'social-youtube',
               component: Buttons,
               hidden:false,
@@ -122,7 +122,7 @@ export const asyncRouterMap = [
             },
             {
               path: 'hoverbuttons',
-              name: 'HoverButtons',
+              name: '悬停特效按钮',
               icon:'wand',
               component: HoverButtons
             }
@@ -131,20 +131,20 @@ export const asyncRouterMap = [
        
         {
           path: '/charts',
-          name: 'Charts',
+          name: '图标',
           icon:'pie-graph',
           component: Charts,
         },
          {
           path: '/table',
-          name: 'Table',
+          name: '表格',
           icon:'ios-paper',
           component: Table,
           meta: { role: ['admin'] }
         },
          {
           path: '/jsontree',
-          name: 'JsonTree',
+          name: 'JSON视图',
           icon:'merge',
           component: JsonTree
         },

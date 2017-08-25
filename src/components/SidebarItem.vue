@@ -8,9 +8,11 @@
              
                 <div class="nav-link nav-dropdown-toggle" @click="handleClick"><Icon :type="item.icon" />{{ item.name}}  </div>
                    <ul class="nav-dropdown-items">
-                     <li class="nav-item" v-for="child in item.children" v-if='!child.hidden'>
+                     <li class="nav-item" v-for="child in item.children" v-if='!child.hidden' @click="addActive">
                         <!-- <router-link :to="child.path+'/'+item.children[0].path" class="nav-link" ><i class="icon-puzzle"></i> {{ child.name}} </router-link> -->
                         <router-link :to="item.path+'/'+child.path+'/'+child.children[0].path" class="nav-link" v-if="!child.hidden&&child.children" ><Icon :type="child.icon"  />{{ child.name}} </router-link> 
+
+
                          <router-link :to="item.path+'/'+child.path" class="nav-link" v-else="!child.children" ><Icon :type="child.icon"  /> {{ child.name}} </router-link> 
 
 
@@ -42,6 +44,10 @@
             handleClick (e) {
               e.preventDefault()
               e.target.parentElement.classList.toggle('open')
+            },
+            addActive(e){
+               e.preventDefault()
+              e.target.parentElement.parentElement.parentElement.classList.add('open')
             }
         },
         mounted(){
