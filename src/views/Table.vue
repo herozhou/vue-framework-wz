@@ -45,8 +45,7 @@
             <div style="" class="doc-content">
                 <h5>表格综合实例</h5>
 
-        <p>按钮类型有：默认按钮、主按钮、幽灵按钮、虚线按钮、文字按钮以及四种颜色按钮。</p>
-        <p>通过设置type为primary、ghost、dashed、text、info、success、warning、error创建不同样式的按钮，不设置为默认样式。</p>
+        <p>轻松完成业务需求，再也不用被产品催了</p>
             </div>
              
         </Col>
