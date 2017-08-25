@@ -6,17 +6,12 @@
            
            <div style="" class="doc-header">
 
-                        <Button>Default</Button>
-    <Button type="primary">Primary</Button>
-    <Button type="ghost">Ghost</Button>
-    <Button type="dashed">Dashed</Button>
-    <Button type="text">Text</Button>
-    <br><br>
-    <Button type="info">信息按钮</Button>
-    <Button type="success">成功按钮</Button>
-    <Button type="warning">警告按钮</Button>
-    <Button type="error">错误按钮</Button>
+                <h4>与iview不同，采用了基于bootstrap的栅格系统</h4>
 
+                <p>
+                    使用时只需加  <Tag>:sm 小屏</Tag> <Tag>:md 中屏</Tag> 
+                    使用时只需加  <Tag>:sm 小屏</Tag> 
+                </p>
             </div>
             <div style="" class="doc-content">
                 <h5>按钮类型</h5>

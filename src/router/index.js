@@ -9,11 +9,15 @@ import Dashboard from '@/views/Dashboard'
 import Charts from '@/views/Charts'
 
 // Views - Components
+import Grid from '@/views/components/Grid'
+
 import Buttons from '@/views/components/Buttons'
 import HoverButtons from '@/views/components/HoverButtons'
-import Table from '@/views/components/Table'
-import TableDetail from '@/views/components/TableDetail'
-import JsonTree from '@/views/components/JsonTree'
+
+// Views - Views
+import Table from '@/views/Table'
+import TableDetail from '@/views/TableDetail'
+import JsonTree from '@/views/JsonTree'
 
 
 // Views - Pages
@@ -109,6 +113,12 @@ export const asyncRouterMap = [
             render (c) { return c('router-view') }
           },
           children: [
+          {
+            icon:'grid',
+            path:'grid',
+            name:'grid',
+            component:Grid
+          },
             {
               path: 'buttons',
               name: 'Buttons',
