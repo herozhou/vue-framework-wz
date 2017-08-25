@@ -9,7 +9,6 @@ import Dashboard from '@/views/Dashboard'
 import Charts from '@/views/Charts'
 
 // Views - Components
-import Grid from '@/views/components/Grid'
 
 import Buttons from '@/views/components/Buttons'
 import HoverButtons from '@/views/components/HoverButtons'
@@ -113,12 +112,6 @@ export const asyncRouterMap = [
             render (c) { return c('router-view') }
           },
           children: [
-          {
-            icon:'grid',
-            path:'grid',
-            name:'grid',
-            component:Grid
-          },
             {
               path: 'buttons',
               name: 'Buttons',
