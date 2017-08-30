@@ -17,7 +17,7 @@ import HoverButtons from '@/views/components/HoverButtons'
 import Table from '@/views/Table'
 import TableDetail from '@/views/TableDetail'
 import JsonTree from '@/views/JsonTree'
-
+import wz from '@/views/wz'
 
 // Views - Pages
 import Page404 from '@/views/pages/Page404'
@@ -154,7 +154,12 @@ export const asyncRouterMap = [
             hidden:true,
           component: TableDetail
         },
-    
+         {
+          path: '/wz',
+          name: 'wz',
+          icon:"social-html5",
+          component: wz
+        },
         
        
           ]
