@@ -78,7 +78,6 @@ export default new Router({
 });
 
 export const asyncRouterMap = [
-//     redirect: '/permission/index',
 //     name: '权限测试',
 //     icon: 'quanxian',
 //     meta: { role: ['admin'] },
