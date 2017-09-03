@@ -159,7 +159,6 @@ export const asyncRouterMap = [
           name: 'wz',
           icon:"social-html5",
           component: wz,
-           meta: { role: ['admin'] }
         },
         
        
