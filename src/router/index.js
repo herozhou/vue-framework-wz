@@ -158,7 +158,7 @@ export const asyncRouterMap = [
           path: '/wz',
           name: 'wz',
           icon:"social-html5",
-          component: wz,
+          component: wz
         },
         
        
