@@ -78,7 +78,6 @@ export default new Router({
 });
 
 export const asyncRouterMap = [
-//   {
 //     path: '/permission',
 //     component: Layout,
 //     redirect: '/permission/index',
