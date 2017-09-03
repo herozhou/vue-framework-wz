@@ -160,7 +160,6 @@ export const asyncRouterMap = [
           icon:"social-html5",
           component: wz
         },
-       
           ]
     },
     { path: '*', redirect: '/pages/404', hidden: true }
