@@ -94,11 +94,7 @@
             <img src="static/img/project_demo/recongize_2.png">
             </div>
         </Carousel-item>
-        <Carousel-item>
-            <div class="demo-carousel">
-            <img src="static/img/project_demo/recongize_1.png">
-            </div>
-        </Carousel-item>
+       
        
     </Carousel>
         </Col>
