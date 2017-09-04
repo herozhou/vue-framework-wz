@@ -96,7 +96,7 @@
         </Carousel-item>
         <Carousel-item>
             <div class="demo-carousel">
-            <img src="static/img/project_demo/recognize_1.png">
+            <img src="static/img/project_demo/recongize_1.png">
             </div>
         </Carousel-item>
        
