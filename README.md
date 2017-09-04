@@ -110,7 +110,7 @@
 
 
 
-**[更多demo](http://panjiachen.github.io/vue-element-admin)**
+**[更多demo](http://herozhou.coding.me/vue-framework-wz/#/dashboard)**
 
 ## 关于作者
 
