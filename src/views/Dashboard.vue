@@ -72,6 +72,7 @@
 
 
 
+
      <Row class="row-margin-top">
         <Col :md="4" :sm="12" :lg="4">
           <h5>Yi+ 人脸识别 </h5>
@@ -80,7 +81,6 @@
             <p><a href="http://faceattr.dressplus.cn/">立即访问</a></p>
 
         </Col>
-
         <Col :md="8" :sm="12" :lg="8"> 
           
              <Carousel autoplay v-model="value2" :autoplay-speed="speed">
@@ -105,6 +105,43 @@
     </Row>
 
 
+     <Row class="row-margin-top">
+        <Col :md="4" :sm="12" :lg="4">
+          <h5>Yi+ 边看边买 </h5>
+            <p>
+            基于WZ框架开发出的边看边买推荐系统
+            </p>
+            <p><a href="recommand-demo.dressplus.cn">立即访问</a></p>
+
+        </Col>
+        <Col :md="8" :sm="12" :lg="8"> 
+          
+             <Carousel autoplay v-model="value3" :autoplay-speed="speed">
+        <Carousel-item>
+            <div class="demo-carousel">
+            <img src="static/img/project_demo/recommand_1.png">
+            </div>
+        </Carousel-item>
+        <Carousel-item>
+            <div class="demo-carousel">
+            <img src="static/img/project_demo/recommand_2.png">
+            </div>
+        </Carousel-item>
+        <Carousel-item>
+            <div class="demo-carousel">
+            <img src="static/img/project_demo/recommand_3.png">
+            </div>
+        </Carousel-item>
+        <Carousel-item>
+            <div class="demo-carousel">
+            <img src="static/img/project_demo/recommand_4.png">
+            </div>
+        </Carousel-item>
+       
+    </Carousel>
+        </Col>
+    </Row>
+
 
 
   </div>
@@ -118,6 +155,7 @@ export default {
             return {
                 value1: 0,
                 value2: 0,
+                value3: 0,
 
                 speed:10000,
             }
