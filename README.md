@@ -132,3 +132,4 @@
 
 * [iView](http://mouapp.com/) 
 * [jquery](http://jquery.com)
+* [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)
