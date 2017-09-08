@@ -123,7 +123,6 @@
     Grade:"Junior"
   }
   //有任何问题请联系我
-  //大三学生求招聘
 ```
 
 
@@ -134,3 +133,6 @@
 * [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)
 * [jquery](http://jquery.com)
 
+## License
+
+MIT
