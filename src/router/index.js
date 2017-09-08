@@ -78,7 +78,6 @@ export default new Router({
 });
 
 export const asyncRouterMap = [
-//     noDropdown: true,
 //     children: [{ path: 'index', component: Permission, name: '权限测试页', meta: { role: ['admin'] } }]
 //   },
 
