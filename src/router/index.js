@@ -78,7 +78,6 @@ export default new Router({
 });
 
 export const asyncRouterMap = [
-//   },
 
  {
       path: '/',
