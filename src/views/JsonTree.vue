@@ -2,7 +2,7 @@
   <div class="animated fadeIn">
 
           <Row>
-        <Col :md="6" >
+        <Col  :xs="24" :sm="24" :md="12" :lg="12" >
            
            <div style="" class="doc-header">
 
@@ -39,7 +39,7 @@
         </Col>
 
 
-        <Col :md="6">
+        <Col :xs="24" :sm="24" :md="12" :lg="12">
            
 <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #062873; font-weight: bold">&lt;template&gt;</span>
 
@@ -139,6 +139,28 @@ export default {
 .next_btn1:hover{
         border:1px solid #379edf;
 }
+
+ .doc-header{
+        width:100%;border-bottom:1.5px dashed rgb(6, 40, 115);
+        padding: 5px;
+    }
+    .doc-content{
+        margin-bottom:20px;
+        padding: 5px;
+        line-height: 20px;
+    }
+    .doc-content p{
+      margin-bottom: 5px;
+    }
+    .showallcode{
+            height: 100px;
+    }
+    .hidecode{
+            height: 100%;
+    }
+    .highlight{
+         transition:1000ms ease all;
+    }
 
 </style>
 

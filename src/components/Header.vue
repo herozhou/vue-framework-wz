@@ -104,5 +104,6 @@ export default {
   .dropdown-itemp{
     text-align: left;
     font-size: 15px;
+    padding: 10px;
   }
 </style>

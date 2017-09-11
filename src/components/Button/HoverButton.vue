@@ -50,7 +50,7 @@
                             [`${hoverClass}-${this.type}-${this.shap}`]:!!this.type&&!!this.shap&&this.type!=='lean',
                             [`${hoverClass}-${this.type}`]:!!this.type&&(this.type==='lean'||this.type==='arrow'||this.type==='change'),
                             [`${hoverClass}-${this.type}`+" "+`${hoverClass}-${this.type}-${this.shap}`] : !!this.type&&oneOf(this.type,['arrow','change']),
-                            ['wz-icon wz-icon-'+`${this.icon}`]:!!this.icon,
+                            ['ivu-icon ivu-icon-'+`${this.icon}`]:!!this.icon,
 
                         }
                     ]

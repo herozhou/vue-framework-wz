@@ -281,7 +281,7 @@ html {
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 0.875rem;
+  font-size: 0.875rem !important;
   font-weight: normal;
   line-height: 1.5;
   color: #263238;
@@ -5369,7 +5369,7 @@ base-chart.chart {
     background-image: url("../img/logo.png");
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 70px auto;
+    background-size: 150px auto;
     border-bottom: 1px solid #cfd8dc; }
   .app-header.navbar .navbar-nav {
     flex-direction: row;
@@ -5557,8 +5557,8 @@ base-chart.chart {
           width: 0.875rem;
           height: 0.875rem;
           padding: 0;
-          font-size: 0.875rem;
-          line-height: 0.65625rem;
+          font-size: 1.875rem;
+          line-height: 0.85625rem;
           text-align: center;
           content: "\2039";
           transition: .3s; }
@@ -6063,3 +6063,12 @@ hr.transparent {
     border-right-color: #f86c6b; }
   *[dir="rtl"] .callout-success {
     border-right-color: #4dbd74; }
+
+
+
+    .ivu-notice{
+      top:65px !important;
+    }
+    .ivu-message{
+      top:65px !important;
+    }

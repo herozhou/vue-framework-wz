@@ -1,77 +1,35 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 const _import = require('./_import_' + process.env.NODE_ENV);
-// in development env not use Lazy Loading,because Lazy Loading large page will cause webpack hot update too slow.so only in production use Lazy Loading
 import Full from '@/containers/Full'
-
-// Views
-import Dashboard from '@/views/Dashboard'
-import Charts from '@/views/Charts'
-
-// Views - Components
-
 import Buttons from '@/views/components/Buttons'
-import HoverButtons from '@/views/components/HoverButtons'
-
-// Views - Views
-import Table from '@/views/Table'
-import TableDetail from '@/views/TableDetail'
-import JsonTree from '@/views/JsonTree'
-import wz from '@/views/wz'
 
 // Views - Pages
-import Page404 from '@/views/pages/Page404'
-import Page500 from '@/views/pages/Page500'
+import Page404 from '@/views/errorPages/Page404'
+import Page500 from '@/views/errorPages/Page500'
 
 
 /* login */
 const Login = _import('login/index');
-
-/* dashboard */
-/* permission */
-// const Permission = _import('permission/index');
-
-
 Vue.use(Router);
-
- /**
-  * icon : the icon show in the sidebar
-  * hidden : if hidden:true will not show in the sidebar
-  * redirect : if redirect:noredirect will not redirct in the levelbar
-  * noDropdown : if noDropdown:true will not has submenu
-  * meta : { role: ['admin'] }  will control the page role
-  **/
 
 export const constantRouterMap = [
     { path: '/login', component: Login, hidden: true },
-    {
-          path: '/pages',
-          redirect: '/pages/p404',
-          name: 'Pages',
+    {path: '/pages',redirect: '/pages/p404', name: 'Pages',
           component: {
             render (c) { return c('router-view') }
               // Full,
           },
-          children: [
-            {
-              path: '404',
-              name: 'Page404',
-              component: Page404
-            },
-            {
-              path: '500',
-              name: 'Page500',
-              component: Page500
-            },
-          ]
-        }
+          children: [{path: '404',  name: 'Page404', component: _import('errorPages/Page404') },
+                     {path: '500',name: 'Page500',component: _import('errorPages/Page404')},
+                    ]
+    }
 
 
 ]
 
 export default new Router({
-  // mode: 'history', //后端支持可开
-  mode: 'hash', // Demo is living in GitHub.io, so required!
+  mode: 'hash', 
   linkActiveClass: 'open active',
   scrollBehavior: () => ({ y: 0 }),
   routes: constantRouterMap
@@ -80,78 +38,55 @@ export default new Router({
 export const asyncRouterMap = [
 
  {
-      path: '/',
-      redirect: '/dashboard',
-      name: '首页',
-      component: Full,
-      hidden:false,
-      children: [
-       {
-          path: '/dashboard',
-          name: '介绍',
-          icon:'speedometer',
-          component: Dashboard
-        },
-       {
-          path: '/components',
-          name: '组件',
-      redirect: '/components/buttons',
+    path: '/',
+    redirect: '/dashboard',
+    name: '首页',
+    component: Full,
+    hidden:false,
+    children: [
 
-          icon:'bookmark',
-          component: {
-            render (c) { return c('router-view') }
-          },
-          children: [
-            {
-              path: 'buttons',
-              name: '按钮',
-              icon:'social-youtube',
-              component: Buttons,
-              hidden:false,
+     {path: '/dashboard',name: '介绍',icon:'speedometer',component: _import('Dashboard')},
+     {path: '/components',name: '组件',redirect: '/components/buttons',icon:'bookmark',
+        component: {render (c) { return c('router-view') }},
+        children: [ {path: 'buttons',name: '按钮',icon:'social-youtube',component: _import('components/Buttons'), hidden:false, },
+                    {path: 'hoverbuttons',name: '悬停特效按钮',icon:'wand',component: _import('components/HoverButtons')}
+                  ]
+      },
+      // {
+      //     path: '/components',
+      //     name: '组件',
 
-            },
-            {
-              path: 'hoverbuttons',
-              name: '悬停特效按钮',
-              icon:'wand',
-              component: HoverButtons
-            }
-          ]
-        },
-       
-        {
-          path: '/charts',
-          name: '图标',
-          icon:'pie-graph',
-          component: Charts,
-        },
-         {
-          path: '/table',
-          name: '表格',
-          icon:'ios-paper',
-          component: Table,
-          meta: { role: ['admin'] }
-        },
-         {
-          path: '/jsontree',
-          name: 'JSON视图',
-          icon:'merge',
-          component: JsonTree
-        },
-          {
-          path: '/tabledetail/:id',
-          name: 'TableDetail',
-            hidden:true,
-          component: TableDetail
-        },
-         {
-          path: '/wz',
-          name: 'wz',
-          icon:"social-html5",
-          component: wz
-        },
-          ]
-    },
-    { path: '*', redirect: '/pages/404', hidden: true }
+      //     icon:'bookmark',
+      //     component: {
+      //       render (c) { return c('router-view') }
+      //     },
+      //     children: [
+      //       {
+      //         path: '/buttons',
+      //         name: '按钮',
+      //         icon:'social-youtube',
+      //         component: Buttons,
+      //         hidden:false
+
+      //       },
+      //       {
+      //         path: '/hoverbuttons',
+      //         name: '悬停特效按钮',
+      //         icon:'wand',
+      //         component: Buttons,
+      //          hidden:false
+      //       }
+      //     ]
+      //   },
+      {path: '/charts',name: '图表',icon:'pie-graph',component: _import('Charts')},
+      {path: '/table', name: '表格',icon:'ios-paper',component: _import('Table'),meta: { role: ['admin'] }},
+      {path: '/jsontree', name: 'JSON视图',icon:'merge',component: _import('JsonTree')},
+      {path: '/tabledetail/:id',name: 'TableDetail', hidden:true, component: _import('TableDetail')},
+      {path: '/tinymce',name: 'Tinymce编辑器',icon:"android-document",component: _import('Tinymce')},
+      {path: '/markdown',name: 'Markdown',icon:"android-list",component: _import('Markdown')},
+      
+    ]
+  },
+  { path: '*', redirect: '/pages/404', hidden: true }
   
 ];

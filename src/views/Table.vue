@@ -1,49 +1,8 @@
 <template>
   <div class="animated fadeIn">
 
-
-<Row>
-  <Col :md="12">
-
-
-      <table class="table">
-          <caption>Bootstap的表格</caption>
-           <thead>
-              <tr>
-                 <th>视频名称</th>
-                 <th>上传时间</th>
-                     
-                 <th>时长</th>
-                  <th>大小</th>
-                    <th>状态</th>
-                      <th>操作</th>
-              </tr>
-           </thead>
-           <tbody>
-              <tr>
-                 <td>p.mp4  </td>
-                 <td>2017-08-10 17:03:54</td>
-                 <td>11s </td>
-                 <td>1732410  </td>
-                 <td>正在处理</td>
-                  <td>查看</td>
-              </tr>
-              <tr>
-                 <td>p.mp4  </td>
-                 <td>2017-08-10 17:03:54</td>
-                 <td>11s </td>
-                 <td>1732410  </td>
-                 <td>正在处理</td>
-                  <td>查看</td>
-              </tr>
-           </tbody>
-        </table>
-
-
-  </Col>
-</Row>
           <Row>
-        <Col :md="12" >
+        <Col :md="24" >
            
 
 
@@ -51,7 +10,7 @@
 <div >
 
 
-    <!--     <div id="container" style="margin-bottom:10px;">
+        <div id="container" style="margin-bottom:10px;">
 
 
    <Button type="primary" size="large"  icon="ios-cloud-upload-outline" id='pickfiles' @click="qiniu_upload" style="padding-bottom:5px;">上传文件</Button>
@@ -62,7 +21,7 @@
                 <span v-if="progresstatus==='wrong'">上传失败</span>
                 <span style="position:absolute;left:50%;top:-5px;" v-if="progresscount!==0&&progresscount!=100">{{progressspeed}}</span>
               </Progress>
-        </div> -->
+        </div>
            
             <div style="position:relative;">
               

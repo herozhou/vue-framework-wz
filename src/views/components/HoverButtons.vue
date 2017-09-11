@@ -2,45 +2,7 @@
   <div class="animated fadeIn">
 
 <Row>
-        <Col :md="6" >
-           
-           <div style="" class="doc-header">
-
-          <Button type="primary"   hover="hover">Primary</Button>
-            <Button type="info"      hover="hover">信息按钮</Button>
-            <Button type="success"   hover="hover">成功按钮</Button>
-            <Button type="warning"   hover="hover">警告按钮</Button>
-            <Button type="error"     hover="hover">错误按钮</Button>
-
-            </div>
-            <div style="" class="doc-content">
-                <h5>基础悬停按钮</h5>
-
-        <p>通过在基础按钮上添加hover属性即可拥有悬浮样式</p>
-            </div>
-             
-        </Col>
-
-
-        <Col :md="6">
-         <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"> 
-            <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;primary&quot;</span>   <span style="color: #4070a0">hover=&quot;hover&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Primary<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-            <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;info&quot;</span>      <span style="color: #4070a0">hover=&quot;hover&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>信息按钮<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-            <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;success&quot;</span>   <span style="color: #4070a0">hover=&quot;hover&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>成功按钮<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-            <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;warning&quot;</span>   <span style="color: #4070a0">hover=&quot;hover&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>警告按钮<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-            <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;error&quot;</span>     <span style="color: #4070a0">hover=&quot;hover&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>错误按钮<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-</pre></div>
-
-
-        </Col>
-
-
-
-    </Row> 
-
-
-<Row>
-        <Col :md="6" >
+        <Col :xs="24" :sm="24" :md="12" :lg="12" >
            
            <div style="" class="doc-header">
  <!-- <div class="hovercontainer">   -->
@@ -69,7 +31,7 @@
         </Col>
 
 
-        <Col :md="6">
+        <Col :xs="24" :sm="24" :md="12" :lg="12">
 <div class="highlight" style="background: #f0f0f0">
           <pre style="line-height: 125%"> 
         <span style="color: #062873; font-weight: bold">&lt;p</span> <span style="color: #4070a0">style=&quot;z-index:1;position:relative&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>
@@ -85,7 +47,7 @@
         </Col>
 </Row> 
 <Row>
-        <Col :md="6" >
+        <Col :xs="24" :sm="24" :md="12" :lg="12" >
            
            <div style="" class="doc-header">
 
@@ -108,7 +70,7 @@
         </Col>
 
 
-        <Col :md="6">
+        <Col :xs="24" :sm="24" :md="12" :lg="12">
         <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">
        <span style="color: #062873; font-weight: bold">&lt;hover-button</span> <span style="color: #4070a0">type=&quot;arrow&quot;</span>  <span style="color: #4070a0">shap=&quot;right&quot;</span> <span style="color: #4070a0">icon=&quot;arrow-right-c&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Continue<span style="color: #062873; font-weight: bold">&lt;/hover-button&gt;</span>
        <span style="color: #062873; font-weight: bold">&lt;hover-button</span> <span style="color: #4070a0">type=&quot;arrow&quot;</span>  <span style="color: #4070a0">shap=&quot;left&quot;</span> <span style="color: #4070a0">icon=&quot;arrow-left-c&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Return<span style="color: #062873; font-weight: bold">&lt;/hover-button&gt;</span>
@@ -124,7 +86,7 @@
 
 
     <Row>
-        <Col :md="6" >
+        <Col :xs="24" :sm="24" :md="12" :lg="12" >
            
            <div style="" class="doc-header">
 
@@ -156,7 +118,7 @@
         </Col>
 
 
-        <Col :md="6">
+        <Col :xs="24" :sm="24" :md="12" :lg="12">
          <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"> 
         <span style="color: #062873; font-weight: bold">&lt;hover-button</span> <span style="color: #4070a0">type=&quot;change&quot;</span>  <span style="color: #4070a0">shap=&quot;top&quot;</span>  <span style="color: #4070a0">icon=&quot;ios-cart&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Add to cart<span style="color: #062873; font-weight: bold">&lt;/hover-button&gt;</span>
         <span style="color: #062873; font-weight: bold">&lt;hover-button</span> <span style="color: #4070a0">type=&quot;change&quot;</span>  <span style="color: #4070a0">shap=&quot;top&quot;</span>  <span style="color: #4070a0">icon=&quot;android-delete&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Delete<span style="color: #062873; font-weight: bold">&lt;/hover-button&gt;</span>
@@ -176,7 +138,7 @@
 
 
        <Row>
-        <Col :md="6" >
+        <Col :xs="24" :sm="24" :md="12" :lg="12" >
            
            <div style="" class="doc-header">
 
@@ -207,7 +169,7 @@
         </Col>
 
 
-        <Col :md="6">
+        <Col :xs="24" :sm="24" :md="12" :lg="12">
     <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">
                  <span style="color: #062873; font-weight: bold">&lt;cool-hover-button</span> <span style="color: #4070a0">type=&quot;swipe&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Settings<span style="color: #062873; font-weight: bold">&lt;/cool-hover-button&gt;</span>
                  <span style="color: #062873; font-weight: bold">&lt;cool-hover-button</span> <span style="color: #4070a0">type=&quot;swipe&quot;</span> <span style="color: #4070a0">shap=&quot;out&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span> Diagonal Swipe<span style="color: #062873; font-weight: bold">&lt;/cool-hover-button&gt;</span>
@@ -238,8 +200,12 @@
 </template>
 
 <script>
+import HoverButton from '@/components/Button/HoverButton';
+import CoolHoverButton from '@/components/Button/CoolHoverButton';
+
 export default {
-  name: 'social-buttons'
+  name: 'social-buttons',
+   components: {HoverButton,CoolHoverButton} ,
 }
 </script>
 
@@ -247,4 +213,26 @@ export default {
   .btn {
      margin-bottom: 4px;
   }
+   .doc-header{
+        width:100%;border-bottom:1.5px dashed rgb(6, 40, 115);
+        padding: 5px;
+    }
+    .doc-content{
+        margin-bottom:20px;
+        padding: 5px;
+        line-height: 20px;
+    }
+    .doc-content p{
+      margin-bottom: 5px;
+    }
+    .showallcode{
+            height: 100px;
+    }
+    .hidecode{
+            height: 100%;
+    }
+    .highlight{
+         transition:1000ms ease all;
+    }
+
 </style>

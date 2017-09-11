@@ -17,6 +17,7 @@ module.exports = {
         filename: '[name].js',
         publicPath: process.env.NODE_ENV !== 'development' ?  config.build.assetsPublicPath: config.dev.assetsPublicPath
     },
+   
     resolve: {
         extensions: ['.js', '.vue', '.json'],
         alias: {
@@ -33,7 +34,8 @@ module.exports = {
             'router': path.resolve(__dirname, '../src/router'),
             'mock': path.resolve(__dirname, '../src/mock'),
             'vendor': path.resolve(__dirname, '../src/vendor'),
-            'static': path.resolve(__dirname, '../static')
+            'static': path.resolve(__dirname, '../static'),
+
         }
     },
     externals: {

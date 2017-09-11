@@ -2,7 +2,7 @@
   <div class="animated fadeIn">
 
           <Row>
-        <Col :md="6" >
+        <Col  :xs="24" :sm="24" :md="12" :lg="12" >
            
            <div style="" class="doc-header">
 
@@ -28,7 +28,7 @@
         </Col>
 
 
-        <Col :md="6">
+        <Col  :xs="24" :sm="24" :md="12" :lg="12">
            
        <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #062873; font-weight: bold">&lt;template&gt;</span>
     <span style="color: #062873; font-weight: bold">&lt;Button&gt;</span>Default<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
@@ -58,7 +58,7 @@
     </Row> 
 
  <Row>
-        <Col :md="6" >
+        <Col  :xs="24" :sm="24" :md="12" :lg="12" >
            
            <div style="" class="doc-header">
 
@@ -84,7 +84,7 @@
         </Col>
 
 
-        <Col :md="6">
+        <Col  :xs="24" :sm="24" :md="12" :lg="12">
            
   <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #062873; font-weight: bold">&lt;template&gt;</span>
     <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;primary&quot;</span> <span style="color: #4070a0">shape=&quot;circle&quot;</span> <span style="color: #4070a0">icon=&quot;ios-search&quot;</span><span style="color: #062873; font-weight: bold">&gt;&lt;/Button&gt;</span>
@@ -113,7 +113,7 @@
 
 
      <Row>
-        <Col :md="6" >
+        <Col  :xs="24" :sm="24" :md="12" :lg="12" >
            
            <div style="" class="doc-header">
 
@@ -136,7 +136,7 @@
         </Col>
 
 
-        <Col :md="6">
+        <Col  :xs="24" :sm="24" :md="12" :lg="12">
            
  <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #062873; font-weight: bold">&lt;template&gt;</span>
     <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;primary&quot;</span> <span style="color: #4070a0">size=&quot;large&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Large<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
@@ -164,7 +164,7 @@
 
 
       <Row>
-        <Col :md="6" >
+        <Col  :xs="24" :sm="24" :md="12" :lg="12" >
            
            <div style="" class="doc-header">
 
@@ -182,7 +182,7 @@
         </Col>
 
 
-        <Col :md="6">
+        <Col  :xs="24" :sm="24" :md="12" :lg="12">
            
 <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #062873; font-weight: bold">&lt;template&gt;</span>
     <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;success&quot;</span> <span style="color:#4070a0">long</span><span style="color: #062873; font-weight: bold">&gt;</span>确认提交<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
@@ -206,7 +206,7 @@
 
 
      <Row>
-        <Col :md="6" >
+        <Col  :xs="24" :sm="24" :md="12" :lg="12" >
            
            <div style="" class="doc-header">
 
@@ -235,7 +235,7 @@
         </Col>
 
 
-        <Col :md="6">
+        <Col  :xs="24" :sm="24" :md="12" :lg="12">
            
 <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #062873; font-weight: bold">&lt;template&gt;</span>
     <span style="color: #062873; font-weight: bold">&lt;Button&gt;</span>Default<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
@@ -270,7 +270,7 @@
 
 
      <Row>
-        <Col :md="6" >
+        <Col  :xs="24" :sm="24" :md="12" :lg="12" >
            
            <div style="" class="doc-header">
 
@@ -293,7 +293,7 @@
         </Col>
 
 
-        <Col :md="6">
+        <Col  :xs="24" :sm="24" :md="12" :lg="12">
            
 <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #062873; font-weight: bold">&lt;template&gt;</span>
     <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;primary&quot;</span> <span style="color:#4070a0">loading</span><span style="color: #062873; font-weight: bold">&gt;</span>Loading...<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
@@ -336,7 +336,7 @@
 
 
     <Row>
-        <Col :md="6" >
+        <Col  :xs="24" :sm="24" :md="12" :lg="12" >
            
            <div style="" class="doc-header">
  <h4>基本</h4>
@@ -442,7 +442,7 @@
         </Col>
 
 
-        <Col :md="6">
+        <Col  :xs="24" :sm="24" :md="12" :lg="12">
            
 <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #062873; font-weight: bold">&lt;template&gt;</span>
     <span style="color: #062873; font-weight: bold">&lt;h4&gt;</span>基本<span style="color: #062873; font-weight: bold">&lt;/h4&gt;</span>
@@ -581,11 +581,32 @@ export default {
 </script>
 
 
-
-<style type="text/css">
-
+<style scoped lang="css">
+  .btn {
+     margin-bottom: 4px;
+  }
+   .doc-header{
+        width:100%;border-bottom:1.5px dashed rgb(6, 40, 115);
+        padding: 5px;
+    }
+    .doc-content{
+        margin-bottom:20px;
+        padding: 5px;
+        line-height: 20px;
+    }
+    .doc-content p{
+      margin-bottom: 5px;
+    }
+    .showallcode{
+            height: 100px;
+    }
+    .hidecode{
+            height: 100%;
+    }
+    .highlight{
+         transition:1000ms ease all;
+    }
 
 </style>
-
 
 

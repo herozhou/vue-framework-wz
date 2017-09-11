@@ -1,11 +1,11 @@
 <template>
   <div class="animated fadeIn">
-  <h3 class="text-center">采用了基于Chart.js的vue-chartjs</h3>
-  <p class="text-center">文档看这里 <a href="http://vue-chartjs.org/#/">vue-chartjs</a> </p>
-  <p class="text-center">更多炫酷demo看这里 <a href="http://demo.vue-chartjs.org/">vue-chartjs</a> </p>
+  <h3 class="intro-head">采用了基于Chart.js的vue-chartjs</h3>
+  <p class="intro-head">文档看这里 <a href="http://vue-chartjs.org/#/">vue-chartjs</a> </p>
+  <p class="intro-head">更多炫酷demo看这里 <a href="http://demo.vue-chartjs.org/">vue-chartjs</a> </p>
 
 <Row>
-  <Col :md="12" :sm="12">
+  <Col :md="24" :sm="24" :lg="24" :xs="24">
   <div style=" background: #212733;
       border-radius: 15px;
       box-shadow: 0px 2px 15px rgba(25, 25, 25, 0.27);
@@ -125,3 +125,11 @@ export default {
   }
 }
 </script>
+
+<style type="text/css" scoped>
+  .intro-head{
+    text-align: center;
+    margin: 10px;
+  }
+</style>
+
