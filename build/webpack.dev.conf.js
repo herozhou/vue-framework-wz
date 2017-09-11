@@ -20,9 +20,7 @@ module.exports = merge(baseWebpackConfig, {
     module: {
         rules: utils.styleLoaders({sourceMap: config.dev.cssSourceMap})
     },
-     devServer: {
-            contentBase:  path.resolve(__dirname, '../node_modules/vue-tinymce/node_modules/tinymce')
-    },
+    
     // cheap-source-map is faster for development
     devtool: '#cheap-source-map',
     cache: true,
