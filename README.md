@@ -132,7 +132,6 @@
 感谢以下的项目,排名不分先后
 
 * [iView](http://mouapp.com/) 
-* [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)
 * [jquery](http://jquery.com)
 
 ## License
