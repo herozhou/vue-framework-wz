@@ -2,7 +2,7 @@
   <div class="animated fadeIn">
 
           <Row>
-        <Col  :xs="24" :sm="24" :md="12" :lg="12" >
+        <Col  span="24">
            
            <div style="" class="doc-header">
 
@@ -27,38 +27,10 @@
              
         </Col>
 
-
-        <Col  :xs="24" :sm="24" :md="12" :lg="12">
-           
-       <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #062873; font-weight: bold">&lt;template&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button&gt;</span>Default<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;primary&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Primary<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;ghost&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Ghost<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;dashed&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Dashed<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;text&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Text<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;br&gt;&lt;br&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;info&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>信息按钮<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;success&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>成功按钮<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;warning&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>警告按钮<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;error&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>错误按钮<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-<span style="color: #062873; font-weight: bold">&lt;/template&gt;</span>
-<span style="color: #062873; font-weight: bold">&lt;script&gt;</span>
-    export default {
-        
-    }
-<span style="color: #062873; font-weight: bold">&lt;/script&gt;</span>
-
-</pre></div>
-
-
-        </Col>
-
-
-
     </Row> 
 
  <Row>
-        <Col  :xs="24" :sm="24" :md="12" :lg="12" >
+        <Col  span="24" >
            
            <div style="" class="doc-header">
 
@@ -82,38 +54,14 @@
             </div>
              
         </Col>
-
-
-        <Col  :xs="24" :sm="24" :md="12" :lg="12">
-           
-  <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #062873; font-weight: bold">&lt;template&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;primary&quot;</span> <span style="color: #4070a0">shape=&quot;circle&quot;</span> <span style="color: #4070a0">icon=&quot;ios-search&quot;</span><span style="color: #062873; font-weight: bold">&gt;&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;primary&quot;</span> <span style="color: #4070a0">icon=&quot;ios-search&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>搜索<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;primary&quot;</span> <span style="color: #4070a0">shape=&quot;circle&quot;</span> <span style="color: #4070a0">icon=&quot;ios-search&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>搜索<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;primary&quot;</span> <span style="color: #4070a0">shape=&quot;circle&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>圆角按钮<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;br&gt;&lt;br&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;ghost&quot;</span> <span style="color: #4070a0">shape=&quot;circle&quot;</span> <span style="color: #4070a0">icon=&quot;ios-search&quot;</span><span style="color: #062873; font-weight: bold">&gt;&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;ghost&quot;</span> <span style="color: #4070a0">icon=&quot;ios-search&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>搜索<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;ghost&quot;</span> <span style="color: #4070a0">shape=&quot;circle&quot;</span> <span style="color: #4070a0">icon=&quot;ios-search&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>搜索<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;ghost&quot;</span> <span style="color: #4070a0">shape=&quot;circle&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>圆角按钮<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-<span style="color: #062873; font-weight: bold">&lt;/template&gt;</span>
-<span style="color: #062873; font-weight: bold">&lt;script&gt;</span>
-    export default {
-        
-    }
-<span style="color: #062873; font-weight: bold">&lt;/script&gt;</span>
-</pre></div>
-
-
-        </Col>
-
+     
 
 
     </Row> 
 
 
      <Row>
-        <Col  :xs="24" :sm="24" :md="12" :lg="12" >
+        <Col  span="24" >
            
            <div style="" class="doc-header">
 
@@ -135,36 +83,12 @@
 
         </Col>
 
-
-        <Col  :xs="24" :sm="24" :md="12" :lg="12">
-           
- <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #062873; font-weight: bold">&lt;template&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;primary&quot;</span> <span style="color: #4070a0">size=&quot;large&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Large<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;primary&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Default<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;primary&quot;</span> <span style="color: #4070a0">size=&quot;small&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Small<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;br&gt;&lt;br&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;primary&quot;</span> <span style="color: #4070a0">shape=&quot;circle&quot;</span> <span style="color: #4070a0">size=&quot;large&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Large<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;primary&quot;</span> <span style="color: #4070a0">shape=&quot;circle&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Default<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;primary&quot;</span> <span style="color: #4070a0">shape=&quot;circle&quot;</span> <span style="color: #4070a0">size=&quot;small&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Small<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-<span style="color: #062873; font-weight: bold">&lt;/template&gt;</span>
-<span style="color: #062873; font-weight: bold">&lt;script&gt;</span>
-    export default {
-        
-    }
-<span style="color: #062873; font-weight: bold">&lt;/script&gt;</span>
-</pre></div>
-
-
-        </Col>
-
-
-
     </Row> 
 
 
 
       <Row>
-        <Col  :xs="24" :sm="24" :md="12" :lg="12" >
+        <Col  span="24">
            
            <div style="" class="doc-header">
 
@@ -182,31 +106,13 @@
         </Col>
 
 
-        <Col  :xs="24" :sm="24" :md="12" :lg="12">
-           
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #062873; font-weight: bold">&lt;template&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;success&quot;</span> <span style="color:#4070a0">long</span><span style="color: #062873; font-weight: bold">&gt;</span>确认提交<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;br&gt;&lt;br&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;error&quot;</span> <span style="color:#4070a0">long</span><span style="color: #062873; font-weight: bold">&gt;</span>确认删除<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-<span style="color: #062873; font-weight: bold">&lt;/template&gt;</span>
-<span style="color: #062873; font-weight: bold">&lt;script&gt;</span>
-    export default {
-        
-    }
-<span style="color: #062873; font-weight: bold">&lt;/script&gt;</span>
-</pre></div>
-
-
-        </Col>
-
-
 
     </Row> 
 
 
 
      <Row>
-        <Col  :xs="24" :sm="24" :md="12" :lg="12" >
+        <Col  span="24" >
            
            <div style="" class="doc-header">
 
@@ -235,42 +141,12 @@
         </Col>
 
 
-        <Col  :xs="24" :sm="24" :md="12" :lg="12">
-           
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #062873; font-weight: bold">&lt;template&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button&gt;</span>Default<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color:#4070a0">disabled</span><span style="color: #062873; font-weight: bold">&gt;</span>Default(Disabled)<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;br&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;primary&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Primary<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;primary&quot;</span> <span style="color:#4070a0">disabled</span><span style="color: #062873; font-weight: bold">&gt;</span>Primary(Disabled)<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;br&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;ghost&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Ghost<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;ghost&quot;</span> <span style="color:#4070a0">disabled</span><span style="color: #062873; font-weight: bold">&gt;</span>Ghost(Disabled)<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;br&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;dashed&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Dashed<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;dashed&quot;</span> <span style="color:#4070a0">disabled</span><span style="color: #062873; font-weight: bold">&gt;</span>Dashed(Disabled)<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;br&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;text&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Text<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;text&quot;</span> <span style="color:#4070a0">disabled</span><span style="color: #062873; font-weight: bold">&gt;</span>Text(Disabled)<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-<span style="color: #062873; font-weight: bold">&lt;/template&gt;</span>
-<span style="color: #062873; font-weight: bold">&lt;script&gt;</span>
-    export default {
-        
-    }
-<span style="color: #062873; font-weight: bold">&lt;/script&gt;</span>
-</pre></div>
-
-
-        </Col>
-
-
-
     </Row> 
 
 
 
      <Row>
-        <Col  :xs="24" :sm="24" :md="12" :lg="12" >
+        <Col  span="24" >
            
            <div style="" class="doc-header">
 
@@ -293,50 +169,13 @@
         </Col>
 
 
-        <Col  :xs="24" :sm="24" :md="12" :lg="12">
-           
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #062873; font-weight: bold">&lt;template&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;primary&quot;</span> <span style="color:#4070a0">loading</span><span style="color: #062873; font-weight: bold">&gt;</span>Loading...<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;primary&quot;</span> <span style="color: #4070a0">:loading=&quot;loading&quot;</span> <span style="color:#4070a0">@</span><span style="color: #4070a0">click=&quot;toLoading&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;span</span> <span style="color: #4070a0">v-if=&quot;!loading&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Click me!<span style="color: #062873; font-weight: bold">&lt;/span&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;span</span> <span style="color:#4070a0">v-else</span><span style="color: #062873; font-weight: bold">&gt;</span>Loading...<span style="color: #062873; font-weight: bold">&lt;/span&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;primary&quot;</span> <span style="color: #4070a0">:loading=&quot;loading2&quot;</span> <span style="color: #4070a0">icon=&quot;checkmark-round&quot;</span> <span style="color:#4070a0">@</span><span style="color: #4070a0">click=&quot;toLoading2&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;span</span> <span style="color: #4070a0">v-if=&quot;!loading2&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Click me!<span style="color: #062873; font-weight: bold">&lt;/span&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;span</span> <span style="color:#4070a0">v-else</span><span style="color: #062873; font-weight: bold">&gt;</span>Loading...<span style="color: #062873; font-weight: bold">&lt;/span&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-<span style="color: #062873; font-weight: bold">&lt;/template&gt;</span>
-<span style="color: #062873; font-weight: bold">&lt;script&gt;</span>
-    export default {
-        data () {
-            return {
-                loading: false,
-                loading2: false
-            }
-        },
-        methods: {
-            toLoading () {
-                this.loading = true;
-            },
-            toLoading2 () {
-                this.loading2 = true;
-            }
-        }
-    }
-<span style="color: #062873; font-weight: bold">&lt;/script&gt;</span>
-</pre></div>
-
-
-        </Col>
-
-
 
     </Row> 
 
 
 
     <Row>
-        <Col  :xs="24" :sm="24" :md="12" :lg="12" >
+        <Col  span="24" >
            
            <div style="" class="doc-header">
  <h4>基本</h4>
@@ -442,113 +281,6 @@
         </Col>
 
 
-        <Col  :xs="24" :sm="24" :md="12" :lg="12">
-           
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"><span style="color: #062873; font-weight: bold">&lt;template&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;h4&gt;</span>基本<span style="color: #062873; font-weight: bold">&lt;/h4&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;br&gt;&lt;br&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button-group&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button&gt;</span>取消<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;primary&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>确定<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;/Button-group&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button-group&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color:#4070a0">disabled</span><span style="color: #062873; font-weight: bold">&gt;</span>昨日<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color:#4070a0">disabled</span><span style="color: #062873; font-weight: bold">&gt;</span>今日<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color:#4070a0">disabled</span><span style="color: #062873; font-weight: bold">&gt;</span>明日<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;/Button-group&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button-group&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;primary&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>L<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button&gt;</span>M<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;ghost&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>M<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;dashed&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>R<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;/Button-group&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;br&gt;&lt;br&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;h4&gt;</span>配合图标<span style="color: #062873; font-weight: bold">&lt;/h4&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;br&gt;&lt;br&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button-group&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;primary&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>
-            <span style="color: #062873; font-weight: bold">&lt;Icon</span> <span style="color: #4070a0">type=&quot;chevron-left&quot;</span><span style="color: #062873; font-weight: bold">&gt;&lt;/Icon&gt;</span>
-            前进
-        <span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;primary&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>
-            后退
-            <span style="color: #062873; font-weight: bold">&lt;Icon</span> <span style="color: #4070a0">type=&quot;chevron-right&quot;</span><span style="color: #062873; font-weight: bold">&gt;&lt;/Icon&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;/Button-group&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button-group&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;primary&quot;</span> <span style="color: #4070a0">icon=&quot;ios-skipbackward&quot;</span><span style="color: #062873; font-weight: bold">&gt;&lt;/Button&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;primary&quot;</span> <span style="color: #4070a0">icon=&quot;ios-skipforward&quot;</span><span style="color: #062873; font-weight: bold">&gt;&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;/Button-group&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button-group&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;ghost&quot;</span> <span style="color: #4070a0">icon=&quot;ios-color-wand-outline&quot;</span><span style="color: #062873; font-weight: bold">&gt;&lt;/Button&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;ghost&quot;</span> <span style="color: #4070a0">icon=&quot;ios-sunny-outline&quot;</span><span style="color: #062873; font-weight: bold">&gt;&lt;/Button&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;ghost&quot;</span> <span style="color: #4070a0">icon=&quot;ios-crop&quot;</span><span style="color: #062873; font-weight: bold">&gt;&lt;/Button&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;ghost&quot;</span> <span style="color: #4070a0">icon=&quot;ios-color-filter-outline&quot;</span><span style="color: #062873; font-weight: bold">&gt;&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;/Button-group&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;br&gt;&lt;br&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;h4&gt;</span>圆角<span style="color: #062873; font-weight: bold">&lt;/h4&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;br&gt;&lt;br&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button-group</span> <span style="color: #4070a0">shape=&quot;circle&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;primary&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>
-            <span style="color: #062873; font-weight: bold">&lt;Icon</span> <span style="color: #4070a0">type=&quot;chevron-left&quot;</span><span style="color: #062873; font-weight: bold">&gt;&lt;/Icon&gt;</span>
-            前进
-        <span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;primary&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>
-            后退
-            <span style="color: #062873; font-weight: bold">&lt;Icon</span> <span style="color: #4070a0">type=&quot;chevron-right&quot;</span><span style="color: #062873; font-weight: bold">&gt;&lt;/Icon&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;/Button-group&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button-group</span> <span style="color: #4070a0">shape=&quot;circle&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;primary&quot;</span> <span style="color: #4070a0">icon=&quot;ios-skipbackward&quot;</span><span style="color: #062873; font-weight: bold">&gt;&lt;/Button&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;primary&quot;</span> <span style="color: #4070a0">icon=&quot;ios-skipforward&quot;</span><span style="color: #062873; font-weight: bold">&gt;&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;/Button-group&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button-group</span> <span style="color: #4070a0">shape=&quot;circle&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;ghost&quot;</span> <span style="color: #4070a0">icon=&quot;ios-color-wand-outline&quot;</span><span style="color: #062873; font-weight: bold">&gt;&lt;/Button&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;ghost&quot;</span> <span style="color: #4070a0">icon=&quot;ios-sunny-outline&quot;</span><span style="color: #062873; font-weight: bold">&gt;&lt;/Button&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;ghost&quot;</span> <span style="color: #4070a0">icon=&quot;ios-crop&quot;</span><span style="color: #062873; font-weight: bold">&gt;&lt;/Button&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;ghost&quot;</span> <span style="color: #4070a0">icon=&quot;ios-color-filter-outline&quot;</span><span style="color: #062873; font-weight: bold">&gt;&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;/Button-group&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;br&gt;&lt;br&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;h4&gt;</span>尺寸<span style="color: #062873; font-weight: bold">&lt;/h4&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;br&gt;&lt;br&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button-group</span> <span style="color: #4070a0">size=&quot;large&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;ghost&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Large<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;ghost&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Large<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;/Button-group&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button-group&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;ghost&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Default<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;ghost&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Default<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;/Button-group&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button-group</span> <span style="color: #4070a0">size=&quot;small&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;ghost&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Small<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;ghost&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Small<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;/Button-group&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;br&gt;&lt;br&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button-group</span> <span style="color: #4070a0">size=&quot;large&quot;</span> <span style="color: #4070a0">shape=&quot;circle&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;ghost&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Large<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;ghost&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Large<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;/Button-group&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button-group</span> <span style="color: #4070a0">shape=&quot;circle&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;ghost&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Default<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;ghost&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Default<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;/Button-group&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;Button-group</span> <span style="color: #4070a0">size=&quot;small&quot;</span> <span style="color: #4070a0">shape=&quot;circle&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;ghost&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Small<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;Button</span> <span style="color: #4070a0">type=&quot;ghost&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Small<span style="color: #062873; font-weight: bold">&lt;/Button&gt;</span>
-    <span style="color: #062873; font-weight: bold">&lt;/Button-group&gt;</span>
-<span style="color: #062873; font-weight: bold">&lt;/template&gt;</span>
-<span style="color: #062873; font-weight: bold">&lt;script&gt;</span>
-    export default {
-        
-    }
-<span style="color: #062873; font-weight: bold">&lt;/script&gt;</span>
-</pre></div>
-
-
-        </Col>
-
-
-
     </Row> 
         </div>
 
@@ -587,15 +319,30 @@ export default {
   }
    .doc-header{
         width:100%;border-bottom:1.5px dashed rgb(6, 40, 115);
-        padding: 5px;
+       padding-left: 5px;
+        padding-top: 5px;
+
+        padding-bottom: 30px;
+
     }
     .doc-content{
-        margin-bottom:20px;
+        margin-top:10px;
+
+        margin-bottom:50px;
         padding: 5px;
+
         line-height: 20px;
     }
+
     .doc-content p{
       margin-bottom: 5px;
+      margin-top: 5px;
+
+    }
+    .doc-content h5{
+      margin-bottom: 10px;
+      margin-top: 10px;
+
     }
     .showallcode{
             height: 100px;

@@ -1,10 +1,8 @@
 <template>
   <Row>
 
-<h3 class="intro-head">👍  <a href="https://github.com/hinesboy/mavonEditor" target="_blank">vue-echart</a> </h3>
-
   <Col :span="24">
-    <chart :options="option" style="width:100%"></chart>
+    <chart :options="option" class="echarts"></chart>
 
   </Col>
 
@@ -14,15 +12,11 @@
 <style scoped>
 .echarts {
   height: 500px;
+  width: 100%;
+  border-radius: 25px;
 }
-  .intro-head{
-    text-align: center;
-    margin: 10px;
-}
+
 </style>
-
-
-
 
 <script>
 var xData = function() {

@@ -2,10 +2,9 @@
   <div class="animated fadeIn">
 
 <Row>
-        <Col :xs="24" :sm="24" :md="12" :lg="12" >
+        <Col span="24" >
            
-           <div style="" class="doc-header">
- <!-- <div class="hovercontainer">   -->
+       <div style="" class="doc-header">
           <section class="color-1">
 
         <p style="z-index:1;position:relative">
@@ -30,24 +29,9 @@
              
         </Col>
 
-
-        <Col :xs="24" :sm="24" :md="12" :lg="12">
-<div class="highlight" style="background: #f0f0f0">
-          <pre style="line-height: 125%"> 
-        <span style="color: #062873; font-weight: bold">&lt;p</span> <span style="color: #4070a0">style=&quot;z-index:1;position:relative&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>
-          <span style="color: #062873; font-weight: bold">&lt;hover-button</span> <span style="color: #4070a0">type=&quot;height&quot;</span> <span style="color: #4070a0">shap=&quot;full&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span> HOVER ONE<span style="color: #062873; font-weight: bold">&lt;/hover-button&gt;</span>
-          <span style="color: #062873; font-weight: bold">&lt;hover-button</span> <span style="color: #4070a0">type=&quot;height&quot;</span> <span style="color: #4070a0">shap=&quot;half&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span> HOVER TWO<span style="color: #062873; font-weight: bold">&lt;/hover-button&gt;</span>
-          <span style="color: #062873; font-weight: bold">&lt;hover-button</span> <span style="color: #4070a0">type=&quot;width&quot;</span>  <span style="color: #4070a0">shap=&quot;full&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span> HOVER THREE<span style="color: #062873; font-weight: bold">&lt;/hover-button&gt;</span>
-          <span style="color: #062873; font-weight: bold">&lt;hover-button</span> <span style="color: #4070a0">type=&quot;width&quot;</span>  <span style="color: #4070a0">shap=&quot;half&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span> HOVER FOUR<span style="color: #062873; font-weight: bold">&lt;/hover-button&gt;</span> 
-          <span style="color: #062873; font-weight: bold">&lt;hover-button</span> <span style="color: #4070a0">type=&quot;lean&quot;</span>  <span style="color: #062873; font-weight: bold">&gt;</span> HOVER FIVE<span style="color: #062873; font-weight: bold">&lt;/hover-button&gt;</span>  
-        <span style="color: #062873; font-weight: bold">&lt;/p&gt;</span>
-</pre></div>
-
-
-        </Col>
 </Row> 
 <Row>
-        <Col :xs="24" :sm="24" :md="12" :lg="12" >
+        <Col span="24" >
            
            <div style="" class="doc-header">
 
@@ -70,23 +54,14 @@
         </Col>
 
 
-        <Col :xs="24" :sm="24" :md="12" :lg="12">
-        <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">
-       <span style="color: #062873; font-weight: bold">&lt;hover-button</span> <span style="color: #4070a0">type=&quot;arrow&quot;</span>  <span style="color: #4070a0">shap=&quot;right&quot;</span> <span style="color: #4070a0">icon=&quot;arrow-right-c&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Continue<span style="color: #062873; font-weight: bold">&lt;/hover-button&gt;</span>
-       <span style="color: #062873; font-weight: bold">&lt;hover-button</span> <span style="color: #4070a0">type=&quot;arrow&quot;</span>  <span style="color: #4070a0">shap=&quot;left&quot;</span> <span style="color: #4070a0">icon=&quot;arrow-left-c&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Return<span style="color: #062873; font-weight: bold">&lt;/hover-button&gt;</span>
-
-</pre></div>
-
-
-        </Col>
-
+     
 
 
     </Row> 
 
 
     <Row>
-        <Col :xs="24" :sm="24" :md="12" :lg="12" >
+        <Col span="24" >
            
            <div style="" class="doc-header">
 
@@ -118,19 +93,6 @@
         </Col>
 
 
-        <Col :xs="24" :sm="24" :md="12" :lg="12">
-         <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%"> 
-        <span style="color: #062873; font-weight: bold">&lt;hover-button</span> <span style="color: #4070a0">type=&quot;change&quot;</span>  <span style="color: #4070a0">shap=&quot;top&quot;</span>  <span style="color: #4070a0">icon=&quot;ios-cart&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Add to cart<span style="color: #062873; font-weight: bold">&lt;/hover-button&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;hover-button</span> <span style="color: #4070a0">type=&quot;change&quot;</span>  <span style="color: #4070a0">shap=&quot;top&quot;</span>  <span style="color: #4070a0">icon=&quot;android-delete&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Delete<span style="color: #062873; font-weight: bold">&lt;/hover-button&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;hover-button</span> <span style="color: #4070a0">type=&quot;change&quot;</span>  <span style="color: #4070a0">shap=&quot;top&quot;</span>  <span style="color: #4070a0">icon=&quot;android-settings&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Settings<span style="color: #062873; font-weight: bold">&lt;/hover-button&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;hover-button</span> <span style="color: #4070a0">type=&quot;change&quot;</span>  <span style="color: #4070a0">shap=&quot;left&quot;</span> <span style="color: #4070a0">icon=&quot;ios-cart&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Add to cart<span style="color: #062873; font-weight: bold">&lt;/hover-button&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;hover-button</span> <span style="color: #4070a0">type=&quot;change&quot;</span>  <span style="color: #4070a0">shap=&quot;left&quot;</span> <span style="color: #4070a0">icon=&quot;android-delete&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Delete<span style="color: #062873; font-weight: bold">&lt;/hover-button&gt;</span>
-        <span style="color: #062873; font-weight: bold">&lt;hover-button</span> <span style="color: #4070a0">type=&quot;change&quot;</span>  <span style="color: #4070a0">shap=&quot;left&quot;</span> <span style="color: #4070a0">icon=&quot;android-settings&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Settings<span style="color: #062873; font-weight: bold">&lt;/hover-button&gt;</span>
-
-</pre></div>
-
-
-        </Col>
 
 
 
@@ -138,9 +100,9 @@
 
 
        <Row>
-        <Col :xs="24" :sm="24" :md="12" :lg="12" >
+        <Col span="24" >
            
-           <div style="" class="doc-header">
+           <div style="" class="">
 
       <div class="wrap">
                  <cool-hover-button type="swipe">Settings</cool-hover-button>
@@ -168,28 +130,6 @@
              
         </Col>
 
-
-        <Col :xs="24" :sm="24" :md="12" :lg="12">
-    <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%">
-                 <span style="color: #062873; font-weight: bold">&lt;cool-hover-button</span> <span style="color: #4070a0">type=&quot;swipe&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Settings<span style="color: #062873; font-weight: bold">&lt;/cool-hover-button&gt;</span>
-                 <span style="color: #062873; font-weight: bold">&lt;cool-hover-button</span> <span style="color: #4070a0">type=&quot;swipe&quot;</span> <span style="color: #4070a0">shap=&quot;out&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span> Diagonal Swipe<span style="color: #062873; font-weight: bold">&lt;/cool-hover-button&gt;</span>
-                 <span style="color: #062873; font-weight: bold">&lt;cool-hover-button</span> <span style="color: #4070a0">type=&quot;swipe&quot;</span> <span style="color: #4070a0">shap=&quot;in&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Double Swipe<span style="color: #062873; font-weight: bold">&lt;/cool-hover-button&gt;</span>
-                 <span style="color: #062873; font-weight: bold">&lt;cool-hover-button</span> <span style="color: #4070a0">type=&quot;close&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Diagonal Close<span style="color: #062873; font-weight: bold">&lt;/cool-hover-button&gt;</span>
-                 <span style="color: #062873; font-weight: bold">&lt;cool-hover-button</span> <span style="color: #4070a0">type=&quot;zoningin&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Zoning In<span style="color: #062873; font-weight: bold">&lt;/cool-hover-button&gt;</span>
-                 <span style="color: #062873; font-weight: bold">&lt;cool-hover-button</span> <span style="color: #4070a0">type=&quot;corners&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>4 Corners<span style="color: #062873; font-weight: bold">&lt;/cool-hover-button&gt;</span>
-                 <span style="color: #062873; font-weight: bold">&lt;cool-hover-button</span> <span style="color: #4070a0">type=&quot;slice&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Slice<span style="color: #062873; font-weight: bold">&lt;/cool-hover-button&gt;</span>
-                 <span style="color: #062873; font-weight: bold">&lt;cool-hover-button</span> <span style="color: #4070a0">type=&quot;alternate&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Alternate<span style="color: #062873; font-weight: bold">&lt;/cool-hover-button&gt;</span>
-                 <span style="color: #062873; font-weight: bold">&lt;cool-hover-button</span> <span style="color: #4070a0">type=&quot;smoosh&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Smoosh<span style="color: #062873; font-weight: bold">&lt;/cool-hover-button&gt;</span>
-                 <span style="color: #062873; font-weight: bold">&lt;cool-hover-button</span> <span style="color: #4070a0">type=&quot;overlap&quot;</span> <span style="color: #4070a0">shap=&quot;vertical&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Vertical Overlap<span style="color: #062873; font-weight: bold">&lt;/cool-hover-button&gt;</span>
-                 <span style="color: #062873; font-weight: bold">&lt;cool-hover-button</span> <span style="color: #4070a0">type=&quot;overlap&quot;</span> <span style="color: #4070a0">shap=&quot;horizontal&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Horizontal Overlap<span style="color: #062873; font-weight: bold">&lt;/cool-hover-button&gt;</span>
-                 <span style="color: #062873; font-weight: bold">&lt;cool-hover-button</span> <span style="color: #4070a0">type=&quot;collision&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>Collision<span style="color: #062873; font-weight: bold">&lt;/cool-hover-button&gt;</span>
-</pre></div>
-
-
-        </Col>
-
-
-
     </Row> 
 
 
@@ -215,15 +155,27 @@ export default {
   }
    .doc-header{
         width:100%;border-bottom:1.5px dashed rgb(6, 40, 115);
-        padding: 5px;
+        padding-left: 5px;
+        padding-top: 5px;
+
+        padding-bottom: 30px;
     }
     .doc-content{
-        margin-bottom:20px;
+        margin-top:10px;
+
+        margin-bottom:50px;
         padding: 5px;
         line-height: 20px;
     }
-    .doc-content p{
+      .doc-content p{
       margin-bottom: 5px;
+      margin-top: 5px;
+
+    }
+    .doc-content h5{
+      margin-bottom: 10px;
+      margin-top: 10px;
+
     }
     .showallcode{
             height: 100px;
