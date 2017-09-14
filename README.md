@@ -10,7 +10,8 @@
 **本项目是后台管理框架，集成了权限管理、登录功能、UI组件、七牛上传等功能，建议直接使用。**
 > **注意**：便于前端调试，所以数据请求都是用了mockjs模拟。**在需要请求外部api时请移除mock文件**。
 
-## 功能
+## Features 特性
+
 - `工业化UI组件`（上手即用，无需自己造轮子）
 - `自适应布局`（完美适配大中小屏）
 - `登录/注销`
@@ -30,7 +31,7 @@
 - mock数据
 - 炫酷hover特效
 
-## 开发
+## Run 开发 
 ```bash
     # 克隆项目
     git clone https://github.com/herozhou/vue-framework-wz.git
@@ -45,7 +46,7 @@
 ```
 浏览器访问 http://localhost:9001
 
-## 发布
+## Build 发布
 ```bash
     # 发布测试环境 带webpack ananalyzer
     npm run build:sit-preview
@@ -54,7 +55,7 @@
     npm run build:prod
 ```
 
-## 目录结构
+## FileTree 目录结构
 ```shell
 
 ├── build                      // 构建相关  
@@ -90,7 +91,7 @@
 └── package.json               // package.json
 
 ```
-## 效果图
+## Preview 效果图
 
 #### 自适应布局
 
@@ -116,7 +117,7 @@
 
 **[更多demo](http://herozhou.coding.me/vue-framework-wz/#/dashboard)**
 
-## 关于作者
+## About me 关于作者
 
 ```javascript
   var herozhou = {
@@ -130,7 +131,7 @@
 ```
 
 
-## 感激
+## Thanks 感激
 感谢以下的项目,排名不分先后
 
 * [iView](http://mouapp.com/) 
