@@ -3,7 +3,7 @@
 
     
     <Row>
-      <Col :md="8" :sm="12" :lg="9">
+      <Col span="18">
       <div style="text-align:center">
           
   <video  controls height="300" v-if="is_video" id='video' preload="auto" src="http://otl6ypoog.bkt.clouddn.com/Objectstoarge/videos/2017-08-14/65055_WeChatSight38.mp4">
@@ -15,7 +15,7 @@
 
 
       </Col>
-       <Col :md="4" :sm="12" :lg="3">
+       <Col span="6">
             <Card>
                 <div v-if="is_video">
                        <p slot="title" >视频名称:{{video_name}}</p>
@@ -78,7 +78,7 @@
   
 
     <Row v-if="is_video">   
-        <Col :md="12" :sm="12">
+        <Col span="24">
  <Table border :columns="columns6" :data="video_result"  ></Table>
  <Page :total="this.video_result.length" show-total @on-change="setInitPage" style="text-align:right;margin-top:50px"></Page>
         </Col> 

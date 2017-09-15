@@ -95,23 +95,23 @@
 
 #### 自适应布局
 
-![自适应布局](https://github.com/herozhou/vue-framework-wz/blob/master/gifs/wz_index.gif)
+![自适应布局](https://coding.net/u/herozhou/p/vue-framework-wz/git/raw/coding-pages/gifs/index.gif)
 
 #### 丰富功能表格
 
-![丰富功能表格](https://github.com/herozhou/vue-framework-wz/blob/master/gifs/wz_table.gif)
+![丰富功能表格](https://coding.net/u/herozhou/p/vue-framework-wz/git/raw/coding-pages/gifs/table.gif)
 #### 炫酷登录界面
 
-![炫酷登录界面](https://github.com/herozhou/vue-framework-wz/blob/master/gifs/wz_login.gif)
+![炫酷登录界面](https://github.com/herozhou/vue-framework-wz/blob/master/gifs/login.gif)
 
-#### hover特效按钮
+#### 炫酷图表
 
-![hover特效按钮](https://github.com/herozhou/vue-framework-wz/blob/master/gifs/wz_hoverbutton.gif)
+![炫酷图表](https://github.com/herozhou/vue-framework-wz/blob/master/gifs/echart.gif)
 
 
-#### JSONTree
+#### 编辑器
 
-![丰富功能表格](https://github.com/herozhou/vue-framework-wz/blob/master/gifs/wz_jsontree.gif)
+![丰富功能表格](https://github.com/herozhou/vue-framework-wz/blob/master/gifs/editor.gif)
 
 
 

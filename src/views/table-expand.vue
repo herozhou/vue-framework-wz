@@ -3,6 +3,7 @@
     .expand-row{
         margin-bottom: 16px;
     }
+  
 </style>
 <template>
     <Steps :current="1"   v-if="row.task_status===0" >

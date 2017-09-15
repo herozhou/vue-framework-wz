@@ -564,10 +564,10 @@ export default {
 
 
 <style type="text/css">
-.wz-tag-dot{
+.ivu-tag-dot{
 	border: none!important;
 }
-tr.wz-table-row-hover td .wz-tag-dot{
+tr.ivu-table-row-hover td .ivu-tag-dot{
 	background-color: #ebf7ff!important;
 }
 
@@ -602,9 +602,13 @@ tr.wz-table-row-hover td .wz-tag-dot{
         }
 /*wz-btn wz-btn-primary wz-btn-small wz-btn-loading*/
 
-        .wz-btn.wz-btn-primary.wz-btn-small:not(.wz-btn-loading ){
+        .ivu-btn.ivu-btn-primary.ivu-btn-small:not(.ivu-btn-loading ){
           padding :2px 10px!important;
         }
+          td.ivu-table-expanded-cell{
+        background-color: white!important;
+
+    }
 </style>
 
 
