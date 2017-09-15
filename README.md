@@ -100,7 +100,6 @@
 #### 丰富功能表格
 
 ![丰富功能表格](https://coding.net/u/herozhou/p/vue-framework-wz/git/raw/coding-pages/gifs/table.gif)
-
 #### 炫酷登录界面
 
 ![炫酷登录界面](https://coding.net/u/herozhou/p/vue-framework-wz/git/raw/coding-pages/gifs/login.gif)
@@ -112,7 +111,7 @@
 
 #### 编辑器
 
-![丰富功能表格](https://coding.net/u/herozhou/p/vue-framework-wz/git/raw/coding-pages/gifs/editor.gif)
+![丰富功能表格](https://github.com/herozhou/vue-framework-wz/blob/master/gifs/editor.gif)
 
 
 
