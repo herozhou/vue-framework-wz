@@ -9,8 +9,8 @@ const log = console.log;
 */
 var program = require('commander');
               
-var install=require('./lib/install.js');
-var remove=require('./lib/remove.js');
+var install=require('./install.js');
+var remove=require('./remove.js');
 
 program
 .command('help')
