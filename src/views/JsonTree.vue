@@ -126,42 +126,7 @@ export default {
 
 
 
-<style type="text/css">
- .num{ height:100px;overflow:hidden;/* width:430px; */position:relative;}
-.min_pic{ padding-top:0px; /*width:500px;*/height:100px;margin:10px auto 0 auto}
-.num ul{ position:absolute; left:0; top:0; }
-.num ul li{ width:100px; height:100px; margin-right:5px; padding:1px;}
-.num ul li.on a img{ border:4px solid #59b1f5; padding:0;}
-.prev_btn1{ width:20px; text-align:center; height:100px; line-height: 100px; margin-right:15px; cursor:pointer; float:left;border: 1px solid #cacaca;}
-.next_btn1{  width:20px; text-align:center; height:100px; cursor:pointer; z-index: 10000;position: absolute;right: 0;line-height: 100px;top:32px;border: 1px solid #cacaca;}
-.prev_btn1:hover{
-        border:1px solid #379edf;
-}
-.next_btn1:hover{
-        border:1px solid #379edf;
-}
-
- .doc-header{
-        width:100%;border-bottom:1.5px dashed rgb(6, 40, 115);
-        padding: 5px;
-    }
-    .doc-content{
-        margin-bottom:20px;
-        padding: 5px;
-        line-height: 20px;
-    }
-    .doc-content p{
-      margin-bottom: 5px;
-    }
-    .showallcode{
-            height: 100px;
-    }
-    .hidecode{
-            height: 100%;
-    }
-    .highlight{
-         transition:1000ms ease all;
-    }
+<style type="text/css" >
 
 </style>
 

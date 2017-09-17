@@ -563,7 +563,7 @@ export default {
 </script>
 
 
-<style type="text/css">
+<style type="text/css" scoped>
 .ivu-tag-dot{
 	border: none!important;
 }
