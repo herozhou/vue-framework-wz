@@ -1,0 +1,131 @@
+#!/usr/bin/env node
+const chalk = require('chalk');
+const log = console.log;
+/*
+	wz help
+	wz rm Tinyme
+	wz install Tinyme
+
+*/
+var program = require('commander');
+              
+var install=require('./lib/install.js');
+var remove=require('./lib/remove.js');
+
+program
+.command('help')
+.description('显示使用帮助')
+.action(function (){
+  program.outputHelp();
+
+});
+
+
+// program
+//     //子命令
+//     .command('init')
+//     //说明
+//     .description('初始化项目')
+//     //注册一个callback函数
+//     .action(function( options){
+
+
+//               init();
+
+//     }).on('--help', function() {
+//         //这里输出子命令的帮助
+//         console.log('\n')
+//         console.log('  Examples:');
+//         console.log('    运行方法：');
+//         console.log('    $ wz init');
+//         console.log();
+//     });
+
+
+program
+    //子命令
+    .command('install')
+    //说明
+    .description('安装UI组件 -u <ui_name> |安装编辑插件 -p <plugin_name>')
+    //resume的子命令
+    .option("-u, --ui <ui_name>", "安装UI组件")
+
+    .option("-p, --plugin <plugin_name>", "安装编辑插件")
+
+    //注册一个callback函数
+    .action(function( options){
+        var ui_name = typeof options.ui=='string'?options.ui:""
+
+        var plugin_name = typeof options.plugin=='string'?options.plugin:""
+
+
+        if(ui_name){
+          log(chalk.green('正在安装UI组件',ui_name));
+          install('ui',ui_name);
+    	}else if(plugin_name){
+          log(chalk.green('正在安装插件',plugin_name));
+          install('plugin',plugin_name);
+    	}else {
+          log(chalk.yellow('请输入要安装的UI组件名称或者插件名称'));
+		 }
+
+    }).on('-h', function() {
+        //这里输出子命令的帮助
+      
+         log('\n')
+        log(chalk.green('Examples 运行方法:'));
+        log(chalk.green('    $ wz install -p Tinymce'));
+        log(chalk.green('    $ wz install -p Markdown'));
+       
+    });
+
+program
+    .command('remove')
+    .alias('rm')
+    .description('移除UI组件 -u <ui_name> |移除编辑插件 -p <plugin_name>' )
+    .option("-u, --ui <ui_name>", "移除UI组件")
+    .option("-p, --plugin <plugin_name>", "移除插件")
+    .action(function( options){
+        var ui_name = typeof options.ui=='string'?options.ui:"";
+        var plugin_name = typeof options.plugin=='string'?options.plugin:"";
+         if(ui_name){
+             log(chalk.green('正在安装UI组件',ui_name));
+
+              remove('ui',ui_name);
+        }else if(plugin_name){
+             log(chalk.green('正在删除插件',plugin_name));
+              remove('plugin',plugin_name);
+        }else {
+             log(chalk.yellow('请输入要删除的UI组件名称或者插件名称'));
+         }
+
+
+    }).on('--help', function() {
+
+         
+        log('\n')
+        log(chalk.green('Examples 运行方法:'));
+        log(chalk.green('    $ wz rm -p Tinymce'));
+        log(chalk.green('    $ wz rm -p Markdown'));
+         log(chalk.green('    $ wz rm -p Mockjs'));
+        log(chalk.green('    $ wz rm -p Jsontree'));
+    });
+
+    program
+    .command('showinstall')
+    .description('可以安装的： 插件：Markdown|Tinymce. UI组件：暂无' )
+     program
+    .command('showremove')
+    .description('可以移除的： 插件：Markdown|Tinymce|Jsontree|Mockjs. UI组件：暂无' )
+
+
+
+
+if(process.argv.length<=2){
+        program.outputHelp()
+
+    log(chalk.yellow('请输入要执行的命令'));
+
+} 
+
+program.parse(process.argv);
