@@ -106,6 +106,7 @@ export default {
 
 <script>
 
+
 export default {
   name: 'buttons',
 

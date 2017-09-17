@@ -4,7 +4,7 @@
   "description": "WZ base on Vue.js",
   "author": "herozhou <zhouhero@hotmail.com>",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "node build/dev-server.js",
     "build:prod": "cross-env NODE_ENV=production node build/build.js",

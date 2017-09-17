@@ -38,7 +38,6 @@
 
   </div>
 </template>
-<script src="./node_modules/tinymce/tinymce.min.js"></script>
 <script>
 import { VueTinymce , TinymceSetting } from 'vue-tinymce';
 
