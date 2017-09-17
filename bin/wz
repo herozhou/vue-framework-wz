@@ -21,27 +21,6 @@ program
 });
 
 
-// program
-//     //子命令
-//     .command('init')
-//     //说明
-//     .description('初始化项目')
-//     //注册一个callback函数
-//     .action(function( options){
-
-
-//               init();
-
-//     }).on('--help', function() {
-//         //这里输出子命令的帮助
-//         console.log('\n')
-//         console.log('  Examples:');
-//         console.log('    运行方法：');
-//         console.log('    $ wz init');
-//         console.log();
-//     });
-
-
 program
     //子命令
     .command('install')
