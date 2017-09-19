@@ -44,7 +44,6 @@ const permission = {
       state.routers.forEach(function(e){
           if(e.name==="首页"){
           state.siderbar_routers=e;
-      console.log(state.siderbar_routers)
             
           }
 
