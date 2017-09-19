@@ -24,6 +24,10 @@ module.exports = function (option,package_name){
 		
 		remove_pulgin.RemoveMock();
 		
+	}else if(option==='plugin'&&package_name==='Qiniu'){
+		
+		remove_pulgin.RemoveQiniu();
+		
 	}
 
 }
