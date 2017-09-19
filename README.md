@@ -7,6 +7,8 @@
 
 **[online-website](https://herozhou.github.io/vue-framework-wz/)**
 
+**[Englist Document](https://github.com/herozhou/vue-framework-wz/wiki/English-Document)**
+
 **本项目是后台管理框架，集成了权限管理、登录功能、UI组件、七牛上传等功能，建议直接使用。**
 > **注意**：便于前端调试，所以数据请求都是用了mockjs模拟。**在需要请求外部api时请移除mock文件**。
 
