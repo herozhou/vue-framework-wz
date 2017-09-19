@@ -215,7 +215,9 @@ HTML 规范由 W3C 维护
     text-align: center;
     margin: 10px;
   }
-
+.v-note-wrapper{
+  z-index:1 !important;
+}
 </style>
 
 
