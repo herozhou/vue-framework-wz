@@ -57,6 +57,10 @@
 浏览器访问 http://localhost:9001
 
 ## wz脚手架
+
+> 为了便于大家使用和精简体积 故开发了基于node的命令行构建工具，可安装/删除插件，比如你所开发的项目无需Tinymce插件就
+```wz remove -p Tinymce ```删除Tinymce 。需要请求外部API就 执行``` wz remove -p Mockjs```，并根据提示修改相应的api地址
+
 **请在项目初期对结构改动不大时使用cli**
 
 ```
