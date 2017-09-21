@@ -125,9 +125,14 @@
 
 ![自适应布局](https://github.com/herozhou/JAVA-HTML-/blob/master/src/gifs/index.gif)
 
+#### 多TAB效果
+
+![自适应布局](https://github.com/herozhou/JAVA-HTML-/blob/master/src/gifs/tab.gif)
+
 #### 丰富功能表格
 
 ![丰富功能表格](https://github.com/herozhou/JAVA-HTML-/blob/master/src/gifs/table.gif)
+
 #### 炫酷登录界面
 
 ![炫酷登录界面](https://github.com/herozhou/JAVA-HTML-/blob/master/src/gifs/login.gif)
