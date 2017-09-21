@@ -31,6 +31,39 @@
 - mock数据
 - 炫酷hover特效
 
+
+## Preview 效果图
+
+#### 自适应布局
+
+![自适应布局](https://github.com/herozhou/JAVA-HTML-/blob/master/src/gifs/index.gif)
+
+#### 多TAB效果
+
+![自适应布局](https://github.com/herozhou/JAVA-HTML-/blob/master/src/gifs/tab.gif)
+
+#### 丰富功能表格
+
+![丰富功能表格](https://github.com/herozhou/JAVA-HTML-/blob/master/src/gifs/table.gif)
+
+#### 炫酷登录界面
+
+![炫酷登录界面](https://github.com/herozhou/JAVA-HTML-/blob/master/src/gifs/login.gif)
+
+#### 炫酷图表
+
+![炫酷图表](https://github.com/herozhou/JAVA-HTML-/blob/master/src/gifs/echart.gif)
+
+
+#### 编辑器
+
+![丰富功能表格](https://github.com/herozhou/JAVA-HTML-/blob/master/src/gifs/editor.gif)
+
+
+
+**[更多demo](http://herozhou.coding.me/vue-framework-wz/#/dashboard)**
+
+
 ## 系列教程
 
 [《一步步带你做vue后台管理框架》第一课：介绍框架](http://www.cnblogs.com/herozhou/p/7434931.html)
@@ -120,36 +153,7 @@
 └── package.json               // package.json
 
 ```
-## Preview 效果图
 
-#### 自适应布局
-
-![自适应布局](https://github.com/herozhou/JAVA-HTML-/blob/master/src/gifs/index.gif)
-
-#### 多TAB效果
-
-![自适应布局](https://github.com/herozhou/JAVA-HTML-/blob/master/src/gifs/tab.gif)
-
-#### 丰富功能表格
-
-![丰富功能表格](https://github.com/herozhou/JAVA-HTML-/blob/master/src/gifs/table.gif)
-
-#### 炫酷登录界面
-
-![炫酷登录界面](https://github.com/herozhou/JAVA-HTML-/blob/master/src/gifs/login.gif)
-
-#### 炫酷图表
-
-![炫酷图表](https://github.com/herozhou/JAVA-HTML-/blob/master/src/gifs/echart.gif)
-
-
-#### 编辑器
-
-![丰富功能表格](https://github.com/herozhou/JAVA-HTML-/blob/master/src/gifs/editor.gif)
-
-
-
-**[更多demo](http://herozhou.coding.me/vue-framework-wz/#/dashboard)**
 
 ## About me 关于作者
 
