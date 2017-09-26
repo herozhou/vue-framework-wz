@@ -28,6 +28,7 @@ router.beforeEach((to, from, next) => {
             router.addRoutes(store.getters.addRouters) // 动态添加可访问路由表
             next({ ...to }) // hack方法 确保addRoutes已完成
           })
+          
         }).catch(() => {
           store.dispatch('FedLogOut').then(() => {
             next({ path: '/login' })
