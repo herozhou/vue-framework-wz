@@ -8,7 +8,6 @@ import './login.js'
 import './ui.js' 
 
 Vue.config.productionTip = false;
-
 var vm=new Vue({
   el: '#app',
   router,
