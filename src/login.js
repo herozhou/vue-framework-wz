@@ -34,7 +34,7 @@ router.beforeEach((to, from, next) => {
           })
         })
       } else {
-        // () 删除下方权限判断 ↓
+        
         store.dispatch('getNowRoutes', to);
 
         if (hasPermission(store.getters.roles, to.meta.role)) {
