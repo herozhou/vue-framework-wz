@@ -44,7 +44,6 @@ router.beforeEach((to, from, next) => {
         } else {
           next({ path: '/', query: { noGoBack: true }})
         }
-        // 可删 ↑
       }
     }
   } else {
