@@ -35,7 +35,7 @@ function filterAsyncRouter(asyncRouterMap, roles) {
 
 function getNowRouter(asyncRouterMap, to) {
   return asyncRouterMap.some(route => {
-      if(route.path===to.path) {
+      if(to.path.indexOf(route.path) !==-1) {
           return true;
       }
       else if (route.children && route.children.length) { //如果有孩子就遍历孩子
