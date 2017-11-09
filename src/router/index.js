@@ -2,6 +2,8 @@ import Vue from 'vue';
 import Router from 'vue-router';
 const _import = require('./_import_' + process.env.NODE_ENV);
 import Full from '@/containers/Full'
+import Full2 from '@/containers/Full2'
+
 import Buttons from '@/views/components/Buttons'
 
 // Views - Pages
@@ -79,6 +81,21 @@ export const asyncRouterMap = [
       
     ]
   },
+
+   {
+    path: '/home1',
+    redirect: '/home1/introduction',
+    name: '首页2',
+    component: Full2,
+    hidden:false,
+    children: [
+     {path: '/home1/dashboard',name: 'Dashboard2',icon:'speedometer',component: _import('Dashboard2')},
+     {path: '/home1/introduction',name: '介绍2',icon:'thumbsup',component: _import('Introduction')},
+    
+    ]
+  },
+
+
   { path: '*', redirect: '/pages/404', hidden: true }
   
 ];

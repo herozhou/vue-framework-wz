@@ -1,7 +1,7 @@
 # vue-framework-wz #
 
 
-[![TeamCity CodeBetter](https://img.shields.io/teamcity/codebetter/bt428.svg)]() [![npm](https://img.shields.io/npm/dw/localeval.svg)]() [![npm](https://img.shields.io/npm/v/npm.svg)]() [![Chrome Web Store](https://img.shields.io/chrome-web-store/stars/nimelepbpejjlbmoobocpfnjhihnpked.svg)]()
+[![TeamCity CodeBetter](https://img.shields.io/teamcity/codebetter/bt428.svg)]() [![npm](https://img.shields.io/npm/dw/localeval.svg)]() [![npm](https://img.shields.io/npm/v/npm.svg)]() [![Chrome Web Store](https://img.shields.io/chrome-web-store/stars/nimelepbpejjlbmoobocpfnjhihnpked.svg)]()[![Sourcegraph for Repo Reference Count](https://img.shields.io/sourcegraph/rrc//github.com/gorilla/mux.svg)]()[![GitHub watchers](https://img.shields.io/github/watchers/badges/shields.svg?style=social&label=Watch)]()
 
 **[立即体验(国内)](http://herozhou.coding.me/vue-framework-wz/#/dashboard)**
 
@@ -18,6 +18,7 @@
 - **自适应布局**（完美适配大中小屏）
 - `登录/注销`
 - `权限验证`
+- **👉多TAB导航**（没有多TAB怎么能称为后台管理界面呢？）
 - `Tinymce 编辑器`
 - `Markdown 编辑器`
 - `动态侧边栏`（支持多级路由）
@@ -29,6 +30,39 @@
 - `多环境发布`
 - mock数据
 - 炫酷hover特效
+
+
+## Preview 效果图
+
+#### 自适应布局
+
+![自适应布局](https://github.com/herozhou/JAVA-HTML-/blob/master/src/gifs/index.gif)
+
+#### 多TAB效果
+
+![自适应布局](https://github.com/herozhou/JAVA-HTML-/blob/master/src/gifs/tab.gif)
+
+#### 丰富功能表格
+
+![丰富功能表格](https://github.com/herozhou/JAVA-HTML-/blob/master/src/gifs/table.gif)
+
+#### 炫酷登录界面
+
+![炫酷登录界面](https://github.com/herozhou/JAVA-HTML-/blob/master/src/gifs/login.gif)
+
+#### 炫酷图表
+
+![炫酷图表](https://github.com/herozhou/JAVA-HTML-/blob/master/src/gifs/echart.gif)
+
+
+#### 编辑器
+
+![丰富功能表格](https://github.com/herozhou/JAVA-HTML-/blob/master/src/gifs/editor.gif)
+
+
+
+**[更多demo](http://herozhou.coding.me/vue-framework-wz/#/dashboard)**
+
 
 ## 系列教程
 
@@ -119,31 +153,7 @@
 └── package.json               // package.json
 
 ```
-## Preview 效果图
 
-#### 自适应布局
-
-![自适应布局](https://github.com/herozhou/JAVA-HTML-/blob/master/src/gifs/index.gif)
-
-#### 丰富功能表格
-
-![丰富功能表格](https://github.com/herozhou/JAVA-HTML-/blob/master/src/gifs/table.gif)
-#### 炫酷登录界面
-
-![炫酷登录界面](https://github.com/herozhou/JAVA-HTML-/blob/master/src/gifs/login.gif)
-
-#### 炫酷图表
-
-![炫酷图表](https://github.com/herozhou/JAVA-HTML-/blob/master/src/gifs/echart.gif)
-
-
-#### 编辑器
-
-![丰富功能表格](https://github.com/herozhou/JAVA-HTML-/blob/master/src/gifs/editor.gif)
-
-
-
-**[更多demo](http://herozhou.coding.me/vue-framework-wz/#/dashboard)**
 
 ## About me 关于作者
 
