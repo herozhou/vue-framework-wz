@@ -126,7 +126,7 @@
             <p>
             基于WZ框架开发出的边看边买推荐系统
             </p>
-            <p><a href="recommand-demo.dressplus.cn" target="_blank">立即访问</a></p>
+            <p><a href="http://recommand-demo.dressplus.cn" target="_blank">立即访问</a></p>
 
         </Col>
      
