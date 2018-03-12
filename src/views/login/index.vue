@@ -132,12 +132,6 @@ animate();
           });
         },
       },
-      init() {
-      
-      },
-      destroyed() {
-        // window.removeEventListener('hashchange', this.afterQRScan);
-      }
     }
 
 var SEPARATION = 100, AMOUNTX = 50, AMOUNTY = 50;
