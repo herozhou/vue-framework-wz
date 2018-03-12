@@ -131,23 +131,6 @@ animate();
             }
           });
         },
-        afterQRScan() {
-          // const hash = window.location.hash.slice(1);
-          // const hashObj = getQueryObject(hash);
-          // const originUrl = window.location.origin;
-          // history.replaceState({}, '', originUrl);
-          // const codeMap = {
-          //   wechat: 'code',
-          //   tencent: 'code'
-          // };
-          // const codeName = hashObj[codeMap[this.auth_type]];
-          // if (!codeName) {
-          // } else {
-          //   this.$store.dispatch('LoginByThirdparty', codeName).then(() => {
-          //     this.$router.push({ path: '/' });
-          //   });
-          // }
-        }
       },
       init() {
       
