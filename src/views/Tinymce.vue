@@ -39,7 +39,7 @@
   </div>
 </template>
 <script>
-import { VueTinymce , TinymceSetting } from 'vue-tinymce';
+import { VueTinymce , TinymceSetting } from 'tinymce';
 
  
 export default {

@@ -24,6 +24,7 @@
     "normalize.css": "3.0.2",
     "nprogress": "0.2.0",
     "popper.js": "^0.6.4",
+    "tinymce": "^4.8.2",
     "vue": "2.3.3",
     "vue-echarts": "^2.4.0",
     "vue-json-tree-view": "^2.0.7",
