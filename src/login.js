@@ -27,14 +27,12 @@ router.beforeEach((to, from, next) => {
             router.addRoutes(store.getters.addRouters) // 动态添加可访问路由表
             next({ ...to }) // hack方法 确保addRoutes已完成
           })
-          
         }).catch(() => {
           store.dispatch('FedLogOut').then(() => {
             next({ path: '/login' })
           })
         })
       } else {
-        
         store.dispatch('getNowRoutes', to);
 
         if (hasPermission(store.getters.roles, to.meta.role)) {
@@ -42,7 +40,9 @@ router.beforeEach((to, from, next) => {
 
           console.log("has userinfo")
         } else {
-          next({ path: '/', query: { noGoBack: true }})
+          next({
+            path: '/', query: { noGoBack: true }
+          })
         }
       }
     }
