@@ -16,7 +16,7 @@
     "async-validator": "^1.7.1",
     "axios": "0.16.2",
     "deepmerge": "^1.5.0",
-    "iview": "^3.0.1",
+    "iview": "^2.3.0",
     "jquery": "3.1.1",
     "js-cookie": "2.1.4",
     "mavon-editor": "^2.2.4",
@@ -25,12 +25,12 @@
     "nprogress": "0.2.0",
     "popper.js": "^0.6.4",
     "tinymce": "^4.8.2",
-    "vue": "2.3.3",
+    "vue": "^2.5.2",
     "vue-echarts": "^2.4.0",
     "vue-json-tree-view": "^2.0.7",
-    "vue-router": "2.5.3",
+    "vue-router": "^2.5.3",
     "vue-tinymce": "github:lpreterite/vue-tinymce",
-    "vuex": "2.3.1"
+    "vuex": "^2.3.1"
   },
   "devDependencies": {
     "commander": "^2.11.0",
@@ -75,7 +75,7 @@
     "url-loader": "0.5.8",
     "vue-loader": "12.2.1",
     "vue-style-loader": "3.0.1",
-    "vue-template-compiler": "2.3.3",
+    "vue-template-compiler": "^2.5.2",
     "webpack": "2.6.1",
     "webpack-bundle-analyzer": "2.8.2",
     "webpack-dev-middleware": "1.10.2",
