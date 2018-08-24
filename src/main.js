@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import Vue from 'vue';
 import App from './App';
 import router from './router';
@@ -12,4 +13,4 @@ var vm = new Vue({
   store,
   template: '<App/>',
   components: { App }
-})
+});

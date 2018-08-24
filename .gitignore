@@ -1,9 +1,9 @@
 .DS_Store
-node_modules/
-dist/
-npm-debug.log
-selenium-debug.log
-.idea
-package-lock.json
-.eslintrc.js
-.eslintignore
+
+             dist/
+             npm-debug.log
+             selenium-debug.log
+             .idea
+             package-lock.json
+             .eslintrc.js
+             .eslintignore

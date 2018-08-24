@@ -20,4 +20,4 @@ import 'echarts/lib/component/title'
 import 'echarts/lib/component/visualMap'
 Vue.use(iView);
 Vue.use(TreeView);
-Vue.component('chart', ECharts)
+Vue.component('chart', ECharts);

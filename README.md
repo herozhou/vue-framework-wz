@@ -117,8 +117,21 @@
     # 构建生成环境
     npm run build:prod
 ```
-
-
+##引用部分插件
+```bash
+"async-validator": "^1.7.1",//自定义验证
+    "axios": "0.16.2",//是一个基于 promise 的 HTTP 库
+    "deepmerge": "^1.5.0",
+    "iview": "^2.3.0",//是一套基于 Vue.js 的开源 UI 组件库，主要服务于 PC 界面的中后台产品。
+    "jquery": "3.1.1",
+    "js-cookie": "2.1.4",
+    "mavon-editor": "^2.2.4",
+    "mockjs": "1.0.1-beta3",//生成随机数据,拦截Ajax 请求 开始 前后端分离
+    "normalize.css": "3.0.2",//保护有用的浏览器默认样式而不是完全去掉它们
+    "nprogress": "0.2.0",//全站进度条插件
+    "popper.js": "^0.6.4",//是一个扩展性较好的 tooltips 提示类 JS 插件
+    "tinymce": "^4.8.2",//最好用的富文本编辑器
+```
 
 ## FileTree 目录结构
 ```shell
