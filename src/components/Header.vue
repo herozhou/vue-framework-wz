@@ -121,19 +121,19 @@
 import navbar from './Navbar'
 
 export default {
-  name: 'header',
+  name: 'f_header',
   components: {
     navbar,
-    
+
   },
   methods: {
-    Logout(e){
-         e.preventDefault();
-         this.$store.dispatch('LogOut').then(() => {
-                this.$router.push({ path: '/login' });
-              }).catch(err => {
-                this.$message.error(err);
-              });
+    Logout(e) {
+      e.preventDefault();
+      this.$store.dispatch('LogOut').then(() => {
+        this.$router.push({ path: '/login' });
+      }).catch(err => {
+        this.$message.error(err);
+      });
     },
     click () {
       // do nothing

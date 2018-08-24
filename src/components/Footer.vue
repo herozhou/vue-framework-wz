@@ -6,6 +6,6 @@
 </template>
 <script>
 export default {
-  name: 'footer'
+  name: 'm_footer'
 }
 </script>
