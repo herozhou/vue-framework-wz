@@ -7,7 +7,7 @@
            
            <div style="" class="doc-header">
             <Select v-model="model1" style="width:200px">
-                <Option v-for="item in cityList" :value="item.value" :key="item">{{ item.label }}</Option>
+                <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.value }}</Option>
             </Select>
 
             </div>
