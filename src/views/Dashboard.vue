@@ -308,38 +308,37 @@ import VueCalendar from './components/VueCalendar';
 import TodoList from '@/components/TodoList'
 
 export default {
-  components:{DashChartCount,DashChartVisitor,DashChartLarge,VueCalendar,TodoList},
+  components: {DashChartCount, DashChartVisitor, DashChartLarge, VueCalendar, TodoList},
   name: 'dashboard',
-        data () {
-            return {
-                value1: 0,
-                value2: 0,
-                value3: 0,
+  data () {
+    return {
+      value1: 0,
+      value2: 0,
+      value3: 0,
 
-                speed:10000,
-            }
-        },
-        methods:{
-              test_logout(){
-                 this.$store.dispatch('LogOut').then(() => {
-                    this.$router.push({ path: '/login' });
-                  }).catch(err => {
-                    this.$message.error(err);
-                  });
-              }
-        },
-        mounted(){
-                const token=this.$store.getters.token;
-                
-             this.$Notice.success({
-                    title: '欢迎使用 WZ 框架',
-                    desc:  `你的账户权限是 ${token} 
+      speed: 10000,
+    }
+  },
+  methods: {
+    test_logout() {
+      this.$store.dispatch('LogOut').then(() => {
+        this.$router.push({ path: '/login' });
+      }).catch(err => {
+        this.$message.error(err);
+      });
+    }
+  },
+  mounted() {
+  /*  const token = this.$store.getters.token;
+
+    this.$Notice.success({
+      title: '欢迎使用 WZ 框架',
+      desc: `你的账户权限是 ${token} 
                             <br>
                             喜欢就去github给个 start 鼓励一下吧`,
-                    duration: 10
-                });
-
-        }
+      duration: 10
+    });*/
+  }
 }
 </script>
 

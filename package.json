@@ -16,7 +16,7 @@
     "async-validator": "^1.7.1",
     "axios": "0.16.2",
     "deepmerge": "^1.5.0",
-    "iview": "^2.3.0",
+    "iview": "^3.0.1",
     "jquery": "3.1.1",
     "js-cookie": "2.1.4",
     "mavon-editor": "^2.2.4",
