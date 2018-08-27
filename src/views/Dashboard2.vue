@@ -165,7 +165,7 @@
               <li >
                 <div  class="staff_list"> 
                   <div class="staff_avatar">
-                      <Avatar src="http://www.jq22.com/demo/AdminEx-141217204554/images/photos/user1.png" size="large" />
+                      <Avatar src="../static/img/user1.png" size="large" />
                   </div>
                   <div class="staff_progress">
                    <p> <span class="staff_name"> Jhon James </span><span> - Project Lead</span></p>

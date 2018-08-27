@@ -1,3 +1,4 @@
+
 import { param2Obj } from 'utils';
 
 const userMap = {
@@ -28,6 +29,8 @@ const userMap = {
 export default {
   loginByEmail: config => {
     const { email } = JSON.parse(config.body);
+   // console.info(userMap[email.split('@')[0]]);
+   // alert("11");
     return userMap[email.split('@')[0]];
   },
   getInfo: config => {
@@ -41,3 +44,4 @@ export default {
   },
   logout: () => 'success'
 };
+

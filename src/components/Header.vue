@@ -12,19 +12,19 @@
     <ul class="nav navbar-nav d-md-down-none">
       
        <li class="nav-item header-item">
-  
+
 
           <router-link tag="div" to='/'  style="height:55px;" class="nav-link">
             <p><Icon type="compose" size='30' color="#2d8cf0"></Icon></p>
             <p  style="color:white"> 留言管理 </p>
-        </router-link> 
+        </router-link>
       </li>
         <li class="nav-item header-item">
-        
+
         <router-link tag="div" to='/home1'  style="height:55px;" class="nav-link">
             <p><Icon type="stats-bars" size='30' color="#2d8cf0"></Icon></p>
             <p  style="color:white"> 浏览排行 </p>
-        </router-link> 
+        </router-link>
 
 
       </li>
@@ -41,7 +41,7 @@
             <DropdownItem>Linux</DropdownItem>
             <DropdownItem>Mac OS X</DropdownItem>
             <DropdownItem>Windows</DropdownItem>
-            
+
             <DropdownItem>Core OS</DropdownItem>
         </DropdownMenu>
     </Dropdown>
@@ -121,7 +121,8 @@
 import navbar from './Navbar'
 
 export default {
-  name: 'f_header',
+  //name: 'f_header',
+  name: 'AppHeader',
   components: {
     navbar,
 

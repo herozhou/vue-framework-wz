@@ -75,6 +75,8 @@ const user = {
           commit('SET_EMAIL', email);
           resolve();
         }).catch(error => {
+          console.info(error)
+          alert(error);
           reject(error);
         });
       });
