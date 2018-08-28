@@ -130,11 +130,24 @@
                 this.data1.splice(index, 1);
             },
             add(){
+                this.loading = true;
+                //
+                this.$store.dispatch('GetCarouser').then((response)  => {
+                    console.info("成功回调");
+                    console.info(response.data);
+                    this.data1=response.data;
+                    //this.$Message.success('登录成功');
+                    this.loading = false;
 
-                this.modal12= true
+                    //  this.$router.push({ path: '/' });
+                }).catch(err => {
+                    console.info(err)
+                    this.$message.error(err);
+                    this.loading = false;
+                });
+              //  this.modal12= true
             },
             refresh(){
-
                 this.loading = true;
                 //
                 this.$store.dispatch('GetCarouser').then((response)  => {

@@ -9,6 +9,15 @@ export function getCarouser(email, password) {
     data
   });
 }
+export function getUser(password) {
+  const data = {
+  };
+  return fetch({
+    url: '/user/getUser',
+    method: 'post',
+    data
+  });
+}
 
 export function logout() {
   return fetch({

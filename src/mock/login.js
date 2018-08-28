@@ -1,3 +1,4 @@
+/*
 
 import { param2Obj } from 'utils';
 
@@ -70,3 +71,4 @@ export default {
   },
   logout: () => 'success'
 };
+*/

@@ -1,4 +1,4 @@
-import {getCarouser} from 'api/carouser';
+import {getCarouser, getUser} from 'api/carouser';
 import Cookies from 'js-cookie';
 
 const carouser = {
@@ -67,6 +67,17 @@ const carouser = {
     GetCarouser({ commit }) {
       return new Promise((resolve, reject) => {
         getCarouser().then(response => {
+          resolve(response);
+        }).catch(error => {
+          console.info(error)
+          alert(error);
+          reject(error);
+        });
+      });
+    },
+    GetUser({ commit }) {
+      return new Promise((resolve, reject) => {
+        getUser().then(response => {
           resolve(response);
         }).catch(error => {
           console.info(error)
