@@ -1,12 +1,10 @@
 import fetch from 'utils/fetch';
 
-export function loginByEmail(email, password) {
+export function getCarouser(email, password) {
   const data = {
-    email,
-    password
   };
   return fetch({
-    url: '/login/loginbyemail',
+    url: '/api/getCarouser',
     method: 'post',
     data
   });

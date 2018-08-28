@@ -115,7 +115,7 @@
                 this.loading = false;
                 this.$router.push({ path: '/' });
               }).catch(err => {
-                  console.info(err)
+                console.info(err)
                 this.$message.error(err);
                 this.loading = false;
               });
