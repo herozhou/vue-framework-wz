@@ -45,9 +45,9 @@ export const asyncRouterMap = [
     component: Full,
     hidden: false,
     children: [
-      {path: '/carouselMap', name: '首页轮播图', icon: 'ios-alert', component: _import('CarouselMap')},
+      {path: '/carouselMap', name: '首页轮播图', icon: 'ios-images', component: _import('CarouselMap')},
       {path: '/information', name: '信息录入', icon: 'ios-alert', component: _import('Information')},
-      {path: '/dashboard', name: 'Dashboard', icon: 'ios-alert', component: _import('Dashboard')},
+      /* {path: '/dashboard', name: 'Dashboard', icon: 'ios-alert', component: _import('Dashboard')},
       {path: '/introduction', name: '介绍', icon: 'ios-alert', component: _import('Introduction')},
       {path: '/components',
         name: 'component组件',
@@ -86,7 +86,7 @@ export const asyncRouterMap = [
       {path: '/tinymce', name: 'Tinymce编辑器', icon: "ios-alert", component: _import('Tinymce')},
       {path: '/markdown', name: 'Markdown', icon: "ios-alert", component: _import('Markdown')},
       {path: '/mr', name: 'MR', icon: "ios-alert", component: mr},
-      {path: '/formMr', name: 'FormMr', icon: "ios-alert", component: formMr},
+      {path: '/formMr', name: 'FormMr', icon: "ios-alert", component: formMr},*/
 
     ]
   },

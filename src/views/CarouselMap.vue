@@ -3,17 +3,15 @@
 
     <div class="animated fadeIn">
         <div >
-            <Button  v-on:click="add"  type="info"> 增加</Button>
+           <Button  v-on:click="add"  type="info"> 增加</Button>
            <Button  v-on:click="refresh" icon="md-refresh"   shape="circle"> </Button>
+           <!-- <img :src="'../static/img/logo.png'" >-->
         </div><br>
-
+        <add-from   ref="addFrom"  ></add-from>
         <Table :columns="columns1" :data="data1"></Table>
 
 
 
-        <Modal v-model="modal12" draggable scrollable title="Modal 1">
-            <div>This is the first modal</div>
-        </Modal>
 
     </div>
 
@@ -21,16 +19,8 @@
 </template>
 
 <script>
-    import  Vue from 'vue'
-    Vue.component('button-counter', {
-        data: function () {
-            return {
-                count: 0
-            }
-        },
-        template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
-    })
-
+    import  addFrom from './carouse/addFrom'
+    import  Vue from 'vue';
     export default {
         name:'mr',
 
@@ -38,16 +28,73 @@
             return {
                 columns1: [
                     {
-                        title: '姓名',
+                        title: '序号',
+                        key: 'id',
+                        width:60
+                    },
+                    {
+                        title: '状态',
+                        key: 'switch',
+                        width:60,
+                        render:(ce, params) =>
+                        {
+                            let  text="关闭";
+                            let  vcolor="";
+                            if(params.row.switch==1){
+                                text="开启";
+                                vcolor="red"
+                            }else if(params.row.switch==0){
+
+                            }
+
+                            //  console.warn(params.row.url);
+                            return ce('font', {
+                                domProps: {
+                                    color:vcolor,
+                                    width: '80'
+
+
+                                },
+                                props:{
+
+
+                                }
+                            },text)
+                        }
+                    },
+                    {
+                        title: '名称',
                         key: 'name'
                     },
                     {
-                        title: '年龄',
-                        key: 'age'
+                        title: '说明',
+                        key: 'description'
                     },
                     {
-                        title: '地址',
-                        key: 'address'
+                        title: '略缩图',
+                        key: 'url',
+                        render:(ce, params) =>
+                        {
+
+
+                          //  console.warn(params.row.url);
+                             return ce('img', {
+                                 domProps: {
+                                     src: params.row.url,
+                                     width: '80'
+
+                                 },
+                                 props:{
+
+
+                                 }
+                             })
+                        }
+
+                    },
+                    {
+                        title: '顺序',
+                        key: 'weights'
                     },
                     {
                         title: '操作',
@@ -56,8 +103,8 @@
                         align: 'center',
                         render: (ce, params) =>
                         {
-
-                           // console.info(params);
+                           // console.info(ce);
+                         //   console.info(params);
                             return ce('div',
                                 [
                                     ce('Button', {
@@ -70,12 +117,13 @@
                                     },
                                     on: {
                                         click: () => {
-
-
-                                            this.show(params.index)
+                                            this.$refs.addFrom.id=params.row.id
+                                            this.$refs.addFrom.titleN="编辑";
+                                            this.$refs.addFrom.modal12=true;
+                                            //this.show(params.index)
                                         }
                                     }
-                                }, '查看'),
+                                }, '编辑'),
                                 ce('Button', {
                                     props: {
                                         type: 'error',
@@ -93,48 +141,40 @@
 
                 ],
                 data1: [
-                    {
-                        name: '王小明',
-                        age: 18,
-                        address: '北京市朝阳区芍药居'
-                    },
-                    {
-                        name: '张小刚',
-                        age: 25,
-                        address: '北京市海淀区西二旗'
-                    },
-                    {
-                        name: '李小红',
-                        age: 30,
-                        address: '上海市浦东新区世纪大道'
-                    },
-                    {
-                        name: '周小伟',
-                        age: 26,
-                        address: '深圳市南山区深南大道'
-                    }
+
                 ],
-                modal12: false,
-                loading: false
+
+                loading: false,
+
             }
+        },
+        created: function() {
+            console.group('------created创建完毕状态------');
+            this.refresh();
+
         },
         methods: {
             show (index) {
+                this.$refs.addFrom.modal12=true;
 
-                this.$Modal.info({
-                    title: '用户信息',
-                    content: `姓名：${this.data1[index].name}<br>年龄：${this.data1[index].age}<br>地址：${this.data1[index].address}`
-                })
             },
             remove (index) {
                 this.data1.splice(index, 1);
             },
             add(){
+
+                this.$refs.addFrom.titleN="增加";
+                this.$refs.addFrom.modal12=true;
+
+
+
+            },
+            refresh(){
                 this.loading = true;
                 //
                 this.$store.dispatch('GetCarouser').then((response)  => {
                     console.info("成功回调");
-                    console.info(response.data);
+                 //   console.info(response.data);
                     this.data1=response.data;
                     //this.$Message.success('登录成功');
                     this.loading = false;
@@ -145,26 +185,11 @@
                     this.$message.error(err);
                     this.loading = false;
                 });
-              //  this.modal12= true
-            },
-            refresh(){
-                this.loading = true;
-                //
-                this.$store.dispatch('GetCarouser').then((response)  => {
-                    console.info("成功回调");
-                    console.info(response.data);
-                    this.data1=response.data;
-                    //this.$Message.success('登录成功');
-                    this.loading = false;
-
-                  //  this.$router.push({ path: '/' });
-                }).catch(err => {
-                    console.info(err)
-                    this.$message.error(err);
-                    this.loading = false;
-                });
 
             }
+        },
+        components: {
+            'add-from':addFrom
         }
     }
 </script>

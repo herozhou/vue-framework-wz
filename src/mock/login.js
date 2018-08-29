@@ -1,5 +1,3 @@
-/*
-
 import { param2Obj } from 'utils';
 
 const userMap = {
@@ -27,24 +25,38 @@ const userMap = {
   },
   dataCarouser: [
     {
-      name: '王小明123',
-      age: 18,
-      address: '北京市朝阳区芍药居'
+      id: 1,
+      switch: 0,
+      name: '轮播图1',
+      url: '../static/img/1535254224057.png',
+      description: '北京市朝阳区芍药居',
+      weights: 1
+
     },
     {
-      name: '张小刚',
-      age: 25,
-      address: '北京市海淀区西二旗'
+      id: 2,
+      switch: 1,
+      name: '轮播图2',
+      url: '../static/img/1535254224057.png',
+      description: '北京市海淀区西二旗',
+      weights: 2
+
     },
     {
-      name: '李小红',
-      age: 30,
-      address: '上海市浦东新区世纪大道'
+      id: 3,
+      switch: 0,
+      name: '轮播图3',
+      url: '../static/img/1535254224057.png',
+      description: '上海市浦东新区世纪大道',
+      weights: 3
     },
     {
-      name: '周小伟',
-      age: 26,
-      address: '深圳市南山区深南大道'
+      id: 4,
+      switch: 1,
+      name: '轮播图4',
+      url: '../static/img/1535254224057.png',
+      description: '深圳市南山区深南大道',
+      weights: 4
     }
   ]
 }
@@ -71,4 +83,3 @@ export default {
   },
   logout: () => 'success'
 };
-*/

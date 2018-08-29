@@ -14,14 +14,14 @@ export function loginByEmail(email, password) {
 
 export function logout() {
   return fetch({
-    url: '/login/logout',
+    url: '/api/login/logout',
     method: 'post'
   });
 }
 
 export function getInfo(token) {
   return fetch({
-    url: '/user/info',
+    url: '/api/user/info',
     method: 'get',
     params: { token }
   });
