@@ -21,7 +21,7 @@ var jsonWrite = function(res, ret) {
 var admin = {
   role: ['admin'],
   token: 'admin',
-  introduction: '我是超级管理员',
+  introduction: '我是超级管理员123',
   name: 'Super Admin',
   uid: '001'
 }

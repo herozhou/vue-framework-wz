@@ -6,7 +6,7 @@
                 <Input v-model="formItem.input" placeholder="轮播图名称"></Input>
             </FormItem>
 
-            <FormItem label="图片上传">
+            <FormItem  label="图片上传">
                 <image-upload></image-upload>
             </FormItem>
             <FormItem label="是否开启">
@@ -48,7 +48,8 @@
             date: '',
             time: '',
             slider: [20, 50],
-            textarea: ''}
+            textarea: ''},
+
           //   titleN: "默认"
         }
       },

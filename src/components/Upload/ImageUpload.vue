@@ -24,13 +24,13 @@
             :before-upload="handleBeforeUpload"
             multiple
             type="drag"
-            action="//jsonplaceholder.typicode.com/posts/"
+            action="/api/uplod"
             style="display: inline-block;width:58px;">
         <div style="width: 58px;height:58px;line-height: 58px;">
             <Icon type="ios-camera" size="20"></Icon>
         </div>
     </Upload>
-    <Modal title="View Image" v-model="visible">
+    <Modal title="View Image" v-model="visible" class-name="my-modal">
         <img :src="'https://o5wwk8baw.qnssl.com/' + imgName + '/large'" v-if="visible" style="width: 100%">
     </Modal>
 
@@ -45,10 +45,6 @@
             {
               'name': 'a42bdcc1178e62b4694c830f028db5c0',
               'url': 'https://o5wwk8baw.qnssl.com/a42bdcc1178e62b4694c830f028db5c0/avatar'
-            },
-            {
-              'name': 'bc7521e033abdd1e92222d733590f104',
-              'url': 'https://o5wwk8baw.qnssl.com/bc7521e033abdd1e92222d733590f104/avatar'
             }
           ],
           imgName: '',
@@ -82,10 +78,11 @@
           });
         },
         handleBeforeUpload () {
-          const check = this.uploadList.length < 5;
+          let num = 1;
+          const check = this.uploadList.length < num;
           if (!check) {
             this.$Notice.warning({
-              title: 'Up to five pictures can be uploaded.'
+              title: '只能上传' + num + "个图片"
             });
           }
           return check;
@@ -97,6 +94,7 @@
     }
 </script>
 <style>
+    .my-modal{z-index:1002}
     .demo-upload-list{
         display: inline-block;
         width: 60px;

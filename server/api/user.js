@@ -52,7 +52,7 @@ router.get('/', (req, res) => {
   var sql = $sql.user.all;
 
   console.log("到了");
-  conn.query(sql, ['1'], function(err, result) {
+  conn.query(sql, function(err, result) {
     if (err) {
       console.log(err);
     }
@@ -61,4 +61,19 @@ router.get('/', (req, res) => {
     }
   })
 });
+router.get('/info', (req, res) => {
+  console.info("到了1")
+  var sql = $sql.user.getUserByid;
+
+  console.log("到了");
+  conn.query(sql, function(err, result) {
+    if (err) {
+      console.log(err);
+    }
+    if (result) {
+      jsonWrite(res, result);
+    }
+  })
+});
+
 module.exports = router;
