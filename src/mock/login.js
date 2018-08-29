@@ -1,4 +1,4 @@
-/*
+
 import { param2Obj } from 'utils';
 
 const userMap = {
@@ -59,6 +59,82 @@ const userMap = {
       description: '深圳市南山区深南大道',
       weights: 4
     }
+  ],
+  dataNavigation: [
+    {
+      id: 1,
+      switch: 0,
+      name: '首页1位置',
+      url: '../static/img/1535254224057.png',
+      description: '北京市朝阳区芍药居',
+      weights: 1
+
+    },
+    {
+      id: 2,
+      switch: 1,
+      name: '首页2位置',
+      url: '../static/img/1535254224057.png',
+      description: '北京市海淀区西二旗',
+      weights: 2
+
+    },
+    {
+      id: 3,
+      switch: 0,
+      name: '首页3位置',
+      url: '../static/img/1535254224057.png',
+      description: '上海市浦东新区世纪大道',
+      weights: 3
+    },
+    {
+      id: 4,
+      switch: 1,
+      name: '首页4位置',
+      url: '../static/img/1535254224057.png',
+      description: '深圳市南山区深南大道',
+      weights: 4
+    },
+    {
+      id: 5,
+      switch: 1,
+      name: '首页5位置',
+      url: '../static/img/1535254224057.png',
+      description: '深圳市南山区深南大道',
+      weights: 4
+    },
+    {
+      id: 6,
+      switch: 1,
+      name: '首页6位置',
+      url: '../static/img/1535254224057.png',
+      description: '深圳市南山区深南大道',
+      weights: 4
+    },
+    {
+      id: 7,
+      switch: 1,
+      name: '首页7位置',
+      url: '../static/img/1535254224057.png',
+      description: '深圳市南山区深南大道',
+      weights: 4
+    },
+		{
+      id: 8,
+      switch: 1,
+      name: '首页8位置',
+      url: '../static/img/1535254224057.png',
+      description: '深圳市南山区深南大道',
+      weights: 4
+    },
+    {
+      id: 9,
+      switch: 1,
+      name: '启动页图片',
+      url: '../static/img/1535254224057.png',
+      description: '深圳市南山区深南大道',
+      weights: 4
+    }
   ]
 }
 
@@ -73,6 +149,9 @@ export default {
   getCarouser: config => {
     return userMap.dataCarouser;
   },
+	getNavigation: config => {
+		return userMap.dataNavigation;
+	},
   getInfo: config => {
     const { token } = param2Obj(config.url);
     if (userMap[token]) {
@@ -84,4 +163,4 @@ export default {
   },
   logout: () => 'success'
 };
-*/
+

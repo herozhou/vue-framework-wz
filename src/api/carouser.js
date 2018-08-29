@@ -1,5 +1,13 @@
 import fetch from 'utils/fetch';
-
+export function getNavigation(email, password) {
+  const data = {
+  };
+  return fetch({
+    url: '/api/getNavigation',
+    method: 'post',
+    data
+  });
+}
 export function getCarouser(email, password) {
   const data = {
   };

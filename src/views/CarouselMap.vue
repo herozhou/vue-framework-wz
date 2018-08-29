@@ -22,7 +22,7 @@
     import  addFrom from './carouse/addFrom'
     import  Vue from 'vue';
     export default {
-        name:'mr',
+        name:'carouselMap',
 
         data:function  () {
             return {
@@ -33,8 +33,8 @@
                         width:60
                     },
                     {
-                        title: '状态',
-                        key: 'switch',
+                        title: '属性',
+                        key: 'type',
                         width:60,
                         render:(ce, params) =>
                         {
