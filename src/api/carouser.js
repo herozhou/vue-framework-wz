@@ -3,16 +3,25 @@ export function getNavigation(email, password) {
   const data = {
   };
   return fetch({
-    url: '/api/getNavigation',
+    url: '/api/user/getNavigation',
     method: 'post',
     data
   });
 }
-export function getCarouser(email, password) {
+export function getCarouser(id) {
   const data = {
   };
   return fetch({
     url: '/api/getCarouser',
+    method: 'post',
+    data
+  });
+}
+export function getCarouserAll() {
+  const data = {
+  };
+  return fetch({
+    url: '/api/user/getCarouserAll',
     method: 'post',
     data
   });

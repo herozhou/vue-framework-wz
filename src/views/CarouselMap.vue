@@ -3,11 +3,11 @@
 
     <div class="animated fadeIn">
         <div >
-           <Button  v-on:click="add"  type="info"> 增加</Button>
-           <Button  v-on:click="refresh" icon="md-refresh"   shape="circle"> </Button>
+           <Button  @click="add"  type="info"> 增加</Button>
+           <Button  @click="refresh" icon="md-refresh"   shape="circle"> </Button>
            <!-- <img :src="'../static/img/logo.png'" >-->
         </div><br>
-        <add-from   ref="addFrom"  ></add-from>
+        <add-from v-bind:todo="addFrom"   ref="addFrom"  ></add-from>
         <Table :columns="columns1" :data="data1"></Table>
 
 
@@ -75,8 +75,6 @@
                         key: 'url',
                         render:(ce, params) =>
                         {
-
-
                           //  console.warn(params.row.url);
                              return ce('img', {
                                  domProps: {
@@ -117,9 +115,32 @@
                                     },
                                     on: {
                                         click: () => {
-                                            this.$refs.addFrom.id=params.row.id
-                                            this.$refs.addFrom.titleN="编辑";
-                                            this.$refs.addFrom.modal12=true;
+
+                                            this.addFrom.titleN="编辑";
+                                             //对象合并
+                                            Object.assign(this.addFrom.formItem,params.row);
+                                           /* if(this.addFrom.formItem.switch==1 ){
+                                                this.addFrom.formItem.switch="1";
+                                            } else{
+                                                this.addFrom.formItem.switch="0";
+                                            }*/
+                                            let defaultList= [
+                                                {
+                                                    'showProgress': false,
+                                                    'status': "finished",
+                                                     'name': 'a42bdcc1178e62b4694c830f028db5c0',
+                                                    'url': this.addFrom.formItem.url
+                                                }
+                                            ]
+                                            //this.$refs.upload.default-file-list=defaultList;
+                                            this.$set(this.addFrom.formItem,"defaultList",defaultList);
+                                            this.addFrom.modal12=true;
+                                            this.loading = true;
+                                            //
+
+
+
+
                                             //this.show(params.index)
                                         }
                                     }
@@ -143,8 +164,24 @@
                 data1: [
 
                 ],
+                addFrom:{
+                    loading: false,
+                    modal12:false,
+                    titleN: '',
+                    id: '',
+                    formItem: {
+                        id:'',
+                        name: '',
+                        switch: 0,
+                        url: '',
+                        weights: '',
+                        description: ''
+                    },
+                }
 
-                loading: false,
+
+
+
 
             }
         },
@@ -155,7 +192,7 @@
         },
         methods: {
             show (index) {
-                this.$refs.addFrom.modal12=true;
+                this.addFrom.modal12=true;
 
             },
             remove (index) {
@@ -163,8 +200,8 @@
             },
             add(){
 
-                this.$refs.addFrom.titleN="增加";
-                this.$refs.addFrom.modal12=true;
+                this.addFrom.titleN="增加";
+                this.addFrom.modal12=true;
 
 
 
@@ -172,7 +209,7 @@
             refresh(){
                 this.loading = true;
                 //
-                this.$store.dispatch('GetCarouser').then((response)  => {
+                this.$store.dispatch('GetCarouserAll').then((response)  => {
                     console.info("成功回调");
                  //   console.info(response.data);
                     this.data1=response.data;

@@ -7,9 +7,10 @@ Mock.mock(/\/api\/login\/loginbyemail/, 'post', loginAPI.loginByEmail);
 Mock.mock(/\/api\/login\/logout/, 'post', loginAPI.logout);
 Mock.mock(/\/api\/user\/info/, 'get', loginAPI.getInfo);
 //轮播图相关
-Mock.mock(/\/api\/getCarouser/, 'post', loginAPI.getCarouser);
+Mock.mock(/\/api\/user\/getCarouserAll/, 'post', loginAPI.getCarouserAll);
+
+Mock.mock(/\/api\/user\/getCarouser/, 'post', loginAPI.getCarouser);
 
 //首页相关
-Mock.mock(/\/api\/getNavigation/, 'post', loginAPI.getNavigation);
+Mock.mock(/\/api\/user\/getNavigation/, 'post', loginAPI.getNavigation);
 export default Mock;
-

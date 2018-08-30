@@ -39,45 +39,49 @@
 <script>
     export default {
       name: 'image-upload',
-      data () {
+      props: ['defaultList123'],
+      data() {
+        //console.info('{{defaultList123}}');
+        //  console.info(this.props.defaultList123);
         return {
-          defaultList: [
-            {
-              'name': 'a42bdcc1178e62b4694c830f028db5c0',
-              'url': 'https://o5wwk8baw.qnssl.com/a42bdcc1178e62b4694c830f028db5c0/avatar'
-            }
-          ],
+          defaultList: [],
           imgName: '',
           visible: false,
-          uploadList: []
+          uploadList: this.defaultList123
         }
       },
       methods: {
-        handleView (name) {
+        handleView(name) {
           this.imgName = name;
           this.visible = true;
         },
-        handleRemove (file) {
+        handleRemove(file) {
+          console.info("开始删除");
+          //以后还要进行优化
           const fileList = this.$refs.upload.fileList;
-          this.$refs.upload.fileList.splice(fileList.indexOf(file), 1);
+          if(fileList.length == 0) {
+            this.uploadList = [];
+          }else{
+            this.$refs.upload.fileList.splice(fileList.indexOf(file), 1);
+          }
         },
-        handleSuccess (res, file) {
+        handleSuccess(res, file) {
           file.url = 'https://o5wwk8baw.qnssl.com/7eb99afb9d5f317c912f08b5212fd69a/avatar';
           file.name = '7eb99afb9d5f317c912f08b5212fd69a';
         },
-        handleFormatError (file) {
+        handleFormatError(file) {
           this.$Notice.warning({
             title: 'The file format is incorrect',
             desc: 'File format of ' + file.name + ' is incorrect, please select jpg or png.'
           });
         },
-        handleMaxSize (file) {
+        handleMaxSize(file) {
           this.$Notice.warning({
             title: 'Exceeding file size limit',
             desc: 'File  ' + file.name + ' is too large, no more than 2M.'
           });
         },
-        handleBeforeUpload () {
+        handleBeforeUpload() {
           let num = 1;
           const check = this.uploadList.length < num;
           if (!check) {
@@ -86,10 +90,26 @@
             });
           }
           return check;
+        },
+        choushabi() {
+          let defaultList = [
+            {
+              // 'name': 'a42bdcc1178e62b4694c830f028db5c0',
+              'url': 'https://o5wwk8baw.qnssl.com/a42bdcc1178e62b4694c830f028db5c0/avatar'
+            }
+          ];
+          return defaultList;
         }
       },
-      mounted () {
+      mounted() {
         this.uploadList = this.$refs.upload.fileList;
+      },
+      watch: {
+        'defaultList123': function (n, o) {
+          this.uploadList = n;
+        //  console.info(this.uploadList);
+        }
+
       }
     }
 </script>

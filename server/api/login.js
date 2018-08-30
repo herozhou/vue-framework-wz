@@ -23,7 +23,7 @@ var admin = {
   token: 'admin',
   introduction: '我是超级管理员123',
   name: 'Super Admin',
-  uid: '001'
+  id: '1'
 }
 // 增加用户接口
 router.post('/loginbyemail', (req, res) => {

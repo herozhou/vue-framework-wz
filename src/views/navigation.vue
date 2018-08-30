@@ -8,7 +8,7 @@
 			<!-- <img :src="'../static/img/logo.png'" >-->
 		</div>
 		<br>
-		<add-from ref="addFrom"></add-from>
+		<add-from ref="addFrom" v-bind:todo="addFrom" ></add-from>
 		<Table :columns="columns1" :data="data1"></Table>
 
 
@@ -20,7 +20,7 @@
 </template>
 
 <script>
-	import addFrom from './carouse/addFrom'
+	import addFrom from './navigation/addFrom'
 	import Vue from 'vue';
 	export default {
 		name: 'navigation',
@@ -80,10 +80,32 @@
 									},
 									on: {
 										click: () => {
-											this.$refs.addFrom.id = params.row.id
-											this.$refs.addFrom.titleN = "编辑";
-											this.$refs.addFrom.modal12 = true;
-											//this.show(params.index)
+                                            this.addFrom.titleN="编辑";
+                                            //对象合并
+                                            Object.assign(this.addFrom.formItem,params.row);
+                                            /* if(this.addFrom.formItem.switch==1 ){
+                                                 this.addFrom.formItem.switch="1";
+                                             } else{
+                                                 this.addFrom.formItem.switch="0";
+                                             }*/
+                                            let defaultList= [
+                                                {
+                                                    'showProgress': false,
+                                                    'status': "finished",
+                                                    'name': 'a42bdcc1178e62b4694c830f028db5c0',
+                                                    'url': this.addFrom.formItem.url
+                                                }
+                                            ]
+                                            //this.$refs.upload.default-file-list=defaultList;
+                                            this.$set(this.addFrom.formItem,"defaultList",defaultList);
+                                            this.addFrom.modal12=true;
+                                            this.loading = true;
+                                            //
+
+
+
+
+                                            //this.show(params.index)
 										}
 									}
 								}, '编辑'),
@@ -106,7 +128,20 @@
 				data1: [
 
 				],
-
+                addFrom:{
+                    loading: false,
+                    modal12:false,
+                    titleN: '',
+                    id: '',
+                    formItem: {
+                        id:'',
+                        name: '',
+                        switch: 0,
+                        url: '',
+                        weights: '',
+                        description: ''
+                    },
+                },
 				loading: false,
 
 			}
@@ -117,21 +152,21 @@
 
 		},
 		methods: {
-			show(index) {
-				this.$refs.addFrom.modal12 = true;
+            show (index) {
+                this.addFrom.modal12=true;
 
-			},
-			remove(index) {
-				this.data1.splice(index, 1);
-			},
-			add() {
+            },
+            remove (index) {
+                this.data1.splice(index, 1);
+            },
+            add(){
 
-				this.$refs.addFrom.titleN = "增加";
-				this.$refs.addFrom.modal12 = true;
+                this.addFrom.titleN="增加";
+                this.addFrom.modal12=true;
 
 
 
-			},
+            },
 			refresh() {
 				this.loading = true;
 				//

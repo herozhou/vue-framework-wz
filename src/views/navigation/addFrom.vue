@@ -12,12 +12,7 @@
             <FormItem  label="图片上传">
                 <image-upload  v-bind:defaultList123="todo.formItem.defaultList" ></image-upload>
             </FormItem>
-            <FormItem label="是否开启">
-                <i-switch    v-model="todo.formItem.switch" true-value=1 false-value=0 size="large">
-                    <span slot="open">On</span>
-                    <span slot="close">Off</span>
-                </i-switch>
-            </FormItem>
+
             <FormItem label="权重">
                 <Input v-model="todo.formItem.weights" placeholder="显示的顺序"></Input>
             </FormItem>
