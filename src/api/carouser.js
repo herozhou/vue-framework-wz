@@ -8,6 +8,16 @@ export function getNavigation(email, password) {
     data
   });
 }
+
+export function getCategoryAll() {
+  const data = {
+  };
+  return fetch({
+    url: '/api/user/getCategoryAll',
+    method: 'post',
+    data
+  });
+}
 export function getCarouser(id) {
   const data = {
   };

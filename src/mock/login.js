@@ -1,5 +1,3 @@
-
-
 import { param2Obj } from 'utils';
 
 const userMap = {
@@ -102,7 +100,7 @@ const userMap = {
       name: '首页5位置',
       url: '../static/img/1535254224057.png',
       description: '深圳市南山区深南大道',
-      weights: 4
+      weights: 5
     },
     {
       id: 6,
@@ -110,7 +108,7 @@ const userMap = {
       name: '首页6位置',
       url: '../static/img/1535254224057.png',
       description: '深圳市南山区深南大道',
-      weights: 4
+      weights: 6
     },
     {
       id: 7,
@@ -118,7 +116,7 @@ const userMap = {
       name: '首页7位置',
       url: '../static/img/1535254224057.png',
       description: '深圳市南山区深南大道',
-      weights: 4
+      weights: 7
     },
     {
       id: 8,
@@ -126,7 +124,7 @@ const userMap = {
       name: '首页8位置',
       url: '../static/img/1535254224057.png',
       description: '深圳市南山区深南大道',
-      weights: 4
+      weights: 8
     },
     {
       id: 9,
@@ -134,8 +132,75 @@ const userMap = {
       name: '启动页图片',
       url: '../static/img/1535254224057.png',
       description: '深圳市南山区深南大道',
-      weights: 4
+      weights: 9
     }
+  ],
+  categoryList: [
+    {
+      id: 1,
+      name: '冰箱',
+      level: 0,
+      weights: 1,
+        parent_id:''
+    },
+    {
+      id: 2,
+      level: 0,
+      name: '洗衣机',
+      weights: 2,
+        parent_id:''
+
+    },
+    {
+      id: 3,
+      name: '空调',
+      level: 0,
+      weights: 3,
+        parent_id:''
+    },
+    {
+      id: 4,
+      level: 0,
+      name: '电视',
+      weights: 4,
+        parent_id:''
+    },
+    {
+      id: 5,
+      level: 0,
+      name: '冷柜',
+      weights: 5,
+        parent_id:''
+    },
+    {
+      id: 6,
+      level: 0,
+      name: '中央空调',
+      weights: 6,
+        parent_id:''
+    },
+    {
+      id: 7,
+      level: 0,
+      name: '小家电',
+      weights: 7,
+        parent_id:''
+    },
+    {
+      id: 8,
+      level: 0,
+      name: '油烟机',
+      weights: 8,
+        parent_id:''
+    },
+      {
+          id: 9,
+          level: 1,
+          name: '双开门',
+          weights: 8,
+          parent_id:'1'
+      }
+
   ]
 }
 
@@ -152,8 +217,12 @@ export default {
     return userMap.dataCarouser[0];
   },
   getCarouserAll: config => {
-    console.group('返回了'+ 'getCarouserAll');
+    console.group('返回了' + 'getCarouserAll');
     return userMap.dataCarouser;
+  },
+  getCategoryAll: config => {
+    console.group('返回了' + 'getCategoryAll');
+    return userMap.categoryList;
   },
   getNavigation: config => {
     return userMap.dataNavigation;

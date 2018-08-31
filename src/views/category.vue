@@ -30,37 +30,18 @@
 				columns1: [{
 						title: '序号',
 						key: 'id',
-						width: 60
+						//width: 60
 					},
 					{
 						title: '名称',
 						key: 'name'
-					},
-					{
-						title: '说明',
-						key: 'description'
-					},
-					{
-						title: '略缩图',
-						key: 'url',
-						render: (ce, params) => {
-
-
-							//  console.warn(params.row.url);
-							return ce('img', {
-								domProps: {
-									src: params.row.url,
-									width: '80'
-
-								},
-								props: {
-
-
-								}
-							})
-						}
-
-					},
+					},{
+                        title: 'parent_id',
+                        key: 'parent_id'
+                    },{
+                        title: '级别',
+                        key: 'level'
+                    },
 					{
 						title: '操作',
 						key: 'action',
@@ -108,18 +89,18 @@
                                             //this.show(params.index)
 										}
 									}
-								}, '编辑'),
-						/*		ce('Button', {
-									props: {
-										type: 'error',
-										size: 'small'
-									},
-									on: {
-										click: () => {
-											this.remove(params.index)
-										}
-									}
-								}, '删除')*/
+								}, '编辑'),ce('Button', {
+                                    props: {
+                                        type: 'error',
+                                        size: 'small'
+                                    },
+                                    on: {
+                                        click: () => {
+                                            this.remove(params.index)
+                                        }
+                                    }
+                                }, '删除')
+
 							]);
 						}
 					}
@@ -170,7 +151,7 @@
 			refresh() {
 				this.loading = true;
 				//
-				this.$store.dispatch('GetNavigation').then((response) => {
+				this.$store.dispatch('GetCategoryAll').then((response) => {
 					console.info("成功回调");
 					//   console.info(response.data);
 					this.data1 = response.data;

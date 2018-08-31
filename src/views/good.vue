@@ -5,6 +5,13 @@
 		<div>
 			<Button v-on:click="add" type="info"> 增加</Button>
 			<Button v-on:click="refresh" icon="md-refresh" shape="circle"> </Button>
+
+
+				<Select v-model="modelSelect" style="width:200px">
+					<Option value='0' key="0">全部</Option>
+					<Option v-for="item in data1" :value="item.id" :key="item.id">{{ item.name }}</Option>
+				</Select>
+
 			<!-- <img :src="'../static/img/logo.png'" >-->
 		</div>
 		<br>
@@ -27,6 +34,28 @@
 
 		data: function () {
 			return {
+                modelSelect:'0'
+				,
+                loading: false,
+                addFrom:{
+                    loading: false,
+                    modal12:false,
+                    titleN: '',
+                    id: '',
+                    formItem: {
+                        id:'',
+                        name: '',
+                        switch: 0,
+                        url: '',
+                        weights: '',
+                        description: ''
+                    },
+                },
+
+                data1: [
+
+                ],
+
 				columns1: [{
 						title: '序号',
 						key: 'id',
@@ -108,41 +137,24 @@
                                             //this.show(params.index)
 										}
 									}
-								}, '编辑'),
-						/*		ce('Button', {
-									props: {
-										type: 'error',
-										size: 'small'
-									},
-									on: {
-										click: () => {
-											this.remove(params.index)
-										}
-									}
-								}, '删除')*/
+								}, '编辑'),ce('Button', {
+                                    props: {
+                                        type: 'error',
+                                        size: 'small'
+                                    },
+                                    on: {
+                                        click: () => {
+                                            this.remove(params.index)
+                                        }
+                                    }
+                                }, '删除')
+
 							]);
 						}
 					}
 
 				],
-				data1: [
 
-				],
-                addFrom:{
-                    loading: false,
-                    modal12:false,
-                    titleN: '',
-                    id: '',
-                    formItem: {
-                        id:'',
-                        name: '',
-                        switch: 0,
-                        url: '',
-                        weights: '',
-                        description: ''
-                    },
-                },
-				loading: false,
 
 			}
 		},

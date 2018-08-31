@@ -47,8 +47,12 @@ export const asyncRouterMap = [
     children: [
       {path: '/carouselMap', name: '首页轮播图', icon: 'ios-images', component: _import('CarouselMap')},
       {path: '/information', name: '信息录入', icon: 'ios-alert', component: _import('Information')},
-       {path: '/navigation', name: 'TV首页导航', icon: 'ios-alert', component: _import('navigation')},
-     /* {path: '/introduction', name: '介绍', icon: 'ios-alert', component: _import('Introduction')},
+      {path: '/navigation', name: 'TV首页导航', icon: 'ios-alert', component: _import('navigation')},
+      {path: '/good', name: '商品管理', icon: 'ios-alert', component: _import('good')},
+      {path: '/category', name: '商品类别', icon: 'ios-alert', component: _import('category')},
+      {path: '/familyCombo', name: '家庭套餐', icon: 'ios-alert', component: _import('familyCombo')},
+
+      /* {path: '/introduction', name: '介绍', icon: 'ios-alert', component: _import('Introduction')},
       {path: '/components',
         name: 'component组件',
         redirect: '/components/buttons',
@@ -83,10 +87,11 @@ export const asyncRouterMap = [
       {path: '/table', name: '表格综合实例', icon: 'ios-alert', component: _import('Table'), meta: { role: ['admin'] }},
       {path: '/jsontree', name: 'JSON视图', icon: 'ios-alert', component: _import('JsonTree')},
       {path: '/tabledetail/:id', name: 'TableDetail', hidden: true, component: _import('TableDetail')},
-      {path: '/tinymce', name: 'Tinymce编辑器', icon: "ios-alert", component: _import('Tinymce')},
+
       {path: '/markdown', name: 'Markdown', icon: "ios-alert", component: _import('Markdown')},
       {path: '/mr', name: 'MR', icon: "ios-alert", component: mr},
       {path: '/formMr', name: 'FormMr', icon: "ios-alert", component: formMr},*/
+      {path: '/tinymce', name: 'Tinymce编辑器', icon: "ios-alert", component: _import('Tinymce')},
 
     ]
   },
