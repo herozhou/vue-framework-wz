@@ -1,6 +1,7 @@
 // node 后端服务器
 
 const user = require('./api/user');
+const api = require('./api/api');
 const loginApi = require('./api/login');
 const fs = require('fs');
 const path = require('path');
@@ -14,6 +15,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 // 后端api路由
 app.use('/api/user', user);
 app.use('/api/login', loginApi);
+app.use('/api', api);
 
 // 监听端口
 app.listen(3000);

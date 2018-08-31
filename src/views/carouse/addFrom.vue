@@ -10,7 +10,8 @@
             </FormItem>
 
             <FormItem  label="图片上传">
-                <image-upload  v-bind:defaultList123="todo.formItem.defaultList" ></image-upload>
+              <!--  <image-upload  v-bind:defaultList123="todo.formItem.defaultList" ></image-upload>-->
+                <upload-file  ></upload-file>
             </FormItem>
             <FormItem label="是否开启">
                 <i-switch    v-model="todo.formItem.switch" true-value=1 false-value=0 size="large">
@@ -30,12 +31,12 @@
 </template>
 
 <script>
-    import ImageUpload from '../../components/Upload/ImageUpload';
+    import UploadFile from '../../components/Upload/UploadFile';
     export default {
       name: "add-from",
       props: ['todo'],
       components: {
-        ImageUpload
+        UploadFile
       },
       data: function () {
         return {

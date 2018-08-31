@@ -32,4 +32,8 @@ router.post('/loginbyemail', (req, res) => {
 router.get('/loginbyemail', (req, res) => {
   jsonWrite(res, admin);
 });
+
+router.post('/logout', (req, res) => {
+  jsonWrite(res);
+});
 module.exports = router;

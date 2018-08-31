@@ -55,4 +55,9 @@ router.get('/', (req, res) => {
     }
   })
 });
+router.get('/uploadFile', (req, res) => {
+
+
+    jsonWrite(res);
+});
 module.exports = router;
