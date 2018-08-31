@@ -214,7 +214,7 @@
                  //   console.info(response.data);
                     this.data1=response.data;
                     //this.$Message.success('登录成功');
-                    this.loading = false;
+                    this.loading = false
 
                     //  this.$router.push({ path: '/' });
                 }).catch(err => {

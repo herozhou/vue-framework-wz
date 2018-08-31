@@ -11,7 +11,7 @@
  import  { mavonEditor } from 'mavon-editor';
 
  import 'mavon-editor/dist/css/index.css';
-    
+ 
 export default {
   components: { mavonEditor },
   data() {
@@ -200,7 +200,6 @@ HTML 规范由 W3C 维护
 *[W3C]:  World Wide Web Consortium
 HTML 规范由 W3C 维护
 \`\`\`
-
 
 `
     }

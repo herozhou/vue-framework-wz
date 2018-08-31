@@ -5,5 +5,4 @@ npm-debug.log
 selenium-debug.log
 .idea
 package-lock.json
-.eslintrc.js
-.eslintignore
+.project
