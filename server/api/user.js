@@ -34,10 +34,10 @@ router.post('/addUser', (req, res) => {
   })
 });
 router.get('/getUser', (req, res) => {
-  console.info("到了")
+ // console.info("到了")
   var sql = $sql.user.all;
 
-  console.log("到了");
+  //console.log("到了");
   conn.query(sql, function(err, result) {
     if (err) {
       console.log(err);
@@ -49,10 +49,10 @@ router.get('/getUser', (req, res) => {
 });
 
 router.get('/', (req, res) => {
-  console.info("到了1")
+ // console.info("到了1")
   var sql = $sql.user.all;
 
-  console.log("到了");
+ // console.log("到了");
   conn.query(sql, function(err, result) {
     if (err) {
       console.log(err);

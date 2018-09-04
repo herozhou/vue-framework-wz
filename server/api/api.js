@@ -3,6 +3,18 @@ var express = require('express');
 var router = express.Router();
 var mysql = require('mysql');
 var $sql = require('../sqlMap');
+var multer = require('multer');
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads');
+  },
+  filename: function (req, file, cb) {
+    var fileFormat = (file.originalname).split(".");
+    cb(null, Date.now() + "." + fileFormat[fileFormat.length - 1]);
+  }
+})
+
+var upload = multer({ storage: storage })
 
 // 连接数据库
 var conn = mysql.createConnection(models.mysql);
@@ -55,9 +67,15 @@ router.get('/', (req, res) => {
     }
   })
 });
-router.get('/uploadFile', (req, res) => {
+router.post('/uploadFile', upload.array('logo', 2), (req, res) => {
+  console.log("dddd");
+  console.log(req.files[0]); // 上传的文件信息
+  let response22 = {
+    message: 'File uploaded successfully',
+    filename: req.files[0].filename,
+      path: req.files[0].path
+  };
 
-
-    jsonWrite(res);
+  res.end(JSON.stringify(response22));
 });
 module.exports = router;

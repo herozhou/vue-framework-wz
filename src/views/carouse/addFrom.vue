@@ -1,5 +1,5 @@
 <template>
-    <Modal  v-model="todo.modal12"   mask-closable="false" :mask-closable="false"  :title="todo.titleN">
+    <Modal 	  v-model="todo.modal12" @on-ok="ok"  mask-closable="false" :mask-closable="false"  :title="todo.titleN">
         <!--<div>{{id}}</div>-->
         <Form :model="todo.formItem" :label-width="80">
             <FormItem   label="id" hidden="true">
@@ -11,7 +11,7 @@
 
             <FormItem  label="图片上传">
               <!--  <image-upload  v-bind:defaultList123="todo.formItem.defaultList" ></image-upload>-->
-                <upload-file  ></upload-file>
+                <upload-file ref="uploadFile"  ></upload-file>
             </FormItem>
             <FormItem label="是否开启">
                 <i-switch    v-model="todo.formItem.switch" true-value=1 false-value=0 size="large">
@@ -26,7 +26,9 @@
                 <Input v-model="todo.formItem.description" type="textarea" :autosize="{minRows: 2,maxRows: 5}" placeholder="简单说明以区分..."></Input>
             </FormItem>
         </Form>
-
+       <div slot="footer">
+            <Button type="success" size="large"  @click="ok"> 提交</Button>   <Button type="dashed" size="large"  @click="ok"> 提交</Button>
+        </div>
     </Modal>
 </template>
 
@@ -45,6 +47,14 @@
           //   titleN: "默认"
         }
       },
+     methods:{
+         ok () {
+             alert("dd");
+            this.$Message.info('Clicked ok');
+
+
+         },
+     }
       // props: ['titleN']
     }
 </script>
