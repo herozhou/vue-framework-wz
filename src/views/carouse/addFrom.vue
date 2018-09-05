@@ -1,17 +1,17 @@
 <template>
-    <Modal 	  v-model="todo.modal12" @on-ok="ok"  mask-closable="false" :mask-closable="false"  :title="todo.titleN">
+    <Modal 	  v-model="todo.modal12"   mask-closable="false" :mask-closable="false"  :title="todo.titleN">
         <!--<div>{{id}}</div>-->
-        <Form :model="todo.formItem" :label-width="80">
+        <Form ref="addFromSub" :model="todo.formItem" :label-width="80"  :rules="ruleInline">
             <FormItem   label="id" hidden="true">
                 <Input  v-model="todo.formItem.id" placeholder="id" ></Input>
             </FormItem>
-            <FormItem label="名称">
+            <FormItem label="名称" prop="name">
                 <Input v-model="todo.formItem.name" placeholder="轮播图名称"></Input>
             </FormItem>
 
             <FormItem  label="图片上传">
               <!--  <image-upload  v-bind:defaultList123="todo.formItem.defaultList" ></image-upload>-->
-                <upload-file ref="uploadFile"  ></upload-file>
+                <upload-file ref="uploadFile"  v-bind:url="todo.formItem.url"   ></upload-file>
             </FormItem>
             <FormItem label="是否开启">
                 <i-switch    v-model="todo.formItem.switch" true-value=1 false-value=0 size="large">
@@ -25,9 +25,14 @@
             <FormItem label="说明">{{todo.formItem.switch}}
                 <Input v-model="todo.formItem.description" type="textarea" :autosize="{minRows: 2,maxRows: 5}" placeholder="简单说明以区分..."></Input>
             </FormItem>
+
+            <FormItem>
+                <Button type="primary"  @click="handleSubmit()">Submit</Button>
+                <Button style="margin-left: 8px">Cancel</Button>
+            </FormItem>
         </Form>
-       <div slot="footer">
-            <Button type="success" size="large"  @click="ok"> 提交</Button>   <Button type="dashed" size="large"  @click="ok"> 提交</Button>
+     <div slot="footer">
+           <!-- <Button type="submit" size="large"  > 提交</Button>   <Button type="dashed" size="large"  @click="cancel"> 取消</Button>-->
         </div>
     </Modal>
 </template>
@@ -45,16 +50,51 @@
           id: '',
 
           //   titleN: "默认"
+          ruleInline: {
+            name: [
+              { required: true, message: 'Please fill in the user name', trigger: 'blur' }
+            ]
+          },
         }
       },
-     methods:{
-         ok () {
-             alert("dd");
-            this.$Message.info('Clicked ok');
 
+      methods: {
+        handleSubmit () {
+          console.info('f到了');
+          this.loading = true;
+          //    console.info(this.$refs.uploadFile.imageList);
+          this.todo.formItem.url = this.$refs.uploadFile.imageList;
+          console.info(this.todo.formItem);
+          this.$refs.addFromSub.validate(valid => {
+            if (valid) {
+              this.$store.dispatch('AddCarousel', this.todo.formItem).then((response) => {
+                console.info("成功回调");
+                console.info(response);
 
-         },
-     }
+                this.$Message.success('提交成功');
+                this.todo.modal12 = false;
+                // this.data1 = response;
+
+                this.loading = false
+
+                //  this.$router.push({ path: '/' });
+              }).catch(err => {
+                console.info(err)
+                this.$message.error(err);
+                this.loading = false;
+              });
+            } else {
+              this.$Message.success('验证失败');
+              console.log('error submit!!');
+              return false;
+            }
+          });
+        },
+        cancel () {
+          console.info('取消');
+          this.todo.modal12 = false;
+        },
+      }
       // props: ['titleN']
     }
 </script>

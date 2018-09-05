@@ -18,6 +18,19 @@ export function getCategoryAll() {
     data
   });
 }
+export function addCarousel(formItem) {
+  const data = {
+    formItem: formItem
+  };
+
+  console.info("data");
+  console.info(data);
+  return fetch({
+    url: '/api/user/addCarousel',
+    method: 'post',
+    data
+  });
+}
 export function getCarouser(id) {
   const data = {
   };

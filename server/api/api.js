@@ -68,12 +68,12 @@ router.get('/', (req, res) => {
   })
 });
 router.post('/uploadFile', upload.array('logo', 2), (req, res) => {
-  console.log("dddd");
-  console.log(req.files[0]); // 上传的文件信息
+ // console.log("dddd");
+ // console.log(req.files[0]); // 上传的文件信息
   let response22 = {
     message: 'File uploaded successfully',
     filename: req.files[0].filename,
-      path: req.files[0].path
+    path: req.files[0].path
   };
 
   res.end(JSON.stringify(response22));

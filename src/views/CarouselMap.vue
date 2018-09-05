@@ -200,8 +200,9 @@
             },
             add(){
                 //清空files内容
-                this.$refs.addFrom.$refs.uploadFile.$refs.upload.clearFiles();
 
+                this.$refs.addFrom.$refs.uploadFile.$refs.upload.clearFiles();
+               this.$refs.addFrom.$refs.uploadFile.imageList=[];
               // console.info(this.$refs.addFrom.$children);
               //  this.$refs.addFrom.$children.clearFiles();
                 this.addFrom.titleN="增加";

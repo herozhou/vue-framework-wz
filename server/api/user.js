@@ -11,10 +11,14 @@ conn.connect();
 var jsonWrite = function(res, ret) {
   if(typeof ret === 'undefined') {
     res.json({
-      code: '1',
+      code: '0',
       msg: '操作失败'
     });
   } else {
+ /*   ret.push({
+      code: '1',
+      msg: '操作成功',
+    })*/
     res.json(ret);
   }
 };
@@ -34,7 +38,7 @@ router.post('/addUser', (req, res) => {
   })
 });
 router.get('/getUser', (req, res) => {
- // console.info("到了")
+  // console.info("到了")
   var sql = $sql.user.all;
 
   //console.log("到了");
@@ -49,10 +53,10 @@ router.get('/getUser', (req, res) => {
 });
 
 router.get('/', (req, res) => {
- // console.info("到了1")
+  // console.info("到了1")
   var sql = $sql.user.all;
 
- // console.log("到了");
+  // console.log("到了");
   conn.query(sql, function(err, result) {
     if (err) {
       console.log(err);
@@ -235,7 +239,24 @@ router.get('/info', (req, res) => {
   // var sql = $sql.user.getUserByid;
 
   console.log("到了");
-  jsonWrite(res, userMap.admin)
+  res.json(userMap.admin);
+  //jsonWrite(res, userMap.admin)
+/*  conn.query(sql, function(err, result) {
+    if (err) {
+      console.log(err);
+    }
+    if (result) {
+      jsonWrite(res, result);
+    }
+  })*/
+});
+router.post('/addCarousel', (req, res) => {
+  //console.log(req);
+  console.log(req.body);
+
+  console.log("到了");
+
+  jsonWrite(res, req.body)
 /*  conn.query(sql, function(err, result) {
     if (err) {
       console.log(err);
