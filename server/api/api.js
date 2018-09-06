@@ -1,12 +1,13 @@
-var models = require('../db');
+var db = require('../db');
 var express = require('express');
 var router = express.Router();
-var mysql = require('mysql');
+//var mysql = require('mysql');
 var $sql = require('../sqlMap');
 var multer = require('multer');
+var conn = db.conn;
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, 'uploads');
+    cb(null, 'static/uploads');
   },
   filename: function (req, file, cb) {
     var fileFormat = (file.originalname).split(".");
@@ -17,9 +18,8 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage })
 
 // 连接数据库
-var conn = mysql.createConnection(models.mysql);
+//var conn = mysql.createConnection(models.mysql);
 
-conn.connect();
 var jsonWrite = function(res, ret) {
   if(typeof ret === 'undefined') {
     res.json({
@@ -33,9 +33,10 @@ var jsonWrite = function(res, ret) {
 
 // 增加用户接口
 router.post('/addUser', (req, res) => {
-  var sql = $sql.user.add;
+/*  var sql = $sql.user.add;
   var params = req.body;
   console.log(params);
+   db.selectAll()
   conn.query(sql, [params.username, params.age], function(err, result) {
     if (err) {
       console.log(err);
@@ -43,7 +44,7 @@ router.post('/addUser', (req, res) => {
     if (result) {
       jsonWrite(res, result);
     }
-  })
+  })*/
 });
 router.get('/getUser', (req, res) => {
   var sql = $sql.user.all;
@@ -68,8 +69,8 @@ router.get('/', (req, res) => {
   })
 });
 router.post('/uploadFile', upload.array('logo', 2), (req, res) => {
- // console.log("dddd");
- // console.log(req.files[0]); // 上传的文件信息
+  // console.log("dddd");
+  // console.log(req.files[0]); // 上传的文件信息
   let response22 = {
     message: 'File uploaded successfully',
     filename: req.files[0].filename,

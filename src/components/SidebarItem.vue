@@ -32,7 +32,6 @@
 </template>
 
 <script>
-
     export default {
       name: 'SidebarItem',
       props: {
@@ -41,18 +40,18 @@
         }
       },
       methods: {
-            handleClick (e) {
-              e.preventDefault()
-              e.target.parentElement.classList.toggle('open')
-            },
-            addActive(e){
-               e.preventDefault()
-              e.target.parentElement.parentElement.parentElement.classList.add('open')
-            }
+        handleClick (e) {
+          e.preventDefault()
+          e.target.parentElement.classList.toggle('open')
         },
-        mounted(){
-                console.log(this.routes)
+        addActive(e) {
+          e.preventDefault()
+          e.target.parentElement.parentElement.parentElement.classList.add('open')
         }
+      },
+      mounted() {
+        console.log(this.routes)
+      }
     }
 </script>
 

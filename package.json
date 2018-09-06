@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@packy-tang/vue-tinymce": "^0.1.5",
+    "api": "^1.0.0",
     "async-validator": "^1.7.1",
     "axios": "0.16.2",
     "body-parser": "^1.18.3",

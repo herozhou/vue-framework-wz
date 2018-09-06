@@ -8,6 +8,7 @@
             :on-format-error="handleFormatError"
             :on-success="handleSuccess"
             :on-remove="remove"
+            :before-upload="handleBeforeUpload"
     >
         <Button icon="ios-cloud-upload-outline">Upload files</Button>
     </Upload>
@@ -36,15 +37,14 @@
         },
         handleSuccess (res, file) {
           console.info("-------handleSuccess------------");
-          console.info(res);
-          console.info(file);
-          console.info(res.filename);
-          this.imageList.push(res.path);
-          console.info(this.imageList);
+          //console.info(res);
+          // console.info(file);
+          // console.info(res.filename);
+          this.imageList.push(res.filename);
+          // console.info(this.imageList);
           console.info("----end---handleSuccess------------");
         },
         remove(a) {
-
           // console.info(this.imageList);
           this.imageList.splice(this.imageList, 1);
 
@@ -52,8 +52,16 @@
           // console.info(this.imageList);
           //   console.info(a);
           //   console.info(a.response);
+        },
+        handleBeforeUpload() {
+          const check = this.imageList.length < 1;
+          if (!check) {
+            this.$Notice.warning({
+              title: '只能上传一个文件.'
+            });
+          }
+          return check;
         }
-
       },
       mounted() {
         console.info("===mounted======");

@@ -269,7 +269,7 @@
         data () {
             return {
                 formItem: {
-                    input: '',
+                    niput: '',
                     select: '',
                     radio: 'male',
                     checkbox: [],

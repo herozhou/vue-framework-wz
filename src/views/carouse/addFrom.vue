@@ -19,16 +19,16 @@
                     <span slot="close">Off</span>
                 </i-switch>
             </FormItem>
-            <FormItem label="权重">
-                <Input v-model="todo.formItem.weights" placeholder="显示的顺序"></Input>
+            <FormItem label="权重"   prop="weights">
+                <Input type="text"  v-model="todo.formItem.weights" placeholder="显示的顺序" number ></Input>
             </FormItem>
-            <FormItem label="说明">{{todo.formItem.switch}}
+            <FormItem label="说明">
                 <Input v-model="todo.formItem.description" type="textarea" :autosize="{minRows: 2,maxRows: 5}" placeholder="简单说明以区分..."></Input>
             </FormItem>
 
             <FormItem>
                 <Button type="primary"  @click="handleSubmit()">Submit</Button>
-                <Button style="margin-left: 8px">Cancel</Button>
+                <Button style="margin-left: 8px"  @click="cancel()" >Cancel</Button>
             </FormItem>
         </Form>
      <div slot="footer">
@@ -52,7 +52,13 @@
           //   titleN: "默认"
           ruleInline: {
             name: [
-              { required: true, message: 'Please fill in the user name', trigger: 'blur' }
+              { required: true, message: '请填写用户名', trigger: 'blur' },
+
+            ],
+            weights: [
+            /*  { required: true, message: '请填写权重', trigger: 'blur' },*/
+              { type: 'integer', message: '不能为空，只能为数字', trigger: 'blur' },
+
             ]
           },
         }
@@ -65,16 +71,17 @@
           //    console.info(this.$refs.uploadFile.imageList);
           this.todo.formItem.url = this.$refs.uploadFile.imageList;
           console.info(this.todo.formItem);
+
           this.$refs.addFromSub.validate(valid => {
             if (valid) {
               this.$store.dispatch('AddCarousel', this.todo.formItem).then((response) => {
-                console.info("成功回调");
-                console.info(response);
+                //   console.info("成功回调");
+                //    console.info(response);
 
                 this.$Message.success('提交成功');
                 this.todo.modal12 = false;
                 // this.data1 = response;
-
+                this.$emit('refreshFrom');
                 this.loading = false
 
                 //  this.$router.push({ path: '/' });
@@ -85,7 +92,7 @@
               });
             } else {
               this.$Message.success('验证失败');
-              console.log('error submit!!');
+              //   console.log('error submit!!');
               return false;
             }
           });

@@ -1,4 +1,4 @@
-import {addCarousel, getCarouser, getUser, getNavigation, getCarouserAll, getCategoryAll} from 'api/carouser';
+import {addCarousel, getCarouser, getUser, getNavigation, getCarouserAll, getCategoryAll} from '../../api/carouser';
 import Cookies from 'js-cookie';
 
 const carouser = {
@@ -50,7 +50,7 @@ const carouser = {
     GetCarouserAll({ commit }) {
       return new Promise((resolve, reject) => {
         getCarouserAll().then(response => {
-          console.info(response);
+          //    console.info(response);
           resolve(response);
         }).catch(error => {
           console.info(error)
@@ -64,7 +64,7 @@ const carouser = {
         getCarouser().then(response => {
           resolve(response);
         }).catch(error => {
-          console.info(error)
+          //   console.info(error)
           alert(error);
           reject(error);
         });
@@ -76,7 +76,7 @@ const carouser = {
           resolve(response);
         }).catch(error => {
           console.info(error)
-          alert(error);
+          //  alert(error);
           reject(error);
         });
       });

@@ -7,7 +7,7 @@
            <Button  @click="refresh" icon="md-refresh"   shape="circle"> </Button>
            <!-- <img :src="'../static/img/logo.png'" >-->
         </div><br>
-        <add-from v-bind:todo="addFrom"   ref="addFrom"  ></add-from>
+        <add-from v-bind:todo="addFrom" @refreshFrom="refresh"   ref="addFrom"  ></add-from>
         <Table :columns="columns1" :data="data1"></Table>
 
 
@@ -32,9 +32,9 @@
                         key: 'id',
                         width:60
                     },
-                    {
-                        title: '属性',
-                        key: 'type',
+                  /*  {
+                        title: '状态',
+                        key: 'switch',
                         width:60,
                         render:(ce, params) =>
                         {
@@ -61,7 +61,7 @@
                                 }
                             },text)
                         }
-                    },
+                    },*/
                     {
                         title: '名称',
                         key: 'name'
@@ -75,10 +75,18 @@
                         key: 'url',
                         render:(ce, params) =>
                         {
-                          //  console.warn(params.row.url);
+                            let uuu;
+                          let spUrl=params.row.url;
+                          let  ss = spUrl.split(",");
+                            if(ss.length>0&&spUrl.length>5){
+                                uuu=this.GLOBAL.imageUrl+ss[0];
+                            }else{
+                                return;
+                            }
+
                              return ce('img', {
                                  domProps: {
-                                     src: params.row.url,
+                                     src:uuu ,
                                      width: '80'
 
                                  },
@@ -174,7 +182,7 @@
                         name: '',
                         switch: 0,
                         url: '',
-                        weights: '',
+                        weights: 0,
                         description: ''
                     },
                 }
@@ -201,10 +209,12 @@
             add(){
                 //清空files内容
 
-                this.$refs.addFrom.$refs.uploadFile.$refs.upload.clearFiles();
-               this.$refs.addFrom.$refs.uploadFile.imageList=[];
+               this.$refs.addFrom.$refs.uploadFile.$refs.upload.clearFiles();
+              this.$refs.addFrom.$refs.uploadFile.imageList=[];
+                this.$refs.addFrom.$refs.addFromSub.resetFields();
               // console.info(this.$refs.addFrom.$children);
               //  this.$refs.addFrom.$children.clearFiles();
+
                 this.addFrom.titleN="增加";
                 this.addFrom.modal12=true;
 
@@ -215,7 +225,7 @@
                 this.loading = true;
                 //
                 this.$store.dispatch('GetCarouserAll').then((response)  => {
-                    console.info("成功回调");
+                    console.info("成功回调刷新表数据");
                  //   console.info(response.data);
                     this.data1=response.data;
                     //this.$Message.success('登录成功');
@@ -223,7 +233,7 @@
 
                     //  this.$router.push({ path: '/' });
                 }).catch(err => {
-                    console.info(err)
+                   // console.info(err)
                     this.$message.error(err);
                     this.loading = false;
                 });

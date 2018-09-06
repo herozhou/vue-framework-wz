@@ -23,8 +23,6 @@ export function addCarousel(formItem) {
     formItem: formItem
   };
 
-  console.info("data");
-  console.info(data);
   return fetch({
     url: '/api/user/addCarousel',
     method: 'post',
