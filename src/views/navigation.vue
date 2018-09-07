@@ -1,4 +1,4 @@
-<!--suppress ALL -->
+<!--TV首页导航 -->
 <template>
 
 	<div class="animated fadeIn">
@@ -8,7 +8,7 @@
 			<!-- <img :src="'../static/img/logo.png'" >-->
 		</div>
 		<br>
-		<add-from ref="addFrom" v-bind:todo="addFrom" ></add-from>
+		<add-from ref="addFrom" v-bind:todo="addFrom"  @refreshFrom="refresh"  ></add-from>
 		<Table :columns="columns1" :data="data1"></Table>
 
 
@@ -21,174 +21,175 @@
 
 <script>
 	import addFrom from './navigation/addFrom'
-	import Vue from 'vue';
+
 	export default {
-		name: 'navigation',
+	  name: 'navigation',
 
-		data: function () {
-			return {
-				columns1: [{
-						title: '序号',
-						key: 'id',
-						width: 60
-					},
-					{
-						title: '名称',
-						key: 'name'
-					},
-					{
-						title: '说明',
-						key: 'description'
-					},
-					{
-						title: '略缩图',
-						key: 'url',
-						render: (ce, params) => {
+	  data: function () {
+	    return {
+	      columns1: [{
+	        title: '序号',
+	        key: 'id',
+	        width: 60
+	      },
+	      {
+	        title: '名称',
+	        key: 'name'
+	      }, {
+	        title: '位置',
+	        key: 'weights'
+	      },
+	      {
+	        title: '说明',
+	        key: 'description'
+	      },
+      {
+        title: '略缩图',
+        key: 'url',
+        render: (ce, params) => {
+          let uuu;
 
+          let spUrl = params.row.url;
+          let ss = spUrl.split(",");
+          if(ss.length > 0 && spUrl.length > 5) {
+            uuu = this.GLOBAL.imageUrl + ss[0];
+          }else{
+            return;
+          }
 
-							//  console.warn(params.row.url);
-							return ce('img', {
-								domProps: {
-									src: params.row.url,
-									width: '80'
-
-								},
-								props: {
-
-
-								}
-							})
-						}
-
-					},
-					{
-						title: '操作',
-						key: 'action',
-						width: 150,
-						align: 'center',
-						render: (ce, params) => {
-							// console.info(ce);
-							//   console.info(params);
-							return ce('div', [
-								ce('Button', {
-									props: {
-										type: 'primary',
-										size: 'small'
-									},
-									style: {
-										marginRight: '5px'
-									},
-									on: {
-										click: () => {
-                                            this.addFrom.titleN="编辑";
-                                            //对象合并
-                                            Object.assign(this.addFrom.formItem,params.row);
-                                            /* if(this.addFrom.formItem.switch==1 ){
-                                                 this.addFrom.formItem.switch="1";
-                                             } else{
-                                                 this.addFrom.formItem.switch="0";
-                                             }*/
-                                            let defaultList= [
-                                                {
-                                                    'showProgress': false,
-                                                    'status': "finished",
-                                                    'name': 'a42bdcc1178e62b4694c830f028db5c0',
-                                                    'url': this.addFrom.formItem.url
-                                                }
-                                            ]
-                                            //this.$refs.upload.default-file-list=defaultList;
-                                            this.$set(this.addFrom.formItem,"defaultList",defaultList);
-                                            this.addFrom.modal12=true;
-                                            this.loading = true;
-                                            //
-
-
-
-
-                                            //this.show(params.index)
-										}
-									}
-								}, '编辑'),
-						/*		ce('Button', {
-									props: {
-										type: 'error',
-										size: 'small'
-									},
-									on: {
-										click: () => {
-											this.remove(params.index)
-										}
-									}
-								}, '删除')*/
-							]);
-						}
-					}
-
-				],
-				data1: [
-
-				],
-                addFrom:{
-                    loading: false,
-                    modal12:false,
-                    titleN: '',
-                    id: '',
-                    formItem: {
-                        id:'',
-                        name: '',
-                        switch: 0,
-                        url: '',
-                        weights: '',
-                        description: ''
-                    },
-                },
-				loading: false,
-
-			}
-		},
-		created: function () {
-			console.group('------created创建完毕状态------');
-			this.refresh();
-
-		},
-		methods: {
-            show (index) {
-                this.addFrom.modal12=true;
+          return ce('img', {
+            domProps: {
+              src: uuu,
+              width: '80'
 
             },
-            remove (index) {
-                this.data1.splice(index, 1);
-            },
-            add(){
+            props: {
 
-                this.addFrom.titleN="增加";
-                this.addFrom.modal12=true;
+            }
+          })
+        }
 
+      },
+	      {
+	        title: '操作',
+	        key: 'action',
+	        width: 150,
+	        align: 'center',
+	        render: (ce, params) => {
+	          // console.info(ce);
+	          //   console.info(params);
+	          return ce('div', [
+	            ce('Button', {
+	              props: {
+	                type: 'primary',
+	                size: 'small'
+	              },
+	              style: {
+	                marginRight: '5px'
+	              },
+	              on: {
+	                click: () => {
+                  this.addFrom.titleN = "编辑";
+                  //对象合并
+                  let formItemN = JSON.parse(JSON.stringify(params.row))
+                  delete formItemN['_index'];
+                  delete formItemN['_rowKey'];
 
+                  this.addFrom.modal12 = true;
+                  this.loading = true;
+                  //
+                  Object.assign(this.addFrom.formItem, formItemN);
+                  //this.show(params.index)
+	                }
+	              }
+	            }, '编辑'), ce('Button', {
+              props: {
+                type: 'error',
+                size: 'small'
+              },
+              on: {
+                click: () => {
+                  console.info(params);
+                  this.remove(params);
+                }
+              }
+            }, '删除')
 
-            },
-			refresh() {
-				this.loading = true;
-				//
-				this.$store.dispatch('GetNavigation').then((response) => {
-					console.info("成功回调");
-					//   console.info(response.data);
-					this.data1 = response.data;
-					//this.$Message.success('登录成功');
-					this.loading = false;
+	          ]);
+	        }
+	      }
 
-					//  this.$router.push({ path: '/' });
-				}).catch(err => {
-					console.info(err)
-					this.$message.error(err);
-					this.loading = false;
-				});
+	      ],
+	      data1: [
 
-			}
-		},
-		components: {
-			'add-from': addFrom
-		}
+	      ],
+      addFrom: {
+        loading: false,
+        modal12: false,
+        titleN: '',
+        id: '',
+        formItem: {
+          id: '',
+          name: '',
+          url: '',
+          weights: '',
+          description: ''
+        },
+      },
+	      loading: false,
+
+	    }
+	  },
+	  created: function () {
+	    console.group('------created创建完毕状态------');
+	    this.refresh();
+	  },
+	  methods: {
+    show (index) {
+      this.addFrom.modal12 = true;
+    },
+    remove (params) {
+      console.info(params.index);
+      this.$store.dispatch('DeleteNavigation', params.row.id).then((response) => {
+        console.info(response);
+        console.info("成功回调刷新表数据");
+        this.loading = false
+        this.data1.splice(params.index, 1);
+        //  this.$router.push({ path: '/' });
+      }).catch(err => {
+        // console.info(err)
+        this.$message.error(err);
+        this.loading = false;
+      });
+    },
+    add() {
+      this.$refs.addFrom.$refs.uploadFile.$refs.upload.clearFiles();
+      this.$refs.addFrom.$refs.uploadFile.imageList = [];
+      this.$refs.addFrom.$refs.addFromSub.resetFields();
+      this.addFrom.titleN = "增加";
+      this.addFrom.modal12 = true;
+    },
+	    refresh() {
+	      this.loading = true;
+	      //
+	      this.$store.dispatch('GetNavigation').then((response) => {
+	        console.info("成功回调");
+	        //   console.info(response.data);
+	        this.data1 = response.data;
+	        //this.$Message.success('登录成功');
+	        this.loading = false;
+
+	        //  this.$router.push({ path: '/' });
+	      }).catch(err => {
+	        console.info(err)
+	        this.$message.error(err);
+	        this.loading = false;
+	      });
+	    }
+	  },
+	  components: {
+	    'add-from': addFrom
+	  }
 	}
 </script>
 
