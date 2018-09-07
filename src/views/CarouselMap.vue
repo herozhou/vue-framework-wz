@@ -126,7 +126,16 @@
 
                                             this.addFrom.titleN="编辑";
                                              //对象合并
-                                            Object.assign(this.addFrom.formItem,params.row);
+
+                                            let formItemN = JSON.parse(JSON.stringify(params.row))
+                                                 console.info(formItemN);
+                                           delete formItemN['_index'];
+                                           delete formItemN['_rowKey'];
+                                        //   delete formItemN['defaultList'];
+
+                                            Object.assign(this.addFrom.formItem,formItemN);
+                                            let sssss=this.addFrom.formItem;
+
                                            /* if(this.addFrom.formItem.switch==1 ){
                                                 this.addFrom.formItem.switch="1";
                                             } else{
@@ -141,7 +150,6 @@
                                                 }
                                             ]
                                             //this.$refs.upload.default-file-list=defaultList;
-                                            this.$set(this.addFrom.formItem,"defaultList",defaultList);
                                             this.addFrom.modal12=true;
                                             this.loading = true;
                                             //
@@ -160,7 +168,10 @@
                                     },
                                     on: {
                                         click: () => {
-                                            this.remove(params.index)
+                                        console.info(params);
+                                            this.remove(params);
+
+
                                         }
                                     }
                                 }, '删除')
@@ -203,8 +214,22 @@
                 this.addFrom.modal12=true;
 
             },
-            remove (index) {
-                this.data1.splice(index, 1);
+            remove (params) {
+                console.info(params.index);
+
+                this.$store.dispatch('DeleteCarouser',params.row.id).then((response)  => {
+
+                    console.info(response);
+                    console.info("成功回调刷新表数据");
+                    this.loading = false
+                    this.data1.splice(params.index, 1);
+                    //  this.$router.push({ path: '/' });
+                }).catch(err => {
+                    // console.info(err)
+                    this.$message.error(err);
+                    this.loading = false;
+                });
+
             },
             add(){
                 //清空files内容

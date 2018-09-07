@@ -1,4 +1,4 @@
-import {addCarousel, getCarouser, getUser, getNavigation, getCarouserAll, getCategoryAll} from '../../api/carouser';
+import {addCarousel, getCarouser, getUser, getNavigation, getCarouserAll, getCategoryAll, deleteCarouser} from '../../api/carouser';
 import Cookies from 'js-cookie';
 
 const carouser = {
@@ -73,6 +73,17 @@ const carouser = {
     AddCarousel({ commit }, formItem) {
       return new Promise((resolve, reject) => {
         addCarousel(formItem).then(response => {
+          resolve(response);
+        }).catch(error => {
+          console.info(error)
+          //  alert(error);
+          reject(error);
+        });
+      });
+    },
+    DeleteCarouser({ commit }, id) {
+      return new Promise((resolve, reject) => {
+        deleteCarouser(id).then(response => {
           resolve(response);
         }).catch(error => {
           console.info(error)

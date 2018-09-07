@@ -10,7 +10,6 @@
             </FormItem>
 
             <FormItem  label="图片上传">
-              <!--  <image-upload  v-bind:defaultList123="todo.formItem.defaultList" ></image-upload>-->
                 <upload-file ref="uploadFile"  v-bind:url="todo.formItem.url"   ></upload-file>
             </FormItem>
             <FormItem label="是否开启">
@@ -74,17 +73,26 @@
 
           this.$refs.addFromSub.validate(valid => {
             if (valid) {
+
               this.$store.dispatch('AddCarousel', this.todo.formItem).then((response) => {
-                //   console.info("成功回调");
-                //    console.info(response);
+                console.info("成功回调");
+                if(response.data.code == 0) {
+                  console.info(response.data);
+                  this.$Message.error('提交失败');
+                  this.todo.modal12 = true;
+                  // this.data1 = response;
+                  this.$emit('refreshFrom');
+                  this.loading = false
 
-                this.$Message.success('提交成功');
-                this.todo.modal12 = false;
-                // this.data1 = response;
-                this.$emit('refreshFrom');
-                this.loading = false
-
-                //  this.$router.push({ path: '/' });
+                  //  this.$router.push({ path: '/' });
+                }else{
+                  console.info(response.data);
+                  this.$Message.success('提交成功');
+                  this.todo.modal12 = false;
+                  // this.data1 = response;
+                  this.$emit('refreshFrom');
+                  this.loading = false
+                }
               }).catch(err => {
                 console.info(err)
                 this.$message.error(err);
