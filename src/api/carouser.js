@@ -13,7 +13,7 @@ export function getCategoryAll() {
   const data = {
   };
   return fetch({
-    url: '/api/user/getCategoryAll',
+    url: '/api/category/getCategoryAll',
     method: 'post',
     data
   });

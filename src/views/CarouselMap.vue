@@ -1,4 +1,4 @@
-<!--suppress ALL -->
+<!--首页轮播图 -->
 <template>
 
     <div class="animated fadeIn">
@@ -19,20 +19,20 @@
 </template>
 
 <script>
-    import  addFrom from './carouse/addFrom'
-    import  Vue from 'vue';
+    import addFrom from './carouse/addFrom'
+    import Vue from 'vue';
     export default {
-        name:'carouselMap',
+      name: 'carouselMap',
 
-        data:function  () {
-            return {
-                columns1: [
-                    {
-                        title: '序号',
-                        key: 'id',
-                        width:60
-                    },
-                  /*  {
+      data: function () {
+        return {
+          columns1: [
+            {
+              title: '序号',
+              key: 'id',
+              width: 60
+            },
+            /*  {
                         title: '状态',
                         key: 'switch',
                         width:60,
@@ -53,221 +53,197 @@
                                     color:vcolor,
                                     width: '80'
 
-
                                 },
                                 props:{
-
 
                                 }
                             },text)
                         }
                     },*/
-                    {
-                        title: '名称',
-                        key: 'name'
-                    },
-                    {
-                        title: '说明',
-                        key: 'description'
-                    },
-                    {
-                        title: '略缩图',
-                        key: 'url',
-                        render:(ce, params) =>
-                        {
-                            let uuu;
-                          let spUrl=params.row.url;
-                          let  ss = spUrl.split(",");
-                            if(ss.length>0&&spUrl.length>5){
-                                uuu=this.GLOBAL.imageUrl+ss[0];
-                            }else{
-                                return;
-                            }
+            {
+              title: '名称',
+              key: 'name'
+            },
+            {
+              title: '说明',
+              key: 'description'
+            },
+            {
+              title: '略缩图',
+              key: 'url',
+              render: (ce, params) => {
+                let uuu;
+                let spUrl = params.row.url;
+                let ss = spUrl.split(",");
+                if(ss.length > 0 && spUrl.length > 5) {
+                  uuu = this.GLOBAL.imageUrl + ss[0];
+                }else{
+                  return;
+                }
 
-                             return ce('img', {
-                                 domProps: {
-                                     src:uuu ,
-                                     width: '80'
+                return ce('img', {
+                  domProps: {
+                    src: uuu,
+                    width: '80'
 
-                                 },
-                                 props:{
+                  },
+                  props: {
 
+                  }
+                })
+              }
 
-                                 }
-                             })
-                        }
+            },
+            {
+              title: '顺序',
+              key: 'weights'
+            },
+            {
+              title: '操作',
+              key: 'action',
+              width: 150,
+              align: 'center',
+              render: (ce, params) => {
+                // console.info(ce);
+                //   console.info(params);
+                return ce('div',
+                  [
+                    ce('Button', {
+                      props: {
+                        type: 'primary',
+                        size: 'small'
+                      },
+                      style: {
+                        marginRight: '5px'
+                      },
+                      on: {
+                        click: () => {
+                          this.addFrom.titleN = "编辑";
+                          //对象合并
 
-                    },
-                    {
-                        title: '顺序',
-                        key: 'weights'
-                    },
-                    {
-                        title: '操作',
-                        key: 'action',
-                        width: 150,
-                        align: 'center',
-                        render: (ce, params) =>
-                        {
-                           // console.info(ce);
-                         //   console.info(params);
-                            return ce('div',
-                                [
-                                    ce('Button', {
-                                    props: {
-                                        type: 'primary',
-                                        size: 'small'
-                                    },
-                                    style: {
-                                        marginRight: '5px'
-                                    },
-                                    on: {
-                                        click: () => {
+                          let formItemN = JSON.parse(JSON.stringify(params.row))
+                          console.info(formItemN);
+                          delete formItemN['_index'];
+                          delete formItemN['_rowKey'];
+                          //   delete formItemN['defaultList'];
 
-                                            this.addFrom.titleN="编辑";
-                                             //对象合并
+                          Object.assign(this.addFrom.formItem, formItemN);
+                          let sssss = this.addFrom.formItem;
 
-                                            let formItemN = JSON.parse(JSON.stringify(params.row))
-                                                 console.info(formItemN);
-                                           delete formItemN['_index'];
-                                           delete formItemN['_rowKey'];
-                                        //   delete formItemN['defaultList'];
-
-                                            Object.assign(this.addFrom.formItem,formItemN);
-                                            let sssss=this.addFrom.formItem;
-
-                                           /* if(this.addFrom.formItem.switch==1 ){
+                          /* if(this.addFrom.formItem.switch==1 ){
                                                 this.addFrom.formItem.switch="1";
                                             } else{
                                                 this.addFrom.formItem.switch="0";
                                             }*/
-                                            let defaultList= [
-                                                {
-                                                    'showProgress': false,
-                                                    'status': "finished",
-                                                     'name': 'a42bdcc1178e62b4694c830f028db5c0',
-                                                    'url': this.addFrom.formItem.url
-                                                }
-                                            ]
-                                            //this.$refs.upload.default-file-list=defaultList;
-                                            this.addFrom.modal12=true;
-                                            this.loading = true;
-                                            //
+                          let defaultList = [
+                            {
+                              'showProgress': false,
+                              'status': "finished",
+                              'name': 'a42bdcc1178e62b4694c830f028db5c0',
+                              'url': this.addFrom.formItem.url
+                            }
+                          ]
+                          //this.$refs.upload.default-file-list=defaultList;
+                          this.addFrom.modal12 = true;
+                          this.loading = true;
+                          //
 
-
-
-
-                                            //this.show(params.index)
-                                        }
-                                    }
-                                }, '编辑'),
-                                ce('Button', {
-                                    props: {
-                                        type: 'error',
-                                        size: 'small'
-                                    },
-                                    on: {
-                                        click: () => {
-                                        console.info(params);
-                                            this.remove(params);
-
-
-                                        }
-                                    }
-                                }, '删除')
-                            ]);
+                          //this.show(params.index)
                         }
-                    }
-
-                ],
-                data1: [
-
-                ],
-                addFrom:{
-                    loading: false,
-                    modal12:false,
-                    titleN: '',
-                    id: '',
-                    formItem: {
-                        id:'',
-                        name: '',
-                        switch: 0,
-                        url: '',
-                        weights: 0,
-                        description: ''
-                    },
-                }
-
-
-
-
-
+                      }
+                    }, '编辑'),
+                    ce('Button', {
+                      props: {
+                        type: 'error',
+                        size: 'small'
+                      },
+                      on: {
+                        click: () => {
+                          console.info(params);
+                          this.remove(params);
+                        }
+                      }
+                    }, '删除')
+                  ]);
+              }
             }
-        },
-        created: function() {
-            console.group('------created创建完毕状态------');
-            this.refresh();
 
-        },
-        methods: {
-            show (index) {
-                this.addFrom.modal12=true;
+          ],
+          data1: [
 
+          ],
+          addFrom: {
+            loading: false,
+            modal12: false,
+            titleN: '',
+            id: '',
+            formItem: {
+              id: '',
+              name: '',
+              switch: 0,
+              url: '',
+              weights: 0,
+              description: ''
             },
-            remove (params) {
-                console.info(params.index);
+          }
 
-                this.$store.dispatch('DeleteCarouser',params.row.id).then((response)  => {
-
-                    console.info(response);
-                    console.info("成功回调刷新表数据");
-                    this.loading = false
-                    this.data1.splice(params.index, 1);
-                    //  this.$router.push({ path: '/' });
-                }).catch(err => {
-                    // console.info(err)
-                    this.$message.error(err);
-                    this.loading = false;
-                });
-
-            },
-            add(){
-                //清空files内容
-
-               this.$refs.addFrom.$refs.uploadFile.$refs.upload.clearFiles();
-              this.$refs.addFrom.$refs.uploadFile.imageList=[];
-                this.$refs.addFrom.$refs.addFromSub.resetFields();
-              // console.info(this.$refs.addFrom.$children);
-              //  this.$refs.addFrom.$children.clearFiles();
-
-                this.addFrom.titleN="增加";
-                this.addFrom.modal12=true;
-
-
-
-            },
-            refresh(){
-                this.loading = true;
-                //
-                this.$store.dispatch('GetCarouserAll').then((response)  => {
-                    console.info("成功回调刷新表数据");
-                 //   console.info(response.data);
-                    this.data1=response.data;
-                    //this.$Message.success('登录成功');
-                    this.loading = false
-
-                    //  this.$router.push({ path: '/' });
-                }).catch(err => {
-                   // console.info(err)
-                    this.$message.error(err);
-                    this.loading = false;
-                });
-
-            }
-        },
-        components: {
-            'add-from':addFrom
         }
+      },
+      created: function() {
+        console.group('------created创建完毕状态------');
+        this.refresh();
+      },
+      methods: {
+        show (index) {
+          this.addFrom.modal12 = true;
+        },
+        remove (params) {
+          console.info(params.index);
+
+          this.$store.dispatch('DeleteCarouser', params.row.id).then((response) => {
+            console.info(response);
+            console.info("成功回调刷新表数据");
+            this.loading = false
+            this.data1.splice(params.index, 1);
+            //  this.$router.push({ path: '/' });
+          }).catch(err => {
+            // console.info(err)
+            this.$message.error(err);
+            this.loading = false;
+          });
+        },
+        add() {
+          //清空files内容
+
+          this.$refs.addFrom.$refs.uploadFile.$refs.upload.clearFiles();
+          this.$refs.addFrom.$refs.uploadFile.imageList = [];
+          this.$refs.addFrom.$refs.addFromSub.resetFields();
+
+
+          this.addFrom.titleN = "增加";
+          this.addFrom.modal12 = true;
+        },
+        refresh() {
+          this.loading = true;
+          //
+          this.$store.dispatch('GetCarouserAll').then((response) => {
+            console.info("成功回调刷新表数据");
+            //   console.info(response.data);
+            this.data1 = response.data;
+            //this.$Message.success('登录成功');
+            this.loading = false
+
+            //  this.$router.push({ path: '/' });
+          }).catch(err => {
+            // console.info(err)
+            this.$message.error(err);
+            this.loading = false;
+          });
+        }
+      },
+      components: {
+        'add-from': addFrom
+      }
     }
 </script>
 

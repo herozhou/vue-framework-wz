@@ -7,8 +7,7 @@ const carouser = {
     //商品分类列表
     GetCategoryAll({ commit }) {
       return new Promise((resolve, reject) => {
-
-          carouserApi.getCategoryAll().then(response => {
+        carouserApi.getCategoryAll().then(response => {
           resolve(response);
         }).catch(error => {
           console.info(error)
@@ -19,7 +18,7 @@ const carouser = {
     },
     GetNavigation({ commit }) {
       return new Promise((resolve, reject) => {
-          carouserApi.getNavigation().then(response => {
+        carouserApi.getNavigation().then(response => {
           resolve(response);
         }).catch(error => {
           console.info(error)
@@ -30,7 +29,7 @@ const carouser = {
     },
     GetCarouserAll({ commit }) {
       return new Promise((resolve, reject) => {
-          carouserApi.getCarouserAll().then(response => {
+        carouserApi.getCarouserAll().then(response => {
           //    console.info(response);
           resolve(response);
         }).catch(error => {
@@ -42,7 +41,7 @@ const carouser = {
     },
     GetCarouser({ commit }) {
       return new Promise((resolve, reject) => {
-          carouserApi.getCarouser().then(response => {
+        carouserApi.getCarouser().then(response => {
           resolve(response);
         }).catch(error => {
           //   console.info(error)
@@ -53,7 +52,7 @@ const carouser = {
     },
     AddCarousel({ commit }, formItem) {
       return new Promise((resolve, reject) => {
-          carouserApi.addCarousel(formItem).then(response => {
+        carouserApi.addCarousel(formItem).then(response => {
           resolve(response);
         }).catch(error => {
           console.info(error)
@@ -64,7 +63,7 @@ const carouser = {
     },
     AddNavigation({ commit }, formItem) {
       return new Promise((resolve, reject) => {
-          carouserApi.addNavigation(formItem).then(response => {
+        carouserApi.addNavigation(formItem).then(response => {
           resolve(response);
         }).catch(error => {
           console.info(error)
@@ -75,7 +74,7 @@ const carouser = {
     },
     DeleteCarouser({ commit }, id) {
       return new Promise((resolve, reject) => {
-          carouserApi.deleteCarouser(id).then(response => {
+        carouserApi.deleteCarouser(id).then(response => {
           resolve(response);
         }).catch(error => {
           console.info(error)
@@ -84,9 +83,9 @@ const carouser = {
         });
       });
     },
-      DeleteNavigation({ commit }, id) {
+    DeleteNavigation({ commit }, id) {
       return new Promise((resolve, reject) => {
-          carouserApi.deleteNavigation(id).then(response => {
+        carouserApi.deleteNavigation(id).then(response => {
           resolve(response);
         }).catch(error => {
           console.info(error)
