@@ -10,9 +10,6 @@
         <add-from v-bind:todo="addFrom" @refreshFrom="refresh"   ref="addFrom"  ></add-from>
         <Table :columns="columns1" :data="data1"></Table>
 
-
-
-
     </div>
 
 
