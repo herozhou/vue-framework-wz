@@ -17,7 +17,6 @@
 
 <script>
     import addFrom from './carouse/addFrom'
-    import Vue from 'vue';
     export default {
       name: 'carouselMap',
 
