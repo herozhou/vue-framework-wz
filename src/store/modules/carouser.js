@@ -39,6 +39,18 @@ const carouser = {
         });
       });
     },
+    GetCategoryParent({ commit }) {
+      return new Promise((resolve, reject) => {
+        carouserApi.getCategoryParent().then(response => {
+          //    console.info(response);
+          resolve(response);
+        }).catch(error => {
+          console.info(error)
+          alert(error);
+          reject(error);
+        });
+      });
+    },
     GetCarouser({ commit }) {
       return new Promise((resolve, reject) => {
         carouserApi.getCarouser().then(response => {
@@ -61,6 +73,17 @@ const carouser = {
         });
       });
     },
+    GetCategoryById({ commit }, data) {
+      return new Promise((resolve, reject) => {
+        carouserApi.getCategoryById(data).then(response => {
+          resolve(response);
+        }).catch(error => {
+          console.info(error)
+          //  alert(error);
+          reject(error);
+        });
+      });
+    },
     AddNavigation({ commit }, formItem) {
       return new Promise((resolve, reject) => {
         carouserApi.addNavigation(formItem).then(response => {
@@ -72,9 +95,32 @@ const carouser = {
         });
       });
     },
+
+    Addcategory({ commit }, formItem) {
+      return new Promise((resolve, reject) => {
+        carouserApi.addcategory(formItem).then(response => {
+          resolve(response);
+        }).catch(error => {
+          console.info(error)
+          //  alert(error);
+          reject(error);
+        });
+      });
+    },
     DeleteCarouser({ commit }, id) {
       return new Promise((resolve, reject) => {
         carouserApi.deleteCarouser(id).then(response => {
+          resolve(response);
+        }).catch(error => {
+          console.info(error)
+          //  alert(error);
+          reject(error);
+        });
+      });
+    },
+      DeleteCategory({ commit }, id) {
+      return new Promise((resolve, reject) => {
+        carouserApi.deleteCategory(id).then(response => {
           resolve(response);
         }).catch(error => {
           console.info(error)

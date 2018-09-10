@@ -124,21 +124,14 @@
                           //   delete formItemN['defaultList'];
 
                           Object.assign(this.addFrom.formItem, formItemN);
-                          let sssss = this.addFrom.formItem;
+
 
                           /* if(this.addFrom.formItem.switch==1 ){
                                                 this.addFrom.formItem.switch="1";
                                             } else{
                                                 this.addFrom.formItem.switch="0";
                                             }*/
-                          let defaultList = [
-                            {
-                              'showProgress': false,
-                              'status': "finished",
-                              'name': 'a42bdcc1178e62b4694c830f028db5c0',
-                              'url': this.addFrom.formItem.url
-                            }
-                          ]
+
                           //this.$refs.upload.default-file-list=defaultList;
                           this.addFrom.modal12 = true;
                           this.loading = true;
@@ -214,7 +207,6 @@
           this.$refs.addFrom.$refs.uploadFile.$refs.upload.clearFiles();
           this.$refs.addFrom.$refs.uploadFile.imageList = [];
           this.$refs.addFrom.$refs.addFromSub.resetFields();
-
 
           this.addFrom.titleN = "增加";
           this.addFrom.modal12 = true;

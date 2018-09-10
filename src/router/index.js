@@ -24,6 +24,7 @@ export const constantRouterMap = [
     },
     children: [{ path: '404', name: "Page404", component: Page404 },
       {path: '500', name: "Page500", component: Page500},
+
     ]
   }
 
@@ -46,10 +47,17 @@ export const asyncRouterMap = [
     hidden: false,
     children: [
       {path: '/carouselMap', name: '首页轮播图', icon: 'ios-images', component: _import('carouselMap')},
-
       {path: '/navigation', name: 'TV首页导航', icon: 'ios-alert', component: _import('navigation')},
+
       {path: '/good', name: '商品管理', icon: 'ios-alert', component: _import('good')},
-      {path: '/category', name: '商品类别', icon: 'ios-alert', component: _import('category')},
+      {path: '/category', name: '商品类别', icon: 'ios-alert', component: _import('category'),
+      },
+
+      {path: '/category/addFrom',
+        name: "操作分类",
+        component: _import('category/addFrom'),
+        hidden: true
+      },
       {path: '/familyCombo', name: '家庭套餐', icon: 'ios-alert', component: _import('familyCombo')},
       {path: '/information', name: '信息录入', icon: 'ios-alert', component: _import('Information')},
       /* {path: '/introduction', name: '介绍', icon: 'ios-alert', component: _import('Introduction')},
@@ -95,6 +103,6 @@ export const asyncRouterMap = [
 
     ]
   },
-  { path: '*', redirect: '/pages/404', hidden: true }
+  { path: '*', redirect: '/pages/404', hidden: true },
 
 ];

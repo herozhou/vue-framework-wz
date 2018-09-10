@@ -1,9 +1,9 @@
 import fetch from 'utils/fetch';
-export function getNavigation(email, password) {
+export function getNavigation() {
   const data = {
   };
   return fetch({
-    url: '/api/user/getNavigation',
+    url: '/api/navigation/getNavigation',
     method: 'post',
     data
   });
@@ -41,6 +41,15 @@ export function addCarousel(formItem) {
     });
   }
 }
+export function getCategoryById(data) {
+  console.info(data.id);
+
+  return fetch({
+    url: '/api/category/getCategoryById',
+    method: 'post',
+    data: data
+  });
+}
 export function addNavigation(formItem) {
   const data = {
     formItem: formItem
@@ -52,19 +61,57 @@ export function addNavigation(formItem) {
   console.info(formItem.id);
   if(formItem.id == '' || formItem.id == null) {
     return fetch({
-      url: '/api/user/addNavigation',
+      url: '/api/navigation/addNavigation',
       method: 'post',
       data
     });
   }else {
     return fetch({
-      url: '/api/user/updateNavigation',
+      url: '/api/navigation/updateNavigation',
       method: 'post',
       data
     });
   }
 }
+export function addcategory(formItem) {
+  const data = {
+    formItem: formItem
+  };
+  console.info(formItem.id);
+  if(formItem.id == '' || formItem.id == null) {
+    return fetch({
+      url: '/api/category/addcategory',
+      method: 'post',
+      data
+    });
+  }else {
+    return fetch({
+      url: '/api/category/updateCategory',
+      method: 'post',
+      data
+    });
+  }
+}
+export function deleteCategory(id) {
+  const data = {
+    id: id
+  };
 
+  return fetch({
+    url: '/api/category/deleteCategory',
+    method: 'post',
+    data
+  });
+}
+export function getCategoryParent() {
+  const data = {
+  };
+  return fetch({
+    url: '/api/category/getCategoryParent',
+    method: 'post',
+    data
+  });
+}
 export function deleteCarouser(id) {
   const data = {
     id: id
@@ -76,6 +123,7 @@ export function deleteCarouser(id) {
     data
   });
 }
+
 export function deleteNavigation(id) {
   const data = {
     id: id
@@ -105,6 +153,7 @@ export function getCarouserAll() {
     data
   });
 }
+
 export function getUser(password) {
   const data = {
   };
