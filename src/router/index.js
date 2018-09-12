@@ -49,7 +49,12 @@ export const asyncRouterMap = [
       {path: '/carouselMap', name: '首页轮播图', icon: 'ios-images', component: _import('carouselMap')},
       {path: '/navigation', name: 'TV首页导航', icon: 'ios-alert', component: _import('navigation')},
 
-      {path: '/good', name: '商品管理', icon: 'ios-alert', component: _import('good')},
+      {path: '/goods', name: '商品管理', icon: 'ios-alert', component: _import('goods')},
+      {path: '/goods/addFrom',
+        name: "操作商品",
+        component: _import('goods/addFrom'),
+        hidden: true
+      },
       {path: '/category', name: '商品类别', icon: 'ios-alert', component: _import('category'),
       },
 

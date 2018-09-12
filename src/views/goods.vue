@@ -7,15 +7,16 @@
 			<Button v-on:click="refresh" icon="md-refresh" shape="circle"> </Button>
 
 
-				<Select v-model="modelSelect" style="width:200px">
-					<Option value='0' key="0">全部</Option>
-					<Option v-for="item in data1" :value="item.id" :key="item.id">{{ item.name }}</Option>
-				</Select>
+			<Select v-model=addFrom.formItem.parent_id style="width:200px">
+				<OptionGroup  v-for="item in category" :label="item.name" >
+					<Option v-for="children in item.children" :value="children.id" :key="children.id">{{ children.name }}</Option>
+				</OptionGroup>
+			</Select>
 
 			<!-- <img :src="'../static/img/logo.png'" >-->
 		</div>
 		<br>
-		<add-from ref="addFrom" v-bind:todo="addFrom" ></add-from>
+	<!--	<add-from ref="addFrom" v-bind:todo="addFrom" ></add-from>-->
 		<Table :columns="columns1" :data="data1"></Table>
 
 
@@ -37,6 +38,7 @@
                 modelSelect:'0'
 				,
                 loading: false,
+                category:[],
                 addFrom:{
                     loading: false,
                     modal12:false,
@@ -160,6 +162,19 @@
 		},
 		created: function () {
 			console.group('------created创建完毕状态------');
+            this.$store.dispatch('GetCategoryGroup').then((response) => {
+                console.info("成功回调1");
+                console.info(response.data);
+                this.category = response.data;
+                //this.$Message.success('登录成功');
+                this.loading = false;
+
+                //  this.$router.push({ path: '/' });
+            }).catch(err => {
+                console.info(err)
+                this.$message.error(err);
+                this.loading = false;
+            });
 			this.refresh();
 
 		},
@@ -172,9 +187,8 @@
                 this.data1.splice(index, 1);
             },
             add(){
+                this.$router.push({ name:'操作商品',params:this.addFrom.formItem});
 
-                this.addFrom.titleN="增加";
-                this.addFrom.modal12=true;
 
 
 

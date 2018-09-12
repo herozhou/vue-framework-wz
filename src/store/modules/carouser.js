@@ -16,6 +16,17 @@ const carouser = {
         });
       });
     },
+      GetCategoryGroup({ commit }) {
+      return new Promise((resolve, reject) => {
+        carouserApi.getCategoryGroup().then(response => {
+          resolve(response);
+        }).catch(error => {
+          console.info(error)
+          alert(error);
+          reject(error);
+        });
+      });
+    },
     GetNavigation({ commit }) {
       return new Promise((resolve, reject) => {
         carouserApi.getNavigation().then(response => {

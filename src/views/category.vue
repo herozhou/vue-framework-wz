@@ -16,18 +16,17 @@
 	<!--	<add-from ref="addFrom" v-bind:todo="addFrom" ></add-from>-->
 		<Table :columns="columns1" :data="data1"></Table>
 
-
-
-
 	</div>
 
 
 </template>
 
 <script>
-	import addFrom from './category/addFrom'
+	import addFrom from './category/addFrom';
+    import subClass from './category/subClass';
 	import Vue from 'vue';
 	export default {
+       // components: { subClass },
 		name: 'navigation',
 
 		data: function () {
@@ -46,7 +45,21 @@
                         parent_id: 0
                     },
                 },
-				columns1: [{
+				columns1: [
+            /*        {
+                        type: 'expand',
+                        width: 50,
+                        render: (h, params) => {
+                            return h(subClass, {
+                                props: {
+                                    row: params.row.children
+
+
+                                }
+                            })
+                        }
+                    },*/
+				    {
 						title: '序号',
 						key: 'id',
 						//width: 60
@@ -221,7 +234,7 @@
             console.info(this.category);
 
             // this.category.push(response.data);
-            this.data1 = response.data;
+
             //this.$Message.success('登录成功');
             this.loading = false;
 

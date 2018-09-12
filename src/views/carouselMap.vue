@@ -116,7 +116,7 @@
                         click: () => {
                           this.addFrom.titleN = "编辑";
                           //对象合并
-
+                          //debugger;
                           let formItemN = JSON.parse(JSON.stringify(params.row))
                           console.info(formItemN);
                           delete formItemN['_index'];
@@ -124,15 +124,6 @@
                           //   delete formItemN['defaultList'];
 
                           Object.assign(this.addFrom.formItem, formItemN);
-
-
-                          /* if(this.addFrom.formItem.switch==1 ){
-                                                this.addFrom.formItem.switch="1";
-                                            } else{
-                                                this.addFrom.formItem.switch="0";
-                                            }*/
-
-                          //this.$refs.upload.default-file-list=defaultList;
                           this.addFrom.modal12 = true;
                           this.loading = true;
                           //
