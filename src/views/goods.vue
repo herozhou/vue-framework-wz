@@ -172,7 +172,7 @@
                 //  this.$router.push({ path: '/' });
             }).catch(err => {
                 console.info(err)
-                this.$message.error(err);
+               // this.$message.error(err);
                 this.loading = false;
             });
 			this.refresh();
@@ -187,7 +187,7 @@
                 this.data1.splice(index, 1);
             },
             add(){
-                this.$router.push({ name:'操作商品',params:this.addFrom.formItem});
+                this.$router.push({ name:'操作商品',query:this.addFrom.formItem});
 
 
 
@@ -206,7 +206,8 @@
 					//  this.$router.push({ path: '/' });
 				}).catch(err => {
 					console.info(err)
-					this.$message.error(err);
+                    //this.refresh();
+					//this.$message.error(err);
 					this.loading = false;
 				});
 

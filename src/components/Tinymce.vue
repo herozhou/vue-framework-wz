@@ -1,24 +1,23 @@
 <template>
     <div class="components-container">
-
-        <h3 class="intro-head"><a href="https://github.com/lpreterite/vue-tinymce" target="_blank">vue-tinymce</a> </h3>
-        <p class="intro-head">作者的原项目有一些bug，自己改进一个临时的 </p>
-
         <Row :gutter="20">
             <Col :span="12" >
             <vue-tinymce
                 ref="tinymce"
                 v-model="content1"
-                :setting="setting1">
+                :setting="setting1"
+            >
+
         </vue-tinymce>
             </Col>
         </Row >
 
         <Row :gutter="20">
             <Col :span="12">
-            <Button type="primary" @click="show_content1_html=!show_content1_html">点击切换显示内容</Button>
-            <div v-html='content1' v-if="!show_content1_html"></div>
-            <div  v-else>{{content1}}</div>
+           <!-- <Button type="primary" @click="show_content1_html=!show_content1_html">点击切换显示内容</Button>-->
+           <h3>实现效果：</h3>
+            <div v-html='content1'></div>
+           <!-- <div  v-else>{{content1}}</div>-->
 
             </Col>
          <!--   <Col :span="12">
@@ -43,26 +42,10 @@
           show_content1_html: false,
           show_content2_html: false,
           content1: '<p>可直接粘贴图片地址插入图片</p>',
-          setting1: Object.assign({}, TinymceSetting, {
+          setting1: Object.assign({}, ...TinymceSetting, {
             height: 200,
             language_url: "./static/langs/zh_CN.js",
             block_formats: "Paragraph=p;Heading 1=h1;Heading 2=h2;Heading 3=h3;Heading 4=h4;Heading 5=h5;Heading 6=h6;",
-
-          }),
-          content2: '<p>Tinymce inlite主题</p><hr><p>这里输入时回车可快速插入选择本地图片和表格 <img src="//img.t.sinajs.cn/t4/appstyle/expression/ext/normal/19/heia_thumb.gif" data-key="[哈哈]"></img></p>',
-          setting2: Object.assign({}, TinymceSetting, {
-            height: 200,
-            language_url: "./static/langs/zh_CN.js",
-            block_formats: "Paragraph=p;Heading 1=h1;Heading 2=h2;Heading 3=h3;Heading 4=h4;Heading 5=h5;Heading 6=h6;",
-            menubar: false,
-            keep_styles: false,
-            theme: 'inlite',
-            inline: true,
-            invalid_styles: 'color font-size',
-            plugins: 'image table link paste contextmenu textpattern autolink',
-            insert_toolbar: 'quickimage quicktable',
-            selection_toolbar: 'bold italic | quicklink h2 h3 blockquote',
-            paste_data_images: true,
 
           })
         }

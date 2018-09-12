@@ -2,9 +2,9 @@
     <div>
     <div class="demo-upload-list" v-for="item in uploadList">
         <template v-if="item.status === 'finished'">
-            <img :src="item.url">
+            <img :src="GLOBAL.imageUrl +item.name">
             <div class="demo-upload-list-cover">
-                <Icon type="ios-eye-outline" @click.native="handleView(item.name)"></Icon>
+                <Icon  type="ios-eye-outline" @click.native="handleView(GLOBAL.imageUrl+item.name)"></Icon>
                 <Icon type="ios-trash-outline" @click.native="handleRemove(item)"></Icon>
             </div>
         </template>
@@ -14,41 +14,35 @@
     </div>
     <Upload
             ref="upload"
+            name="logo"
             :show-upload-list="false"
-            :default-file-list="defaultList"
+            :default-file-list="setting.defaultList"
+            :accept="setting.accept"
             :on-success="handleSuccess"
-            :format="['jpg','jpeg','png']"
-            :max-size="2048"
+            :format="setting.format"
+            :max-size="setting.maxSize"
             :on-format-error="handleFormatError"
             :on-exceeded-size="handleMaxSize"
             :before-upload="handleBeforeUpload"
             multiple
             type="drag"
-            action="//jsonplaceholder.typicode.com/posts/"
+            action="api/uploadFile"
             style="display: inline-block;width:58px;">
         <div style="width: 58px;height:58px;line-height: 58px;">
             <Icon type="ios-camera" size="20"></Icon>
         </div>
     </Upload>
     <Modal title="View Image" v-model="visible">
-        <img :src="'https://o5wwk8baw.qnssl.com/' + imgName + '/large'" v-if="visible" style="width: 100%">
+        <img :src=imgName v-if="visible" style="width: 100%">
     </Modal>
     </div>
 </template>
 <script>
     export default {
+      props: ['setting'],
       data () {
         return {
-          defaultList: [
-            {
-              'name': 'a42bdcc1178e62b4694c830f028db5c0',
-              'url': 'https://o5wwk8baw.qnssl.com/a42bdcc1178e62b4694c830f028db5c0/avatar'
-            },
-            {
-              'name': 'bc7521e033abdd1e92222d733590f104',
-              'url': 'https://o5wwk8baw.qnssl.com/bc7521e033abdd1e92222d733590f104/avatar'
-            }
-          ],
+
           imgName: '',
           visible: false,
           uploadList: []
@@ -64,13 +58,13 @@
           this.$refs.upload.fileList.splice(fileList.indexOf(file), 1);
         },
         handleSuccess (res, file) {
-          file.url = 'https://o5wwk8baw.qnssl.com/7eb99afb9d5f317c912f08b5212fd69a/avatar';
-          file.name = '7eb99afb9d5f317c912f08b5212fd69a';
+          //   file.url = 'https://o5wwk8baw.qnssl.com/7eb99afb9d5f317c912f08b5212fd69a/avatar';
+          file.name = res.filename;
         },
         handleFormatError (file) {
           this.$Notice.warning({
-            title: 'The file format is incorrect',
-            desc: 'File format of ' + file.name + ' is incorrect, please select jpg or png.'
+            title: '文件格式不正确',
+            desc: +file.name + ' 的文件格式不正确，请选择' + this.setting.format
           });
         },
         handleMaxSize (file) {
@@ -80,17 +74,19 @@
           });
         },
         handleBeforeUpload () {
-          const check = this.uploadList.length < 5;
+          const check = this.uploadList.length < this.setting.maxFileNum;
           if (!check) {
             this.$Notice.warning({
-              title: 'Up to five pictures can be uploaded.'
+              title: '最多可上传' + this.setting.maxFileNum + '张照片'
             });
           }
           return check;
         }
       },
       mounted () {
+        console.info("mounted");
         this.uploadList = this.$refs.upload.fileList;
+        console.info(this.uploadList);
       }
     }
 </script>

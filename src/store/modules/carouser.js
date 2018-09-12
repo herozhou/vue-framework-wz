@@ -22,7 +22,7 @@ const carouser = {
           resolve(response);
         }).catch(error => {
           console.info(error)
-          alert(error);
+          //alert(error);
           reject(error);
         });
       });
@@ -33,7 +33,7 @@ const carouser = {
           resolve(response);
         }).catch(error => {
           console.info(error)
-          alert(error);
+        //  alert(error);
           reject(error);
         });
       });
@@ -45,7 +45,7 @@ const carouser = {
           resolve(response);
         }).catch(error => {
           console.info(error)
-          alert(error);
+       //   alert(error);
           reject(error);
         });
       });
@@ -57,7 +57,7 @@ const carouser = {
           resolve(response);
         }).catch(error => {
           console.info(error)
-          alert(error);
+        //  alert(error);
           reject(error);
         });
       });
@@ -68,7 +68,7 @@ const carouser = {
           resolve(response);
         }).catch(error => {
           //   console.info(error)
-          alert(error);
+          //alert(error);
           reject(error);
         });
       });
