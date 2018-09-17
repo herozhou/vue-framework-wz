@@ -36,12 +36,14 @@
     import { VueTinymce, TinymceSetting } from '@packy-tang/vue-tinymce';
 
     export default {
+      props: ['content'],
       components: { VueTinymce, TinymceSetting },
       data() {
         return {
+          content1: '<p>可直接粘贴图片地址插入图片</p>',
           show_content1_html: false,
           show_content2_html: false,
-          content1: '<p>可直接粘贴图片地址插入图片</p>',
+          // content1: '<p>可直接粘贴图片地址插入图片</p>',
           setting1: Object.assign({}, ...TinymceSetting, {
             height: 200,
             language_url: "./static/langs/zh_CN.js",
@@ -94,7 +96,11 @@
           })
           return serializer.serialize(nodes);
         }
-      }
+      },
+      created: function () {
+        this.content1 = this.content;
+      },
+
     }
 </script>
 
