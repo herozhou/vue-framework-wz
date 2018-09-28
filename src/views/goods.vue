@@ -83,6 +83,9 @@
                         render: (ce, params) => {
                             let uuu;
                             let spUrl = params.row.product_video;
+                            if(spUrl==null){
+                                spUrl='';
+                            }
                             let ss = spUrl.split(",");
                             if(ss.length > 0 && spUrl.length > 5) {
                                 uuu = this.GLOBAL.imageUrl + ss[0];
@@ -106,6 +109,9 @@
                         render: (ce, params) => {
                             let uuu;
                             let spUrl = params.row.product_images;
+                            if(spUrl==null){
+                                spUrl='';
+                            }
                             let ss = spUrl.split(",");
                             if(ss.length > 0 && spUrl.length > 5) {
                                 uuu = this.GLOBAL.imageUrl + ss[0];
@@ -126,6 +132,37 @@
                         }
 
 					},
+                    {
+                        title: '二维码',
+                        key: 'qrcode',
+                        render: (ce, params) => {
+                            let uuu;
+                            let spUrl = params.row.qrcode;
+
+                            let ss;
+                            if(spUrl==null){
+                                spUrl='';
+							}
+                             ss = spUrl.split(",");
+                            if(ss.length > 0 && spUrl.length > 5) {
+                                uuu = this.GLOBAL.imageUrl + ss[0];
+                            }else{
+                                return;
+                            }
+
+                            return ce('img', {
+                                domProps: {
+                                    src: uuu,
+                                    width: '80'
+
+                                },
+                                props: {
+
+                                }
+                            })
+                        }
+
+                    },
 					{
 						title: '操作',
 						key: 'action',
@@ -145,7 +182,7 @@
 									},
 									on: {
 										click: () => {
-                                            this.$router.push({ name:'操作商品',params:{ids:params.row.id}});
+                                            this.$router.push({ name:'操作商品',params:{ids:params.row}});
                                             this.loading = true;
                                             //
                                             //this.show(params.index)
