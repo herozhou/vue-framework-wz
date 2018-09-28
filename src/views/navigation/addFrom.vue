@@ -9,10 +9,12 @@
                 <Input v-model="todo.formItem.name" placeholder="首页导航名称"></Input>
             </FormItem>
 
-            <FormItem  label="图片上传">
+            <FormItem  label="略缩图上传">
                 <upload-file ref="uploadFile"  v-bind:url="todo.formItem.url"   ></upload-file>
             </FormItem>
-
+            <FormItem  label="详情图上传">
+                <upload-file ref="uploadFilex"  v-bind:url="todo.formItem.urlx"   ></upload-file>
+            </FormItem>
             <FormItem label="首页位置"   prop="weights">
                 <Input type="text"  v-model="todo.formItem.weights" placeholder="显示的顺序" number ></Input>
             </FormItem>
@@ -64,11 +66,11 @@
           this.loading = true;
           //    console.info(this.$refs.uploadFile.imageList);
           this.todo.formItem.url = this.$refs.uploadFile.imageList;
+          this.todo.formItem.urlx = this.$refs.uploadFilex.imageList;
           console.info(this.todo.formItem);
 
           this.$refs.addFromSub.validate(valid => {
             if (valid) {
-
               this.$store.dispatch('AddNavigation', this.todo.formItem).then((response) => {
                 console.info("成功回调");
                 if(response.data.code == 0) {

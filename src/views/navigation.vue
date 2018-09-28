@@ -70,6 +70,33 @@
         }
 
       },
+      {
+        title: '详情图',
+        key: 'urlx',
+        render: (ce, params) => {
+          let uuu;
+
+          let spUrl = params.row.urlx;
+          let ss = spUrl.split(",");
+          if(ss.length > 0 && spUrl.length > 5) {
+            uuu = this.GLOBAL.imageUrl + ss[0];
+          }else{
+            return;
+          }
+
+          return ce('img', {
+            domProps: {
+              src: uuu,
+              width: '80'
+
+            },
+            props: {
+
+            }
+          })
+        }
+
+      },
 	      {
 	        title: '操作',
 	        key: 'action',
@@ -132,6 +159,7 @@
           id: '',
           name: '',
           url: '',
+          urlx: '',
           weights: '',
           description: ''
         },

@@ -61,6 +61,18 @@ const carouser = {
         });
       });
     },
+    GetImageAll({ commit }) {
+      return new Promise((resolve, reject) => {
+        carouserApi.getCarouserAll().then(response => {
+          //    console.info(response);
+          resolve(response);
+        }).catch(error => {
+          console.info(error)
+          //   alert(error);
+          reject(error);
+        });
+      });
+    },
     GetCategoryParent({ commit }) {
       return new Promise((resolve, reject) => {
         carouserApi.getCategoryParent().then(response => {
@@ -162,7 +174,7 @@ const carouser = {
         });
       });
     },
-      DeleteGoods({ commit }, id) {
+    DeleteGoods({ commit }, id) {
       return new Promise((resolve, reject) => {
         carouserApi.deleteGoods(id).then(response => {
           resolve(response);
