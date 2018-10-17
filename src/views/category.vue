@@ -15,7 +15,13 @@
 		<br>
 	<!--	<add-from ref="addFrom" v-bind:todo="addFrom" ></add-from>-->
 		<Table :columns="columns1" :data="data1"></Table>
-
+		<Modal
+				v-model="modal1"
+				title="操作确认"
+				@on-ok="ok"
+				@on-cancel="cancel">
+			<p>是否继续操作</p>
+		</Modal>
 	</div>
 
 
@@ -32,6 +38,8 @@
 		data: function () {
 			return {
 			    //分类
+                modal1: false,
+                delete: '',
 				category:{},
                 parent_id:'',
                 addFrom:{
@@ -116,8 +124,9 @@
                                     on: {
                                         click: () => {
 
+                                            this.delete = params;
+                                            this.modal1 = true;
 
-                                            this.remove(params)
                                         }
                                     }
                                 }, '删除')
@@ -141,6 +150,14 @@
 
 		},
 		methods: {
+            ok () {
+                this.$Message.info('操作成功');
+
+                this.remove(this.delete);
+            },
+            cancel () {
+                this.$Message.info('操作取消');
+            },
             show (index) {
                 this.addFrom.modal12=true;
 
@@ -201,7 +218,7 @@
 				  }
                 this.$store.dispatch('GetCategoryById',data).then((response) => {
                     console.info("成功回调");
-                    //   console.info(response.data);
+                      console.info(response.data);
                     this.data1 = response.data;
                     //this.$Message.success('登录成功');
                     this.loading = false;

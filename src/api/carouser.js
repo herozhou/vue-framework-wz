@@ -80,12 +80,14 @@ export function addGoods(formItem) {
   }
 }
 export function getCategoryById(data) {
-  console.info(data.id);
-
+  const data1 = {
+    id: data.id
+  };
+  console.info(data1);
   return fetch({
     url: '/api/category/getCategoryById',
     method: 'post',
-    data: data
+    data: data1
   });
 }
 export function getGoodsById(id) {

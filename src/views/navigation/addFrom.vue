@@ -15,6 +15,16 @@
             <FormItem  label="详情图上传">
                 <upload-file ref="uploadFilex"  v-bind:url="todo.formItem.urlx"   ></upload-file>
             </FormItem>
+            <FormItem  label="跳转链接">
+                <Input v-model="todo.formItem.goot_url" placeholder="需要跳转的网页"></Input>
+
+            </FormItem>
+            <FormItem label="是否开启">
+                <i-switch    v-model="todo.formItem.switchsb" true-value=1 false-value=0 size="large">
+                    <span slot="open">On</span>
+                    <span slot="close">Off</span>
+                </i-switch>
+            </FormItem>
             <FormItem label="首页位置"   prop="weights">
                 <Input type="text"  v-model="todo.formItem.weights" placeholder="显示的顺序" number ></Input>
             </FormItem>

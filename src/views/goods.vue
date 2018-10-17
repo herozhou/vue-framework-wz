@@ -18,7 +18,13 @@
 		<br>
 	<!--	<add-from ref="addFrom" v-bind:todo="addFrom" ></add-from>-->
 		<Table :columns="columns1" :data="data1"></Table>
-
+		<Modal
+				v-model="modal1"
+				title="操作确认"
+				@on-ok="ok"
+				@on-cancel="cancel">
+			<p>是否继续操作</p>
+		</Modal>
 
 
 
@@ -35,6 +41,8 @@
 
 		data: function () {
 			return {
+                modal1: false,
+                delete: '',
                 modelSelect:'0'
 				,
                 loading: false,
@@ -195,7 +203,8 @@
                                     },
                                     on: {
                                         click: () => {
-                                            this.remove(params)
+                                            this.delete = params;
+                                            this.modal1 = true;
                                         }
                                     }
                                 }, '删除')
@@ -228,6 +237,14 @@
 
 		},
 		methods: {
+            ok () {
+                this.$Message.info('操作成功');
+
+                this.remove(this.delete);
+            },
+            cancel () {
+                this.$Message.info('操作取消');
+            },
             show (index) {
                 this.addFrom.modal12=true;
 

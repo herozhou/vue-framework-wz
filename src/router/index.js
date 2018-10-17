@@ -64,7 +64,7 @@ export const asyncRouterMap = [
         component: _import('category/addFrom'),
         hidden: true
       },
-      {path: '/image', name: '图片管理', icon: 'ios-alert', component: _import('image')},
+      /*      {path: '/image', name: '图片管理', icon: 'ios-alert', component: _import('image')},*/
       /* {path: '/familyCombo', name: '家庭套餐', icon: 'ios-alert', component: _import('familyCombo')},
          {path: '/information', name: '信息录入', icon: 'ios-alert', component: _import('Information')},
           {path: '/introduction', name: '介绍', icon: 'ios-alert', component: _import('Introduction')},
