@@ -106,7 +106,7 @@ getCarouserAll
          {path: '/markdown', name: 'Markdown', icon: "ios-alert", component: _import('Markdown')},
          {path: '/mr', name: 'MR', icon: "ios-alert", component: mr},
          {path: '/formMr', name: 'FormMr', icon: "ios-alert", component: formMr},*/
-     /* {path: '/tinymce', name: 'Tinymce编辑器', icon: "ios-alert", component: _import('Tinymce')},*/
+      /* {path: '/tinymce', name: 'Tinymce编辑器', icon: "ios-alert", component: _import('Tinymce')},*/
 
     ]
   },
