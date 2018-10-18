@@ -9,19 +9,27 @@
         </div><br>
         <add-from v-bind:todo="addFrom" @refreshFrom="refresh"   ref="addFrom"  ></add-from>
         <Table :columns="columns1" :data="data1"></Table>
-
+        <Modal
+                v-model="modal1"
+                title="操作确认"
+                @on-ok="ok"
+                @on-cancel="cancel">
+            <p>是否继续操作</p>
+        </Modal>
     </div>
 
 
 </template>
 
 <script>
-    import addFrom from './carouse/addFrom'
+    import addFrom from './image/addFrom'
     export default {
       name: 'carouselMap',
 
       data: function () {
         return {
+            modal1: false,
+            delete: '',
           columns1: [
             {
               title: '序号',
@@ -91,8 +99,29 @@
 
             },
             {
-              title: '顺序',
-              key: 'weights'
+              title: '连接',
+              key: 'url',
+              render: (ce, params) => {
+                let uuu;
+                let spUrl = params.row.url;
+                let ss = spUrl.split(",");
+                if(ss.length > 0 && spUrl.length > 5) {
+                  uuu = this.GLOBAL.imageUrl + ss[0];
+                }else{
+                  return;
+                }
+
+                return ce('span', {
+                  domProps: {
+                      innerHTML: uuu,
+                    width: '80'
+
+                  },
+                  props: {
+
+                  }
+                })
+              }
             },
             {
               title: '操作',
@@ -104,7 +133,7 @@
                 //   console.info(params);
                 return ce('div',
                   [
-                    ce('Button', {
+   /*                 ce('Button', {
                       props: {
                         type: 'primary',
                         size: 'small'
@@ -131,7 +160,7 @@
                           //this.show(params.index)
                         }
                       }
-                    }, '编辑'),
+                    }, '编辑'),*/
                     ce('Button', {
                       props: {
                         type: 'error',
@@ -139,8 +168,10 @@
                       },
                       on: {
                         click: () => {
-                          console.info(params);
-                          this.remove(params);
+
+                            this.delete = params;
+                            this.modal1 = true;
+
                         }
                       }
                     }, '删除')
@@ -160,9 +191,7 @@
             formItem: {
               id: '',
               name: '',
-              switch: 0,
               url: '',
-              weights: 0,
               description: ''
             },
           }
@@ -174,6 +203,13 @@
         this.refresh();
       },
       methods: {
+          ok () {
+              this.$Message.info('操作成功');
+              this.remove(this.delete);
+          },
+          cancel () {
+              this.$Message.info('操作取消');
+          },
         show (index) {
           this.addFrom.modal12 = true;
         },

@@ -59,6 +59,29 @@ export function addCarousel(formItem) {
     });
   }
 }
+export function addImage(formItem) {
+  const data = {
+    formItem: formItem
+  };
+
+  if (formItem.url == "" || formItem.url == null) {
+    delete formItem['url'];
+  }
+  console.info(formItem.id);
+  if(formItem.id == '' || formItem.id == null || formItem.id == 0 || formItem.id == '0') {
+    return fetch({
+      url: '/api/image/addImage',
+      method: 'post',
+      data
+    });
+  }else {
+    return fetch({
+      url: '/api/user/updateImage',
+      method: 'post',
+      data
+    });
+  }
+}
 export function addGoods(formItem) {
   const data = {
     formItem: formItem
@@ -86,6 +109,17 @@ export function getCategoryById(data) {
   console.info(data1);
   return fetch({
     url: '/api/category/getCategoryById',
+    method: 'post',
+    data: data1
+  });
+}
+export function getGoodsByCategoryId(data) {
+  const data1 = {
+    id: data.id
+  };
+  console.info(data1);
+  return fetch({
+    url: '/api/goods/getGoodsByCategoryId',
     method: 'post',
     data: data1
   });
@@ -212,6 +246,15 @@ export function getCarouserAll() {
   };
   return fetch({
     url: '/api/user/getCarouserAll',
+    method: 'post',
+    data
+  });
+}
+export function getImageAll() {
+  const data = {
+  };
+  return fetch({
+    url: '/api/image/getImageAll',
     method: 'post',
     data
   });

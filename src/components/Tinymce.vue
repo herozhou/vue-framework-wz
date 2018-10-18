@@ -44,7 +44,7 @@
           show_content1_html: false,
           show_content2_html: false,
           // content1: '<p>可直接粘贴图片地址插入图片</p>',
-          setting1: Object.assign({}, ...TinymceSetting, {
+          setting1: Object.assign({}, TinymceSetting, {
             height: 200,
             language_url: "./static/langs/zh_CN.js",
             block_formats: "Paragraph=p;Heading 1=h1;Heading 2=h2;Heading 3=h3;Heading 4=h4;Heading 5=h5;Heading 6=h6;",

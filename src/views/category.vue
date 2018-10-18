@@ -79,10 +79,7 @@
                         title: 'parent_id',
                         key: 'parent_id'
                     },
-				/*	{
-                        title: '级别',
-                        key: 'level'
-                    },*/
+
 					{
 						title: '操作',
 						key: 'action',

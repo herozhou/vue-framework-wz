@@ -63,7 +63,7 @@ const carouser = {
     },
     GetImageAll({ commit }) {
       return new Promise((resolve, reject) => {
-        carouserApi.getCarouserAll().then(response => {
+        carouserApi.getImageAll().then(response => {
           //    console.info(response);
           resolve(response);
         }).catch(error => {
@@ -107,6 +107,17 @@ const carouser = {
         });
       });
     },
+    AddImage({ commit }, formItem) {
+      return new Promise((resolve, reject) => {
+        carouserApi.addImage(formItem).then(response => {
+          resolve(response);
+        }).catch(error => {
+          console.info(error)
+          //  alert(error);
+          reject(error);
+        });
+      });
+    },
     AddGoods({ commit }, formItem) {
       return new Promise((resolve, reject) => {
         carouserApi.addGoods(formItem).then(response => {
@@ -121,6 +132,17 @@ const carouser = {
     GetCategoryById({ commit }, data) {
       return new Promise((resolve, reject) => {
         carouserApi.getCategoryById(data).then(response => {
+          resolve(response);
+        }).catch(error => {
+          console.info(error)
+          //  alert(error);
+          reject(error);
+        });
+      });
+    },
+    GetGoodsByCategoryId({ commit }, data) {
+      return new Promise((resolve, reject) => {
+        carouserApi.getGoodsByCategoryId(data).then(response => {
           resolve(response);
         }).catch(error => {
           console.info(error)

@@ -7,8 +7,8 @@
 			<Button v-on:click="refresh" icon="md-refresh" shape="circle"> </Button>
 
 
-			<Select v-model=addFrom.formItem.parent_id style="width:200px">
-				<OptionGroup  v-for="item in category" :key="item.id"  :label="item.name" >
+			<Select v-model=addFrom.formItem.parent_id style="width:200px"  @on-change="freshById">
+				<OptionGroup  v-for="item in category" :key="item.id"  :label="item.name"  >
 					<Option v-for="children in item.children" :value="children.id" :key="children.id">{{ children.name }}</Option>
 				</OptionGroup>
 			</Select>
@@ -80,7 +80,10 @@
 					{
 						title: '价格',
 						key: 'price'
-					},
+					},{
+                        title: '类别',
+                        key: 'cname'
+                    },
 					{
 						title: '关键字',
 						key: 'keyword'
@@ -289,7 +292,35 @@
 					this.loading = false;
 				});
 
-			}
+			},
+            freshById(){
+
+                console.info("ddd");
+
+                let data={
+                    id:this.addFrom.formItem.parent_id
+                };
+                console.info("data");
+                console.info(data);
+                if(data.id==undefined){
+                    this.refresh();
+                    return;
+                }
+                this.$store.dispatch('GetGoodsByCategoryId',data).then((response) => {
+                    console.info("成功回调");
+                    console.info(response.data);
+                    this.data1 = response.data;
+                    //this.$Message.success('登录成功');
+                    this.loading = false;
+
+                    //  this.$router.push({ path: '/' });
+                }).catch(err => {
+                    console.info(err)
+                    this.$message.error(err);
+                    this.loading = false;
+                });
+
+            }
 		},
 		components: {
 			'add-from': addFrom
