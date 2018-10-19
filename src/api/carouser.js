@@ -120,8 +120,8 @@ export function getGoodsByCategoryId(data) {
   console.info(data1);
   return fetch({
     url: '/api/goods/getGoodsByCategoryId',
-    method: 'post',
-    data: data1
+    method: 'get',
+      params: data1
   });
 }
 export function getGoodsById(id) {

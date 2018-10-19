@@ -78,7 +78,11 @@
 					},{
                         title: 'parent_id',
                         key: 'parent_id'
+                    },{
+                        title: '导航位置',
+                        key: 'weights'
                     },
+
 
 					{
 						title: '操作',

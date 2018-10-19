@@ -10,6 +10,9 @@
             <FormItem label="名称" prop="name">
                 <Input  v-model="formItem.name" placeholder="名称"></Input>
             </FormItem>
+         <FormItem label="权重"   prop="weights">
+             <Input type="text"  v-model="formItem.weights" placeholder="显示的顺序" number ></Input>
+         </FormItem>
             <FormItem label="类别">
                 <Select v-model=formItem.parent_id style="width:200px">
                    <Option v-for="item in category" :value="item.id" :key="item.id">{{ item.name }}</Option>
@@ -38,7 +41,8 @@
           formItem: {
             id: '',
             name: '',
-            parent_id: 0
+            parent_id: 0,
+            weights: ''
           },
           //   titleN: "默认"
           ruleInline: {
