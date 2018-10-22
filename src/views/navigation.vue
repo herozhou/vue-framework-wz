@@ -89,9 +89,9 @@
           let uuu;
 
           let spUrl = params.row.url;
-            if(spUrl == null) {
-                spUrl = ""
-            }
+          if(spUrl == null) {
+            spUrl = ""
+          }
           let ss = spUrl.split(",");
           if(ss.length > 0 && spUrl.length > 5) {
             uuu = this.GLOBAL.imageUrl + ss[0];
@@ -170,11 +170,16 @@
                   let formItemN = JSON.parse(JSON.stringify(params.row))
                   delete formItemN['_index'];
                   delete formItemN['_rowKey'];
-
+                  console.info(formItemN);
                   this.addFrom.modal12 = true;
                   this.loading = true;
-                  //
+
                   Object.assign(this.addFrom.formItem, formItemN);
+                  //  console.info(this.$refs.addFrom.$refs.uploadFilex.$refs.upload);
+                  this.$refs.addFrom.$refs.uploadFilex.$refs.upload.clearFiles();
+                  this.$refs.addFrom.$refs.uploadFile.$refs.upload.clearFiles();
+                  this.$refs.addFrom.$refs.uploadFile.imageList = [];
+                  this.$refs.addFrom.$refs.uploadFilex.imageList =[];
                   //this.show(params.index)
 	                }
 	              }

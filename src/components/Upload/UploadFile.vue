@@ -9,6 +9,7 @@
             :on-success="handleSuccess"
             :on-remove="remove"
             :before-upload="handleBeforeUpload"
+
     >
         <Button icon="ios-cloud-upload-outline">Upload files</Button>
     </Upload>
@@ -20,6 +21,7 @@
           imageList: [
 
           ],
+
           imgName: '',
           visible: false,
           uploadList: []
@@ -37,9 +39,9 @@
         },
         handleSuccess (res, file) {
           console.info("-------handleSuccess------------");
-          //console.info(res);
-          // console.info(file);
-          // console.info(res.filename);
+          console.info(res);
+           console.info(file);
+          console.info(res.filename);
           this.imageList.push(res.filename);
           // console.info(this.imageList);
           console.info("----end---handleSuccess------------");

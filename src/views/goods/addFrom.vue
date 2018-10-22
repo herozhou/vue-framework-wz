@@ -151,6 +151,9 @@
           if(this.settingS.fileList.length > 0) {
             this.formItem.product_video = this.settingS.fileList[0].name;
           }
+          if(this.formItem.weights == null || this.formItem.weights == "") {
+            this.formItem.weights = 0;
+          }
           console.info(this.formItem);
           // console.info(this.settingF.fileList);
           //  console.info(this.settingF[0]);
@@ -270,6 +273,7 @@
         this.formItem.category_id = this.$route.params.ids.category_id;
         this.formItem.parameter = this.$route.params.ids.parameter;
         this.formItem.details = this.$route.params.ids.details;
+        this.formItem.qrcode = this.$route.params.ids.qrcode;
         this.formItem.product_images = this.$route.params.ids.product_images;
         this.formItem.characteristic = this.$route.params.ids.characteristic;
         this.formItem.weights = this.$route.params.ids.weights;
@@ -277,11 +281,13 @@
           {
             name: this.$route.params.ids.product_images
           }
-        ]; this.settingS.defaultList = [
+        ];
+        this.settingS.defaultList = [
           {
             name: this.$route.params.ids.product_video
           }
-        ]; this.settingQrcode.defaultList = [
+        ];
+        this.settingQrcode.defaultList = [
           {
             name: this.$route.params.ids.qrcode
           }

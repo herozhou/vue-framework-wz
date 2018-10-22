@@ -121,7 +121,7 @@ export function getGoodsByCategoryId(data) {
   return fetch({
     url: '/api/goods/getGoodsByCategoryId',
     method: 'get',
-      params: data1
+    params: data1
   });
 }
 export function getGoodsById(id) {
@@ -131,7 +131,7 @@ export function getGoodsById(id) {
 
   return fetch({
     url: '/api/goods/getGoodsById',
-    method: 'post',
+    method: 'get',
     data: data
   });
 }

@@ -8,7 +8,6 @@
             <FormItem label="名称" prop="name">
                 <Input v-model="todo.formItem.name" placeholder="首页导航名称"></Input>
             </FormItem>
-
             <FormItem  label="略缩图上传">
                 <upload-file ref="uploadFile"  v-bind:url="todo.formItem.url"   ></upload-file>
             </FormItem>
@@ -75,8 +74,13 @@
           console.info('f到了');
           this.loading = true;
           //    console.info(this.$refs.uploadFile.imageList);
-          this.todo.formItem.url = this.$refs.uploadFile.imageList;
-          this.todo.formItem.urlx = this.$refs.uploadFilex.imageList;
+          if(this.$refs.uploadFile.imageList.length > 0) {
+            this.todo.formItem.url = this.$refs.uploadFile.imageList;
+          }
+          if(this.$refs.uploadFilex.imageList.length > 0) {
+            this.todo.formItem.urlx = this.$refs.uploadFilex.imageList;
+          }
+
           console.info(this.todo.formItem);
 
           this.$refs.addFromSub.validate(valid => {
