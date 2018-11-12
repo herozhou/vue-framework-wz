@@ -68,12 +68,12 @@
           console.info('f到了');
           this.loading = true;
           //    console.info(this.$refs.uploadFile.imageList);
-          this.todo.formItem.url = this.$refs.uploadFile.imageList;
           console.info(this.todo.formItem);
-
+          if(this.$refs.uploadFile.imageList.length > 0) {
+            this.todo.formItem.url = this.$refs.uploadFile.imageList;
+          }
           this.$refs.addFromSub.validate(valid => {
             if (valid) {
-
               this.$store.dispatch('AddCarousel', this.todo.formItem).then((response) => {
                 console.info("成功回调");
                 if(response.data.code == 0) {

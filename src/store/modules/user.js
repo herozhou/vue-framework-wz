@@ -69,11 +69,17 @@ const user = {
       return new Promise((resolve, reject) => {
         loginByEmail(email, userInfo.password).then(response => {
           const data = response.data;
-          console.log(response.data);
-          Cookies.set('Admin-Token', response.data.token);
-          commit('SET_TOKEN', data.token);
-          commit('SET_EMAIL', email);
-          resolve();
+          // console.log(response.data);
+
+          if(response.data.token == "") {
+
+          }else{
+            Cookies.set('Admin-Token', response.data.token);
+            commit('SET_EMAIL', email);
+            commit('SET_TOKEN', data.token);
+          }
+
+          resolve(response);
         }).catch(error => {
           console.info(error)
           alert(error);

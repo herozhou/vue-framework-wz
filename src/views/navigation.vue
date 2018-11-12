@@ -179,7 +179,7 @@
                   this.$refs.addFrom.$refs.uploadFilex.$refs.upload.clearFiles();
                   this.$refs.addFrom.$refs.uploadFile.$refs.upload.clearFiles();
                   this.$refs.addFrom.$refs.uploadFile.imageList = [];
-                  this.$refs.addFrom.$refs.uploadFilex.imageList =[];
+                  this.$refs.addFrom.$refs.uploadFilex.imageList = [];
                   //this.show(params.index)
 	                }
 	              }

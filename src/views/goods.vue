@@ -97,6 +97,7 @@
                             if(spUrl==null){
                                 spUrl='';
                             }
+                            console.info(this.GLOBAL.imageUrl );
                             let ss = spUrl.split(",");
                             if(ss.length > 0 && spUrl.length > 5) {
                                 uuu = this.GLOBAL.imageUrl + ss[0];
@@ -236,7 +237,7 @@
                // this.$message.error(err);
                 this.loading = false;
             });
-			this.refresh();
+			//this.refresh();
 
 		},
 		methods: {

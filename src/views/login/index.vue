@@ -3,7 +3,7 @@
     <div id="canvascontainer" ref='can'></div>
 
     <Form ref="loginForm" autoComplete="on" :model="loginForm" :rules="loginRules"  class="card-box login-form">
-        <Form-item prop="email">
+        <Form-item >
             <Input type="text" v-model="loginForm.email" placeholder="Username" autoComplete="on">
                 <Icon type="ios-person-outline" slot="prepend" ></Icon>
             </Input>
@@ -45,7 +45,7 @@
         };
         return {
           loginForm: {
-            email: 'admin@wz.com',
+            email: '',
             password: ''
           },
           loginRules: {
@@ -109,8 +109,13 @@
             if (valid) {
               this.loading = true;
               //
-              this.$store.dispatch('LoginByEmail', this.loginForm).then(() => {
-                this.$Message.success('登录成功');
+              this.$store.dispatch('LoginByEmail', this.loginForm).then((response) => {
+                console.info(response)
+                if(response.data.token == "") {
+                  this.$Message.success('账号或密码错误');
+                }else {
+                  this.$Message.success('登录成功');
+                }
     
                 this.loading = false;
                 this.$router.push({ path: '/' });

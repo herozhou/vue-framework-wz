@@ -130,7 +130,8 @@
                           delete formItemN['_index'];
                           delete formItemN['_rowKey'];
                           //   delete formItemN['defaultList'];
-
+                            this.$refs.addFrom.$refs.uploadFile.imageList = [];
+                            this.$refs.addFrom.$refs.uploadFile.$refs.upload.clearFiles();
                           Object.assign(this.addFrom.formItem, formItemN);
                           this.addFrom.modal12 = true;
                           this.loading = true;
