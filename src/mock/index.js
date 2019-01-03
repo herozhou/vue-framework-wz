@@ -1,4 +1,4 @@
-/*
+
 import Mock from 'mockjs';
 import loginAPI from './login';
 
@@ -15,4 +15,4 @@ Mock.mock(/\/api\/user\/getCarouser/, 'post', loginAPI.getCarouser);
 //商品类别
 Mock.mock(/\/api\/user\/getNavigation/, 'post', loginAPI.getNavigation);
 export default Mock;
-*/
+

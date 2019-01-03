@@ -1,4 +1,3 @@
-/*
 import { param2Obj } from 'utils';
 
 const userMap = {
@@ -239,4 +238,4 @@ export default {
   },
   logout: () => 'success'
 };
-*/
+
