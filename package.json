@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "async-validator": "^1.7.1",
-    "axios": "0.16.2",
+    "axios": "0.19.2",
     "deepmerge": "^1.5.0",
     "iview": "^2.3.0",
     "jquery": "3.1.1",
