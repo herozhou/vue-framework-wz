@@ -17,7 +17,7 @@
     "axios": "0.16.2",
     "deepmerge": "^1.5.0",
     "iview": "^2.3.0",
-    "jquery": "3.1.1",
+    "jquery": "3.5.0",
     "js-cookie": "2.1.4",
     "mavon-editor": "^2.2.4",
     "mockjs": "1.0.1-beta3",
