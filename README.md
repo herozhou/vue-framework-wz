@@ -75,7 +75,7 @@
     # 安装依赖
     npm install
     //or 
-    npm install --registry=https://registry.npm.taobao.org
+    npm install --registry=https://registry.npmmirror.com
 
 
     # 本地开发 开启服务
